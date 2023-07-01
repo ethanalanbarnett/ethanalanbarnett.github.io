@@ -4,6 +4,22 @@ body {
   margin: 0;
 }
 
+.nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition-duration: 150ms;
+}
+
 #background-port {
   position: absolute;
   left: 0;
@@ -26,6 +42,15 @@ body {
   background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_starboard.jpg");
   background-repeat: no-repeat;
   background-position: right top;
+}
+
+#top-bar {
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 4px;
 }
 
 #page {

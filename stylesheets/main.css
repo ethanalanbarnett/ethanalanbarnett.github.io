@@ -1,15 +1,15 @@
 body {
-  height: 100vh;
+  height: 2000px;
   width: 100vw;
   margin: 0;
 }
 
 #background-port {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
-  height: 100%;
+  height: 2000px;
   width: 50%;
   background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_port.jpg");
   background-repeat: no-repeat;
@@ -17,11 +17,11 @@ body {
 }
 
 #background-starboard {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: -1;
-  height: 100%;
+  height: 2000px;
   width: 50%;
   background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_starboard.jpg");
   background-repeat: no-repeat;
@@ -29,8 +29,9 @@ body {
 }
 
 #page {
-  width: 60%;
-  min-height: calc(100% - 1px);
+  width: 70%;
+  /* min-height: calc(100% - 1px); */
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1px;

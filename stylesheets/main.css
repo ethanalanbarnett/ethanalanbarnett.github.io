@@ -76,3 +76,17 @@ body {
   height: 100%;
   width: 100%;
 }
+
+#résumé {
+  width: 80%;
+  aspect-ratio: 8.5 / 11;
+}
+
+#resume {
+  width: 20%;
+  border: 1px solid #000000;
+}
+
+#résumé-modal {
+  display: none;
+}

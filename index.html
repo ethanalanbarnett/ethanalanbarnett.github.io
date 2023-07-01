@@ -3,6 +3,7 @@
   <head>
     <title>Ethan Alan Barnett</title>
     <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <div id="background-port"></div>
@@ -17,8 +18,11 @@
       <h1>Hello world; this is me.</h1>
       <div id="hello-world">
         <iframe id="yt" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe src="resources/Ethan's Résumé.pdf" title="Ethan's Résumé" frameborder="0"></iframe>
       </div>
+      <a href="javascript:run()"><img id="resume" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+    </div>
+    <div id="résumé-modal">
+      <iframe id="résumé" src="resources/Ethan's Résumé.pdf" title="Ethan's Résumé" frameborder="0"></iframe>
     </div>
   </body>  
 </html>

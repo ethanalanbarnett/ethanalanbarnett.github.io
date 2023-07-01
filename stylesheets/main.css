@@ -24,6 +24,19 @@ body {
   overflow: scroll;
 }
 
+.modal-toolbar {
+  background-color: #555555;
+}
+
+.modal-toolbar-btn {
+  white-space: nowrap;
+}
+
+.modal-toolbar-xbtn {
+  width: 100%;
+  text-align: right;
+}
+
 .hidden {
   display: none;
 }
@@ -102,9 +115,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  aspect-ratio: 8.5 / 11.1;
   width: 70%;
+  padding: 0;
   z-index: 2;
+  box-shadow: 0 0 20px 5px #222222;
+  background-color: #ffffff;
 }
 
 #screen-dimmer {

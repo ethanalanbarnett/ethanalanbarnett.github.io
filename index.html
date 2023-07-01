@@ -22,7 +22,14 @@
       <a href="javascript:toggleRésumé()"><img id="resume" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
     </div>
     <div id="résumé-modal" class="modal hidden">
-      <iframe id="résumé" src="resources/Ethan's Résumé.pdf" title="Ethan's Résumé" frameborder="0"></iframe>
+      <div class="modal-toolbar">
+        <table>
+          <tr>
+            <td class="modal-toolbar-btn"><a class="nav-link" href="resources/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
+            <td class="modal-toolbar-xbtn"><a class="nav-link" href="javascript:screenDimmerHandler()" download>🗙</a></td>
+        </table>
+      </div>
+      <img id="résumé" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé">
     </div>
     <div id="screen-dimmer" class="hidden"></div>
   </body>  

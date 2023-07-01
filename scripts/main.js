@@ -5,8 +5,7 @@ const screenDimmer = document.querySelector('#screen-dimmer');
 const toggleRésumé = () => {
   résuméModal.classList.toggle('hidden');
   if (résuméModal.className !== 'hidden') {
-    const halfWidth = résuméModal.offsetWidth / 2;
-    résuméModal.style.marginLeft = `calc(50% - ${halfWidth}px)`;
+    resizeModal();
     toggleScreenDimmer();
   }
 }
@@ -28,4 +27,10 @@ const screenDimmerHandler = () => {
   }
 }
 
+const resizeModal = () => {
+  const halfWidth = résuméModal.offsetWidth / 2;
+  résuméModal.style.marginLeft = `calc(50% - ${halfWidth}px)`;  
+}
+
 screenDimmer.addEventListener('click', screenDimmerHandler);
+window.addEventListener('resize', resizeModal);

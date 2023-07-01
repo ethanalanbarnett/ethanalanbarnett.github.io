@@ -2,8 +2,30 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+}
+
+#background-port {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
   background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_port.jpg");
   background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#background-starboard {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
+  background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_starboard.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 #page {

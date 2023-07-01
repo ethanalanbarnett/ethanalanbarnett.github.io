@@ -19,10 +19,11 @@
       <div id="hello-world">
         <iframe id="yt" width="560" height="315" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <a href="javascript:run()"><img id="resume" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+      <a href="javascript:toggleRésumé()"><img id="resume" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
     </div>
-    <div id="résumé-modal">
+    <div id="résumé-modal" class="modal hidden">
       <iframe id="résumé" src="resources/Ethan's Résumé.pdf" title="Ethan's Résumé" frameborder="0"></iframe>
     </div>
+    <div id="screen-dimmer" class="hidden"></div>
   </body>  
 </html>

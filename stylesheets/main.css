@@ -10,6 +10,10 @@ body {
   font-family: custom-hebrew;
 }
 
+h3 {
+  margin: 0;
+}
+
 .nav-link {
   padding-left: 10px;
   padding-right: 10px;
@@ -24,6 +28,23 @@ body {
   background-color: #ffffff;
   color: #000000;
   transition-duration: 150ms;
+}
+
+.page-bi-table {
+  width: 90%;
+  display: inline-block;
+}
+
+.bi-table-cell {
+  width: 50%;
+  height: fit-content;
+  vertical-align: top;
+}
+
+.title-cell {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10px;
 }
 
 .modal {
@@ -101,26 +122,20 @@ body {
   margin-bottom: 30px;
 }
 
-#hello-world {
-  width: 80%;
+#youtube {
+  width: 100%;
   aspect-ratio: 119 / 90;
-  margin-left: auto;
-  margin-right: auto;
+  border: 1px solid #000000;
 }
 
-#yt {
-  height: 100%;
-  width: 100%;
+#résumé-thumbnail {
+  width: 58.445%;
+  border: 1px solid #000000;
 }
 
 #résumé {
   width: 100%;
   aspect-ratio: 8.5 / 11;
-}
-
-#resume {
-  width: 20%;
-  border: 1px solid #000000;
 }
 
 #résumé-modal {

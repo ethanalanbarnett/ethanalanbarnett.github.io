@@ -1,12 +1,13 @@
 @font-face {
   font-family: frankruhl;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/FrankRuhlLibre-Medium.woff);
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/FrankRuhlLibre-Regular.woff);
 }
 
 body {
   height: 2000px;
   width: 100vw;
   margin: 0;
+  font-family: frankruhl;
 }
 
 .nav-link {
@@ -95,7 +96,8 @@ body {
 }
 
 #hebrew-text {
-  font-family: frankruhl;
+  font: 100px/120px frankruhl, serif;
+  margin: 0;
 }
 
 #hello-world {

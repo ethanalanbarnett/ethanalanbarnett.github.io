@@ -1,6 +1,6 @@
 @font-face {
   font-family: custom-hebrew;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/SILEOT.tff);
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
 body {
@@ -97,7 +97,8 @@ body {
 
 #hebrew-text {
   font: 100px/120px custom-hebrew, serif;
-  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 #hello-world {

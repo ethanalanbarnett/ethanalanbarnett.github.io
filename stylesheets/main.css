@@ -1,13 +1,13 @@
 @font-face {
-  font-family: frankruhl;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/FrankRuhlLibre-Regular.woff);
+  font-family: custom-hebrew;
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/SILEOT.tff);
 }
 
 body {
   height: 2000px;
   width: 100vw;
   margin: 0;
-  font-family: frankruhl;
+  font-family: custom-hebrew;
 }
 
 .nav-link {
@@ -96,7 +96,7 @@ body {
 }
 
 #hebrew-text {
-  font: 100px/120px frankruhl, serif;
+  font: 100px/120px custom-hebrew, serif;
   margin: 0;
 }
 

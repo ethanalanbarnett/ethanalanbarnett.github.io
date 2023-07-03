@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: montserrat-thin;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/montserrat-thin.otf);
+  font-family: montserrat-extralight;
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/montserrat-extralight.otf);
 }
 
 body {
@@ -38,8 +38,7 @@ h3 {
 .subscript {
   position: relative;
   top: -50px;
-  color: #555555;
-  font: 15px montserrat-thin, sans-serif;
+  font: 15px montserrat-extralight, sans-serif;
 }
 
 .page-bi-table {

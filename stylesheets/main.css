@@ -19,6 +19,10 @@ h3 {
   margin: 0;
 }
 
+.nav-dropdown {
+  display: inline;
+}
+
 .nav-link {
   padding-left: 10px;
   padding-right: 10px;

@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const portfolioDropdown = document.querySelector('#portfolio-dropdown');
 const résuméModal = document.querySelector('#résumé-modal');
 const screenDimmer = document.querySelector('#screen-dimmer');
 
@@ -17,6 +18,10 @@ const toggleBodyScroll = () => {
 const toggleScreenDimmer = () => {
   screenDimmer.classList.toggle('hidden');
   // toggleBodyScroll();
+}
+
+const navDropdownHandler = () => {
+  portfolioDropdown.classList.toggle('hidden');
 }
 
 const screenDimmerHandler = () => {

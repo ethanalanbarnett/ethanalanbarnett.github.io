@@ -20,12 +20,15 @@ h3 {
 }
 
 .nav-dropdown {
-  display: inline;
+  position: relative;
+  display: inline-block;
 }
 
 .nav-dropdown-drawer {
-  position: relative;
-  left: 130px;
+  position: absolute;
+  z-index: 1;
+  background-color: #000000;
+  white-space: nowrap;
 }
 
 .nav-link {

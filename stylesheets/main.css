@@ -23,6 +23,11 @@ h3 {
   display: inline;
 }
 
+.nav-dropdown-drawer {
+  position: relative;
+  left: 130px;
+}
+
 .nav-link {
   padding-left: 10px;
   padding-right: 10px;

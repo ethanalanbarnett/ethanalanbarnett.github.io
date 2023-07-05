@@ -32,6 +32,8 @@ const screenDimmerHandler = () => {
   }
 }
 
+const nullHandler = () => {}
+
 const resizeModal = () => {
   const halfWidth = résuméModal.offsetWidth / 2;
   résuméModal.style.marginLeft = `calc(50% - ${halfWidth}px)`;  

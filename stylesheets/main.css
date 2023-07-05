@@ -42,7 +42,7 @@ h3 {
 }
 
 .nav-dropdown-drawer {
-  /* display: none; */
+  display: none;
   position: absolute;
   z-index: 1;
   background-color: #000000;
@@ -51,9 +51,9 @@ h3 {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 }
 
-/* .dropdown-root:hover .nav-dropdown-drawer {
+.nav-dropdown:hover .nav-dropdown-drawer {
   display: block;
-} */
+}
 
 .dropdown-link {
   display: block;

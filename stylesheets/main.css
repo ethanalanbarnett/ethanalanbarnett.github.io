@@ -3,7 +3,7 @@ body {
   width: 100vw;
   margin: 0;
   font-family: custom-hebrew;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 h3 {

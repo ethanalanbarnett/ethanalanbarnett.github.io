@@ -1,13 +1,3 @@
-@font-face {
-  font-family: custom-hebrew;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
-}
-
-@font-face {
-  font-family: montserrat-extralight;
-  src: url(https://ethanalanbarnett.github.io/resources/fonts/montserrat-extralight.otf);
-}
-
 body {
   height: 2000px;
   width: 100vw;
@@ -138,6 +128,14 @@ h3 {
   text-align: center;
 }
 
+#background-bow {
+  display: none;
+  z-index: -1;
+  width: 100%;
+  background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_bow.jpg");
+  background-repeat: no-repeat;
+}
+
 #page {
   width: 70%;
   min-height: calc(100% - 36px);
@@ -190,4 +188,30 @@ h3 {
   height: 100vh;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+@font-face {
+  font-family: custom-hebrew;
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
+}
+
+@font-face {
+  font-family: montserrat-extralight;
+  src: url(https://ethanalanbarnett.github.io/resources/fonts/montserrat-extralight.otf);
+}
+
+@media screen and (max-width: 1042px) {
+  #background-starboard {
+    display: none;
+  }
+  #background-port {
+    display: none;
+  }
+  #background-bow {
+    display: block;
+  }
+  #page {
+    width: 100%;
+    box-shadow: none;
+  }
 }

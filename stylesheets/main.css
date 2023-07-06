@@ -3,6 +3,7 @@ body {
   width: 100vw;
   margin: 0;
   font-family: custom-hebrew;
+  font-size: 20px;
 }
 
 h3 {
@@ -38,7 +39,7 @@ h3 {
   background-color: #000000;
   white-space: nowrap;
   text-align: left;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
 }
 
 .nav-dropdown:hover .nav-dropdown-drawer {
@@ -128,7 +129,7 @@ h3 {
   height: auto;
   text-align: center;
   background-color: #000000;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
 }
 
 #narrow-background {
@@ -168,7 +169,7 @@ h3 {
   padding-top: 1px;
   text-align: center;
   background-color: #ffffff;
-  box-shadow: 0 0 20px 5px #222222;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
 }
 
 #wide-shalom {
@@ -225,6 +226,9 @@ h3 {
 }
 
 @media screen and (max-width: 1042px) {
+  body {
+    font-size: 40px;
+  }
   #background-starboard {
     display: none;
   }
@@ -236,6 +240,7 @@ h3 {
   }
   #page {
     width: 100%;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
   }
   #shalom-for-wide-background {
     display: none;

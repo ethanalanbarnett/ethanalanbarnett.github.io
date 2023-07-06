@@ -39,5 +39,21 @@ const resizeModal = () => {
   résuméModal.style.marginLeft = `calc(50% - ${halfWidth}px)`;  
 }
 
+const responsiveHebrewTextAlignment = () => {
+  if (window.innerWidth <= 1042) {
+    const aleichem = document.querySelector('#narrow-aleichem');
+    const shalom = document.querySelector('#narrow-shalom');
+    const aleichemHalfWidth = aleichem.offsetWidth / 2;
+    const shalomHalfWidth = shalom.offsetWidth / 2;
+    aleichem.style.left = `calc(18% - ${aleichemHalfWidth}px)`;
+    shalom.style.right = `calc(18% - ${shalomHalfWidth}px)`;
+  }
+}
+
 screenDimmer.addEventListener('click', screenDimmerHandler);
 window.addEventListener('resize', resizeModal);
+window.addEventListener('resize', responsiveHebrewTextAlignment);
+
+if (window.innerWidth <= 1042) {
+  responsiveHebrewTextAlignment();
+}

@@ -128,12 +128,33 @@ h3 {
   text-align: center;
 }
 
-#background-bow {
+#narrow-background {
   display: none;
+  position: relative;
   z-index: -1;
+}
+
+#background-bow {
   width: 100%;
-  background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_bow.jpg");
-  background-repeat: no-repeat;
+  display: block;
+}
+
+#narrow-aleichem {
+  position: absolute;
+  top: 50%;
+  left: calc(18% - 135px);
+  font: 10vw/0 custom-hebrew, serif;
+  margin: 0;
+  z-index: 0;
+}
+
+#narrow-shalom {
+  position: absolute;
+  top: 50%;
+  right: calc(18% - 135px);
+  font: 10vw/0 custom-hebrew, serif;
+  margin: 0;
+  z-index: 0;
 }
 
 #page {
@@ -147,7 +168,7 @@ h3 {
   box-shadow: 0 0 20px 5px #222222;
 }
 
-#hebrew-text {
+#wide-shalom {
   font: 100px/120px custom-hebrew, serif;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -207,11 +228,13 @@ h3 {
   #background-port {
     display: none;
   }
-  #background-bow {
+  #narrow-background {
     display: block;
   }
   #page {
     width: 100%;
-    box-shadow: none;
+  }
+  #shalom-for-wide-background {
+    display: none;
   }
 }

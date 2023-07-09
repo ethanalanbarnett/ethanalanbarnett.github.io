@@ -162,8 +162,9 @@ h3 {
 }
 
 #page {
+  position: relative;
   width: 70%;
-  min-height: calc(100% - 36px);
+  min-height: calc(100% - 46px);
   margin-left: auto;
   margin-right: auto;
   padding-top: 1px;
@@ -181,12 +182,33 @@ h3 {
 #youtube {
   width: 100%;
   aspect-ratio: 119 / 90;
-  border: 1px solid #000000;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 #résumé-thumbnail {
   width: 58.445%;
-  border: 1px solid #000000;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#made-with-buttons {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 233.0835px);
+  width: fit-content;
+  text-align: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+#made-with-buttons img {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#made-with-buttons p {
+  margin: 0;
+  font: bold 20px/20px custom-hebrew;
 }
 
 #résumé {

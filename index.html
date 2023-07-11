@@ -4,79 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Alan Barnett</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylesheets/main.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="icon" href="resources/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div id="background-port"></div>
-    <div id="background-starboard"></div>
     <nav id="top-bar">
-      <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="blog">Blog</a>
-      <a class="nav-link" href="resources/Ethan's Résumé.pdf" target="_blank">Résumé</a>
+      <a class="nav-link" href="javascript:HomePage.render()">Home</a>
+      <a class="nav-link" href="javascript:ArchivePage.render()">Archive</a>
+      <a class="nav-link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Résumé</a>
       <div class="nav-dropdown">
-        <a class="nav-link dropdown-link" href="javascript:nullHandler()">Portfolio</a>
+        <a class="nav-link dropdown-link" href="javascript:PortfolioPage.render()">Portfolio</a>
         <div class="nav-dropdown-drawer" id="portfolio-dropdown">
-          <a class="nav-link dropdown-link" href="bigthicket/app.html">Big Thicket</a>
-          <a class="nav-link dropdown-link" href="bigthicket/app.html">Demo</a>
-          <a class="nav-link dropdown-link" href="bigthicket/app.html">Big Thicket Redoubt</a>
-          <a class="nav-link dropdown-link" href="bigthicket/app.html">Website</a>
-          <a class="nav-link dropdown-link" href="bigthicket/app.html">Obituary Site</a>
+          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Big Thicket</a>
+          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Demo</a>
+          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Big Thicket Redoubt</a>
+          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Website</a>
+          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Obituary Site</a>
         </div>
       </div>
     </nav>
     <div id="narrow-background">
-      <img id="background-bow" src="images/ethan_alan_barnett_bow.jpg" alt="Ethan Alan Barnett Wide Shot">
+      <img id="background-bow" src="resources/images/ethan_alan_barnett_bow.jpg" alt="Ethan Alan Barnett Wide Shot">
       <h1 id="narrow-aleichem">עוֹלָם</h1>
       <h1 id="narrow-shalom">שָׁלוֹם</h1>
     </div>
+    <div id="background-port"></div>
+    <div id="background-starboard"></div>
     <div id="page">
-      <div id="shalom-for-wide-background">
-        <h1 id="wide-shalom">שָׁלוֹם עוֹלָם</h1>
-        <!-- <p class="subscript">Shalom!</p> -->
-      </div>
-      <h2>My name is Ethan Alan Barnett</h2>
-      <table class="page-bi-table">
-        <tr>
-          <td class="bi-table-cell title-cell"><h3>Feel free to availe yourself of this cheeky "hello world!" reference:</h3></td>
-          <td class="bi-table-cell title-cell"><h3>Alternatively, you may also take a gander at my résumé (click to enlarge):</h3></td>
-        </tr>
-        <tr>
-          <td class="bi-table-cell">
-            <iframe id="youtube" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </td>
-          <td class="bi-table-cell">
-            <a href="javascript:toggleRésumé()"><img id="résumé-thumbnail" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
-          </td>
-        </tr>
-      </table>
-      <p>this is just some text.</p>
+    </div>
+    <div id="footer">
       <div id="made-with-buttons">
         <p>Made with love. Oh! and these technologies:</p>
-        <a href="https://web.archive.org/web/20120308030806/http://www.amd.com/us/press-releases/Pages/Press_Release_751.aspx" target="_blank"><img src="images/AMD64_Logo.svg" alt="AMD64 icon"></a>
-        <a href="https://www.kernel.org/" target="_blank"><img src="images/TuxFlat.svg" alt="Linux icon"></a>
-        <a href="https://fedoraproject.org/" target="_blank"><img src="images/Fedora_icon_(2021).svg" alt="Fedora icon"></a>
-        <a href="https://code.visualstudio.com/" target="_blank"><img src="images/Visual_Studio_Code_1.35_icon.svg" alt="Visual Studio Code icon"></a>
-        <a href="https://262.ecma-international.org/14.0/" target="_blank"><img src="images/Javascript_Logo.png" alt="JavaScript icon"></a>
-        <a href="https://html.spec.whatwg.org/" target="_blank"><img src="images/HTML5_logo_and_wordmark.svg" alt="HTML 5 icon"></a>
-        <a href="https://www.w3.org/TR/CSS/" target="_blank"><img src="images/CSS3_logo_and_wordmark.svg" alt="CSS 3 icon"></a>
-        <a href="https://httpwg.org/specs/" target="_blank"><img src="images/HTTP_logo.svg" alt="HTTP icon"></a>
-        <a href="https://git-scm.com/" target="_blank"><img src="images/Git_icon.svg" alt="Git Logo"></a>
-        <a href="https://github.com/about" target="_blank"><img src="images/GitHub_Invertocat_Logo.svg" alt="GitHub icon"></a>
+        <a href="https://web.archive.org/web/20120308030806/http://www.amd.com/us/press-releases/Pages/Press_Release_751.aspx" target="_blank"><img src="resources/icons/AMD64_Logo.svg" alt="AMD64 icon"></a>
+        <a href="https://www.kernel.org/" target="_blank"><img src="resources/icons/TuxFlat.svg" alt="Linux icon"></a>
+        <a href="https://fedoraproject.org/" target="_blank"><img src="resources/icons/Fedora_icon_(2021).svg" alt="Fedora icon"></a>
+        <a href="https://code.visualstudio.com/" target="_blank"><img src="resources/icons/Visual_Studio_Code_1.35_icon.svg" alt="Visual Studio Code icon"></a>
+        <a href="https://262.ecma-international.org/14.0/" target="_blank"><img src="resources/icons/Javascript_Logo.png" alt="JavaScript icon"></a>
+        <a href="https://html.spec.whatwg.org/" target="_blank"><img src="resources/icons/HTML5_logo_and_wordmark.svg" alt="HTML 5 icon"></a>
+        <a href="https://www.w3.org/TR/CSS/" target="_blank"><img src="resources/icons/CSS3_logo_and_wordmark.svg" alt="CSS 3 icon"></a>
+        <a href="https://httpwg.org/specs/" target="_blank"><img src="resources/icons/HTTP_logo.svg" alt="HTTP icon"></a>
+        <a href="https://git-scm.com/" target="_blank"><img src="resources/icons/Git_icon.svg" alt="Git Logo"></a>
+        <a href="https://github.com/about" target="_blank"><img src="resources/icons/GitHub_Invertocat_Logo.svg" alt="GitHub icon"></a>
         <p>What a motly crew.</p>
       </div>
     </div>
-    <div id="résumé-modal" class="modal hidden">
-      <div class="modal-toolbar">
-        <table>
-          <tr>
-            <td class="modal-toolbar-btn"><a class="nav-link" href="resources/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
-            <td class="modal-toolbar-xbtn"><a class="nav-link" href="javascript:screenDimmerHandler()" download>🗙</a></td>
-        </table>
-      </div>
-      <img id="résumé" src="resources/Ethan's Résumé.svg" alt="Ethan's Résumé">
-    </div>
-    <div id="screen-dimmer" class="hidden"></div>
-  </body>  
+    <div id="modal-list"></div>
+  </body>
 </html>

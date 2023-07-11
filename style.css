@@ -105,7 +105,7 @@ h3 {
   z-index: -1;
   height: 2000px;
   width: 50%;
-  background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_port.jpg");
+  background-image: url("https://ethanalanbarnett.github.io/resources/images/ethan_alan_barnett_port.jpg");
   background-repeat: no-repeat;
   background-position: left top;
 }
@@ -117,7 +117,7 @@ h3 {
   z-index: -1;
   height: 2000px;
   width: 50%;
-  background-image: url("https://ethanalanbarnett.github.io/images/ethan_alan_barnett_starboard.jpg");
+  background-image: url("https://ethanalanbarnett.github.io/resources/images/ethan_alan_barnett_starboard.jpg");
   background-repeat: no-repeat;
   background-position: right top;
 }

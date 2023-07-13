@@ -13,27 +13,37 @@
       <a class="nav-link" href="javascript:HomePage.render()">Home</a>
       <a class="nav-link" href="javascript:ArchivePage.render()">Archive</a>
       <a class="nav-link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Résumé</a>
-      <div class="nav-dropdown">
-        <a class="nav-link dropdown-link" href="javascript:PortfolioPage.render()">Portfolio</a>
-        <div class="nav-dropdown-drawer" id="portfolio-dropdown">
-          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Big Thicket</a>
-          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Demo</a>
-          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Big Thicket Redoubt</a>
-          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Website</a>
-          <a class="nav-link dropdown-link" href="portfolio/bigthicket/app.html">Obituary Site</a>
-        </div>
-      </div>
+      <a class="nav-link dropdown-link" href="javascript:PortfolioPage.render()">Portfolio</a>
     </nav>
     <div id="narrow-background">
-      <img id="background-bow" src="resources/images/ethan_alan_barnett_bow.jpg" alt="Ethan Alan Barnett Wide Shot">
+      <picture>
+        <source srcset="resources/images/ethan_alan_barnett_wide.jxl" type="image/jxl" />
+        <source srcset="resources/images/ethan_alan_barnett_wide.avif" type="image/avif" />
+        <source srcset="resources/images/ethan_alan_barnett_wide.webp" type="image/webp" />
+        <img id="background-wide" src="resources/images/ethan_alan_barnett_wide.jpg" alt="Ethan Alan Barnett wide crop" />
+      </picture>
       <h1 id="narrow-aleichem">עוֹלָם</h1>
       <h1 id="narrow-shalom">שָׁלוֹם</h1>
     </div>
-    <div id="background-port"></div>
-    <div id="background-starboard"></div>
-    <div id="page">
+    <div id="background-left">
+      <picture>
+        <source srcset="resources/images/ethan_alan_barnett_left.jxl" type="image/jxl" />
+        <source srcset="resources/images/ethan_alan_barnett_left.avif" type="image/avif" />
+        <source srcset="resources/images/ethan_alan_barnett_left.webp" type="image/webp" />
+        <img src="resources/images/ethan_alan_barnett_left.jpg" alt="Ethan Alan Barnett left crop" />
+      </picture>
     </div>
-    <div id="footer">
+    <div id="background-right">
+      <picture>
+        <source srcset="resources/images/ethan_alan_barnett_right.jxl" type="image/jxl" />
+        <source srcset="resources/images/ethan_alan_barnett_right.avif" type="image/avif" />
+        <source srcset="resources/images/ethan_alan_barnett_right.webp" type="image/webp" />
+        <img src="resources/images/ethan_alan_barnett_right.jpg" alt="Ethan Alan Barnett right crop" />
+      </picture>
+    </div>
+    <div id="page" style="display: none">
+    </div>
+    <div id="footer" style="display: none">
       <div id="made-with-buttons">
         <p>Made with love. Oh! and these technologies:</p>
         <a href="https://web.archive.org/web/20120308030806/http://www.amd.com/us/press-releases/Pages/Press_Release_751.aspx" target="_blank"><img src="resources/icons/AMD64_Logo.svg" alt="AMD64 icon"></a>

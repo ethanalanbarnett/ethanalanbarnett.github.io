@@ -11,6 +11,7 @@ h3 {
 }
 
 .nav-link {
+  display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 3px;
@@ -25,29 +26,6 @@ h3 {
   background-color: #ffffff;
   color: #000000;
   transition-duration: 150ms;
-}
-
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-dropdown-drawer {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #000000;
-  white-space: nowrap;
-  text-align: left;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-}
-
-.nav-dropdown:hover .nav-dropdown-drawer {
-  display: block;
-}
-
-.dropdown-link {
-  display: block;
 }
 
 .subscript {
@@ -98,30 +76,6 @@ h3 {
   overflow: hidden;
 }
 
-#background-port {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 2000px;
-  width: 50%;
-  background-image: url("https://ethanalanbarnett.github.io/resources/images/ethan_alan_barnett_port.jpg");
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-#background-starboard {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  height: 2000px;
-  width: 50%;
-  background-image: url("https://ethanalanbarnett.github.io/resources/images/ethan_alan_barnett_starboard.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-
 #top-bar {
   position: relative;
   z-index: 2;
@@ -132,13 +86,41 @@ h3 {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
 }
 
+#background-left {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  z-index: -1;
+  height: 2000px;
+  width: 50%;
+  overflow: hidden;
+}
+
+#background-right {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  z-index: -1;
+  height: 2000px;
+  width: 50%;
+  overflow: hidden;
+}
+
+#background-left img {
+  float: left;
+}
+
+#background-right img {
+  float: right;
+}
+
 #narrow-background {
   display: none;
   position: relative;
   z-index: -1;
 }
 
-#background-bow {
+#background-wide {
   width: 100%;
   display: block;
 }
@@ -253,10 +235,10 @@ h3 {
   /* body {
     font-size: 30px;
   } */
-  #background-starboard {
+  #background-right {
     display: none;
   }
-  #background-port {
+  #background-left {
     display: none;
   }
   #narrow-background {

@@ -81,6 +81,9 @@ class PortfolioPage extends Page {
   static page = 'portfolio';
   static content = `
     <h1>Portfolio</h1>
+    <iframe id="portfolio-frame" src="portfolio/bigthicket/app.html" frameborder="0"></iframe>
+    <p><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></p>
+    <p>This web app is generated with JavaScript into an otherwise empty HTML file. It allows a user to log in and create microblog posts.</p>
   `;
 }
 

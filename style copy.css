@@ -1,8 +1,9 @@
 body {
+  height: 2000px;
   width: 100vw;
   margin: 0;
   font-family: custom-hebrew;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 h3 {
@@ -11,11 +12,11 @@ h3 {
 
 .nav-link {
   display: inline-block;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding-top: 0.188rem;
-  padding-bottom: 0.25rem;
-  font-size: 1.563rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 25px;
   font-weight: 500;
   color: #ffffff;
   background-color: #000000;
@@ -41,7 +42,7 @@ h3 {
 .title-cell {
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 
 .modal {
@@ -82,7 +83,7 @@ h3 {
 #background-left {
   position: absolute;
   left: 0;
-  top: 2.813rem;
+  top: 45px;
   z-index: -1;
   height: 2000px;
   width: 50%;
@@ -92,7 +93,7 @@ h3 {
 #background-right {
   position: absolute;
   right: 0;
-  top: 2.813rem;
+  top: 45px;
   z-index: -1;
   height: 2000px;
   width: 50%;
@@ -139,22 +140,19 @@ h3 {
 #page {
   position: relative;
   width: 70%;
-  height: 2000px;
+  min-height: calc(100% - 46px);
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1px;
   text-align: center;
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
 }
 
-#shalom-for-wide-background {
-  padding-top: 20px;
-}
-
 #wide-shalom {
-  font: 100px/140px custom-hebrew, serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  font: 100px/120px custom-hebrew, serif;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 #youtube {
@@ -183,19 +181,19 @@ h3 {
 
 #made-with-buttons {
   text-align: center;
-  padding: 1.25rem;
+  padding: 20px;
   white-space: nowrap;
 }
 
 #made-with-buttons img {
-  height: 2.5rem;
-  margin-top: 0.625rem;
-  margin-bottom: 0.313rem;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #made-with-buttons p {
   margin: 0;
-  font: bold 1.25rem/1.25rem custom-hebrew;
+  font: bold 20px/20px custom-hebrew;
 }
 
 #résumé {
@@ -233,8 +231,9 @@ h3 {
     font-size: 30px;
   } */
   .nav-link {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    /* font-size: 40px; */
+    padding-left: 20px;
+    padding-right: 20px;
   }
   #background-right {
     display: none;
@@ -253,11 +252,11 @@ h3 {
     display: none;
   }
   #made-with-buttons img {
-    height: 1.563rem;
-    margin-top: 0.625rem;
-    margin-bottom: 0.313rem;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
   #made-with-buttons p {
-    font-size: 0.938rem;
+    font-size: 15px;
   }
 }

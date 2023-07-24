@@ -5,6 +5,10 @@ body {
   font-size: 1rem;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 h3 {
   margin: 0;
 }
@@ -82,7 +86,6 @@ h3 {
 #background-left {
   position: absolute;
   left: 0;
-  top: 2.813rem;
   z-index: -1;
   height: 2000px;
   width: 50%;
@@ -92,7 +95,6 @@ h3 {
 #background-right {
   position: absolute;
   right: 0;
-  top: 2.813rem;
   z-index: -1;
   height: 2000px;
   width: 50%;
@@ -206,7 +208,7 @@ h3 {
 
 #résumé-modal {
   position: absolute;
-  top: 0;
+  top: 2.75rem;
   left: 0;
   width: 70%;
   padding: 0;
@@ -260,5 +262,8 @@ h3 {
   }
   #made-with-buttons p {
     font-size: 0.938rem;
+  }
+  #résumé-modal {
+    width: 100%;
   }
 }

@@ -25,12 +25,6 @@ h3 {
   background-color: #000000;
 }
 
-.nav-link:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transition-duration: 150ms;
-}
-
 .page-bi-table {
   width: 90%;
   display: inline-block;
@@ -231,10 +225,15 @@ h3 {
   src: url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
+@media screen and (min-width: 1043px) {
+  .nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition-duration: 150ms;
+  }
+}
+
 @media screen and (max-width: 1042px) {
-  /* body {
-    font-size: 30px;
-  } */
   .nav-link {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
@@ -265,5 +264,9 @@ h3 {
   }
   #résumé-modal {
     width: 100%;
+  }
+  .nav-link:active {
+    background-color: #ffffff;
+    color: #000000;
   }
 }

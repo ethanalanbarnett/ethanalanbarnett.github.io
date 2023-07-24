@@ -88,29 +88,53 @@ class PortfolioPage extends Page {
 }
 
 class Modal {
-  toggle() {    /* add functionality to remove active modal. Also, shift inactive modals to be active */
+  toggle() {
     if (App.activeModal.modalName === this.modalName) {
-      this.element.innerHTML = '';
+      this.removeActive();
     } else if (App.inactiveModals.length > 0) {
-      for (const modal of inactiveModals) {
-        if (modal.modalName === this.modalName) {
-          this.element.innerHTML = '';
-        }
-      }
+      this.checkIfInactive();
     } else {
       this.render();
     }
   }
+  removeActive() {
+    this.element.remove();
+    App.activeModal = false;
+    if (App.inactiveModals.length > 0) {
+      const mostRecentModal = App.inactiveModals.pop();
+      App.activeModal = mostRecentModal;
+    }
+  }
+  checkIfInactive() {
+    let i = 0;
+    let found;
+    for (const modal of App.inactiveModals) {
+      if (modal.modalName === this.modalName) {
+        this.element.remove();
+        App.inactiveModals.splice(i, 1);
+        found = true;
+      } else {
+        i++;
+        found = false;
+      }
+    }
+    if (!found) {
+      this.render();
+    }
+  }
   render() {
+    const modalList = App.body.querySelector('#modal-list');
     this.element = document.createElement('div');
     this.element.id = this.modalName;
     this.element.className = 'modal';
-    App.body.append(this.element);
+    modalList.append(this.element);
     this.element.innerHTML = this.content;
+    if (App.activeModal) {
+      App.inactiveModals.push(App.activeModal);
+    }
     App.activeModal = this;
     this.resize();
     App.screenDimmer.toggle();
-    // this.element.addEventListener('click', this.clickHandler.bind(this));
   }
   resize() {
     const halfWidth = this.element.offsetWidth / 2;

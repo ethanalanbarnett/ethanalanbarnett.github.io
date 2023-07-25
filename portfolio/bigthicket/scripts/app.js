@@ -58,9 +58,9 @@ class Tools {
 
 class User {
   static existingUsers = [
-    {username: 'Ethan', password: 'Judges1'},
-    {username: 'Eleazar', password: 'Eleazar1'},
-    {username: 'zebby', password: 'thetwofeet'}
+    {username: 'Ethan', password: 'Ethan123!'},
+    {username: 'Andrea', password: 'Andrea123!'},
+    {username: 'Caiaphas', password: 'Caiaphas123!'}
   ];
   static signInUser(usrnm, pswrd) {
     const navMenuUl = App.navBanner.children[0].children[0];

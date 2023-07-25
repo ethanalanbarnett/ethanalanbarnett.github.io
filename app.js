@@ -66,7 +66,9 @@ class HomePage extends Page {
         </td>
       </tr>
     </table>
-    <p>this is just some text.</p>
+    <br><br>
+    <h3>This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
+    <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</h3>
   `;
 }
 
@@ -81,9 +83,11 @@ class PortfolioPage extends Page {
   static page = 'portfolio';
   static content = `
     <h1>Portfolio</h1>
-    <iframe id="portfolio-frame" src="portfolio/bigthicket/app.html" frameborder="0"></iframe>
-    <p><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></p>
-    <p>This web app is generated with JavaScript into an otherwise empty HTML file. It allows a user to log in and create microblog posts.</p>
+    <img id="portfolio-frame" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+    <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
+    <h3>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML file. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+    <br>Username: Ethan
+    <br>Password: Ethan123!</h3>
   `;
 }
 

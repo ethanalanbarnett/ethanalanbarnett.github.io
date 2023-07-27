@@ -47,12 +47,12 @@ class Page {
 class HomePage extends Page {
   static page = 'home';
   static content = `
-    <div id="shalom-for-wide-background">
+    <div id="shalom-for-wide-background" class="centered">
       <h1 id="wide-shalom">שָׁלוֹם עוֹלָם</h1>
       <!-- <p class="subscript">Shalom!</p> -->
     </div>
-    <h2>My name is Ethan Alan Barnett</h2>
-    <table class="page-bi-table">
+    <h2 class="centered">My name is Ethan Alan Barnett</h2>
+    <table class="page-bi-table centered">
       <tr>
         <td class="bi-table-cell title-cell"><h3>Feel free to availe yourself of this cheeky "hello world!" reference:</h3></td>
         <td class="bi-table-cell title-cell"><h3>Alternatively, you may also take a gander at my résumé (click to enlarge):</h3></td>

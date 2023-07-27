@@ -1,8 +1,8 @@
 body {
-  width: 100vw;
-  margin: 0;
   font-family: custom-hebrew;
   font-size: 1rem;
+  margin: 0;
+  width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -14,32 +14,29 @@ h3 {
 }
 
 .nav-link {
+  background-color: #000000;
+  color: #ffffff;
   display: inline-block;
+  font-size: 1.563rem;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   padding-top: 0.188rem;
-  padding-bottom: 0.25rem;
-  font-size: 1.563rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #000000;
 }
 
-.page-bi-table {
-  width: 90%;
-  display: inline-block;
-}
+/* .page-bi-table {} */
 
 .bi-table-cell {
-  width: 50%;
   height: fit-content;
   vertical-align: top;
+  width: 50%;
 }
 
 .title-cell {
+  padding-bottom: 0.625rem;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 0.625rem;
 }
 
 .modal {
@@ -55,8 +52,15 @@ h3 {
 }
 
 .modal-toolbar-xbtn {
-  width: 100%;
   text-align: right;
+  width: 100%;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .hidden {
@@ -68,31 +72,31 @@ h3 {
 }
 
 #top-bar {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: auto;
-  text-align: center;
   background-color: #000000;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  height: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
 }
 
 #background-left {
-  position: absolute;
-  left: 0;
-  z-index: -1;
   height: 2000px;
-  width: 50%;
+  left: 0;
   overflow: hidden;
+  position: absolute;
+  width: 50%;
+  z-index: -1;
 }
 
 #background-right {
+  height: 2000px;
+  overflow: hidden;
   position: absolute;
   right: 0;
-  z-index: -1;
-  height: 2000px;
   width: 50%;
-  overflow: hidden;
+  z-index: -1;
 }
 
 #background-left img {
@@ -110,38 +114,40 @@ h3 {
 }
 
 #background-wide {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 #narrow-aleichem {
+  font: 10vw/0 custom-hebrew, serif;
+  left: calc(18% - 135px);
+  margin: 0;
   position: absolute;
   top: 50%;
-  left: calc(18% - 135px);
-  font: 10vw/0 custom-hebrew, serif;
-  margin: 0;
   z-index: 0;
 }
 
 #narrow-shalom {
-  position: absolute;
-  top: 50%;
-  right: calc(18% - 135px);
   font: 10vw/0 custom-hebrew, serif;
   margin: 0;
+  position: absolute;
+  right: calc(18% - 135px);
+  top: 50%;
   z-index: 0;
 }
 
 #page {
-  position: relative;
-  width: 70%;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
   height: 2000px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   overflow-y: hidden;
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+  padding-left: 3%;
+  padding-right: 3%;
+  position: relative;
+  width: 70%;
 }
 
 #shalom-for-wide-background {
@@ -150,74 +156,74 @@ h3 {
 
 #wide-shalom {
   font: 100px/140px custom-hebrew, serif;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 #youtube {
-  width: 100%;
   aspect-ratio: 119 / 90;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 #résumé-thumbnail {
-  width: 58.445%;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  width: 58.445%;
 }
 
 #portfolio-frame {
+    /* aspect-ratio: 4 / 3; */
   width: 30%;
-  /* aspect-ratio: 4 / 3; */
 }
 
 #footer {
-  position: relative;
-  z-index: 1;
-  width: 100%;
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 #made-with-buttons {
-  text-align: center;
   padding: 1.25rem;
+  text-align: center;
   white-space: nowrap;
 }
 
 #made-with-buttons img {
   height: 2.5rem;
-  margin-top: 0.625rem;
   margin-bottom: 0.313rem;
+  margin-top: 0.625rem;
 }
 
 #made-with-buttons p {
-  margin: 0;
   font: bold 1.25rem/1.25rem custom-hebrew;
+  margin: 0;
 }
 
 #résumé {
-  width: 100%;
   aspect-ratio: 8.5 / 11;
+  width: 100%;
 }
 
 #résumé-modal {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px #222222;
+  left: 0;
+  padding: 0;
   position: absolute;
   top: 2.75rem;
-  left: 0;
   width: 70%;
-  padding: 0;
-  box-shadow: 0 0 20px 5px #222222;
-  background-color: #ffffff;
 }
 
 #screen-dimmer {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @font-face {
@@ -225,48 +231,48 @@ h3 {
   src: url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
-@media screen and (min-width: 1043px) {
-  .nav-link:hover {
-    background-color: #ffffff;
-    color: #000000;
-    transition-duration: 150ms;
-  }
-}
-
 @media screen and (max-width: 1042px) {
   .nav-link {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
   }
-  #background-right {
-    display: none;
+  .nav-link:active {
+    background-color: #ffffff;
+    color: #000000;
   }
   #background-left {
     display: none;
+  }
+  #background-right {
+    display: none;
+  }
+  #made-with-buttons img {
+    height: 1.563rem;
+    margin-bottom: 0.313rem;
+    margin-top: 0.625rem;
+  }
+  #made-with-buttons p {
+    font-size: 0.938rem;
   }
   #narrow-background {
     display: block;
   }
   #page {
-    width: 100%;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-  }
-  #shalom-for-wide-background {
-    display: none;
-  }
-  #made-with-buttons img {
-    height: 1.563rem;
-    margin-top: 0.625rem;
-    margin-bottom: 0.313rem;
-  }
-  #made-with-buttons p {
-    font-size: 0.938rem;
+    width: 100%;
   }
   #résumé-modal {
     width: 100%;
   }
-  .nav-link:active {
+  #shalom-for-wide-background {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1043px) {
+  .nav-link:hover {
     background-color: #ffffff;
     color: #000000;
+    transition-duration: 150ms;
   }
 }

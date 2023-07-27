@@ -1,3 +1,12 @@
+/* DEFAULTS */
+
+h3 {
+  margin: 0;
+}
+
+
+/* BLOCKS */
+
 body {
   font-family: custom-hebrew;
   font-size: 1rem;
@@ -9,11 +18,101 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h3 {
+footer {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+main {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  height: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+  padding-left: 3%;
+  padding-right: 3%;
+  position: relative;
+  width: 70%;
+}
+
+.bgd-desktop {
+  height: 2000px;
+  overflow: hidden;
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+}
+
+.bgd-mobile {
+  display: none;
+  position: relative;
+  z-index: -1;
+}
+
+.desktop-hebrew-text {
+  font: 100px/140px custom-hebrew, serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.ftr-buttons {
+  padding: 1.25rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-main {
+  background-color: #000000;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  height: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+
+/* ELEMENTS */
+
+.bgd-desktop__img-left {
+  float: left;
+}
+
+.bgd-desktop__img-right {
+  float: right;
+}
+
+.bgd-mobile__img {
+  display: block;
+  width: 100%;
+}
+
+.bgd-mobile__text {
+  font: 10vw/0 custom-hebrew, serif;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+}
+
+.ftr-buttons__desc {
+  font: bold 1.25rem/1.25rem custom-hebrew;
   margin: 0;
 }
 
-.nav-link {
+.ftr-buttons__img {
+  height: 2.5rem;
+  margin-bottom: 0.313rem;
+  margin-top: 0.625rem;
+}
+
+.nav-main__link {
   background-color: #000000;
   color: #ffffff;
   display: inline-block;
@@ -24,6 +123,44 @@ h3 {
   padding-right: 1.5vw;
   padding-top: 0.188rem;
 }
+
+
+/* MODIFIERS */
+
+.bgd-desktop--left {
+  left: 0;
+}
+
+.bgd-desktop--right {
+  right: 0;
+}
+
+.bgd-mobile__text--left {
+  left: calc(18% - 135px);
+}
+
+.bgd-mobile__text--right {
+  right: calc(18% - 135px);
+}
+
+
+/* UTILITIES */
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 
 /* .page-bi-table {} */
 
@@ -56,110 +193,6 @@ h3 {
   width: 100%;
 }
 
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-#top-bar {
-  background-color: #000000;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-  height: auto;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
-}
-
-#background-left {
-  height: 2000px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 50%;
-  z-index: -1;
-}
-
-#background-right {
-  height: 2000px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  z-index: -1;
-}
-
-#background-left img {
-  float: left;
-}
-
-#background-right img {
-  float: right;
-}
-
-#narrow-background {
-  display: none;
-  position: relative;
-  z-index: -1;
-}
-
-#background-wide {
-  display: block;
-  width: 100%;
-}
-
-#narrow-aleichem {
-  font: 10vw/0 custom-hebrew, serif;
-  left: calc(18% - 135px);
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  z-index: 0;
-}
-
-#narrow-shalom {
-  font: 10vw/0 custom-hebrew, serif;
-  margin: 0;
-  position: absolute;
-  right: calc(18% - 135px);
-  top: 50%;
-  z-index: 0;
-}
-
-#page {
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
-  box-sizing: border-box;
-  height: 2000px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-y: hidden;
-  padding-left: 3%;
-  padding-right: 3%;
-  position: relative;
-  width: 70%;
-}
-
-#shalom-for-wide-background {
-  padding-top: 20px;
-}
-
-#wide-shalom {
-  font: 100px/140px custom-hebrew, serif;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 #youtube {
   aspect-ratio: 119 / 90;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
@@ -174,31 +207,6 @@ h3 {
 #portfolio-frame {
     /* aspect-ratio: 4 / 3; */
   width: 30%;
-}
-
-#footer {
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-#made-with-buttons {
-  padding: 1.25rem;
-  text-align: center;
-  white-space: nowrap;
-}
-
-#made-with-buttons img {
-  height: 2.5rem;
-  margin-bottom: 0.313rem;
-  margin-top: 0.625rem;
-}
-
-#made-with-buttons p {
-  font: bold 1.25rem/1.25rem custom-hebrew;
-  margin: 0;
 }
 
 #résumé {
@@ -226,51 +234,51 @@ h3 {
   z-index: 2;
 }
 
+
+/* AT-RULES */
+
 @font-face {
   font-family: custom-hebrew;
   src: url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
 @media screen and (max-width: 1042px) {
-  .nav-link {
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+  main {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
   }
-  .nav-link:active {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  #background-left {
+  .bgd-desktop {
     display: none;
   }
-  #background-right {
+  .bgd-mobile {
+    display: block;
+  }
+  .desktop-hebrew-text {
     display: none;
   }
-  #made-with-buttons img {
+  .ftr-buttons__desc {
+    font-size: 0.938rem;
+  }
+  .ftr-buttons__img {
     height: 1.563rem;
     margin-bottom: 0.313rem;
     margin-top: 0.625rem;
   }
-  #made-with-buttons p {
-    font-size: 0.938rem;
+  .nav-main__link {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
   }
-  #narrow-background {
-    display: block;
-  }
-  #page {
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-    width: 100%;
+  .nav-main__link:active {
+    background-color: #ffffff;
+    color: #000000;
   }
   #résumé-modal {
     width: 100%;
   }
-  #shalom-for-wide-background {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1043px) {
-  .nav-link:hover {
+  .nav-main__link:hover {
     background-color: #ffffff;
     color: #000000;
     transition-duration: 150ms;

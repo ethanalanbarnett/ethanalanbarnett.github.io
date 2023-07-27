@@ -1,6 +1,6 @@
 class App {
   static body = document.querySelector('body');
-  static pageElement = document.querySelector('#page');
+  static pageElement = document.querySelector('main');
   static currentPage;
   static activeModal = false;
   static inactiveModals = [];
@@ -18,20 +18,20 @@ class App {
 
 class Tools {
   static resizeHandler() {
-    Tools.responsiveHebrewTextAlignment();
+    if (window.innerWidth <= 1042) {
+      Tools.responsiveHebrewTextAlignment();
+    }
     if (App.activeModal) {
       App.activeModal.resize();
     }
   }
   static responsiveHebrewTextAlignment() {
-    if (window.innerWidth <= 1042) {
-      const aleichem = document.querySelector('#narrow-aleichem');
-      const shalom = document.querySelector('#narrow-shalom');
-      const aleichemHalfWidth = aleichem.offsetWidth / 2;
-      const shalomHalfWidth = shalom.offsetWidth / 2;
-      aleichem.style.left = `calc(18% - ${aleichemHalfWidth}px)`;
-      shalom.style.right = `calc(18% - ${shalomHalfWidth}px)`;
-    }
+    const olam = document.querySelector('.bgd-mobile__text--left');
+    const shalom = document.querySelector('.bgd-mobile__text--right');
+    const olamHalfWidth = olam.offsetWidth / 2;
+    const shalomHalfWidth = shalom.offsetWidth / 2;
+    olam.style.left = `calc(18% - ${olamHalfWidth}px)`;
+    shalom.style.right = `calc(18% - ${shalomHalfWidth}px)`;
   }
 }
 
@@ -47,10 +47,7 @@ class Page {
 class HomePage extends Page {
   static page = 'home';
   static content = `
-    <div id="shalom-for-wide-background" class="centered">
-      <h1 id="wide-shalom">שָׁלוֹם עוֹלָם</h1>
-      <!-- <p class="subscript">Shalom!</p> -->
-    </div>
+    <h1 class="desktop-hebrew-text centered">שָׁלוֹם עוֹלָם</h1>
     <h2 class="centered">My name is Ethan Alan Barnett</h2>
     <table class="page-bi-table centered">
       <tr>

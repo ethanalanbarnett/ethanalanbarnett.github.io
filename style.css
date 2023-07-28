@@ -1,11 +1,11 @@
-/* DEFAULTS */
+/* DEFAULTS _______________________________________________________________________________*/
 
 h3 {
   margin: 0;
 }
 
 
-/* BLOCKS */
+/* BLOCKS _______________________________________________________________________________*/
 
 body {
   font-family: custom-hebrew;
@@ -40,6 +40,11 @@ main {
   width: 70%;
 }
 
+nav {
+  height: auto;
+  width: 100%;
+}
+
 .bgd-desktop {
   height: 2000px;
   overflow: hidden;
@@ -67,18 +72,28 @@ main {
   white-space: nowrap;
 }
 
-.nav-main {
-  background-color: #000000;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-  height: auto;
-  position: relative;
-  text-align: center;
-  width: 100%;
+#résumé-modal {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px #222222;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: 2.75rem;
+  width: 70%;
+}
+
+#screen-dimmer {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   z-index: 2;
 }
 
 
-/* ELEMENTS */
+/* ELEMENTS _______________________________________________________________________________*/
 
 .bgd-desktop__img-left {
   float: left;
@@ -101,6 +116,12 @@ main {
   z-index: 0;
 }
 
+.bi-table__cell {
+  height: fit-content;
+  vertical-align: top;
+  width: 50%;
+}
+
 .ftr-buttons__desc {
   font: bold 1.25rem/1.25rem custom-hebrew;
   margin: 0;
@@ -112,7 +133,15 @@ main {
   margin-top: 0.625rem;
 }
 
-.nav-main__link {
+.header__nav {
+  background-color: #000000;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.nav__link {
   background-color: #000000;
   color: #ffffff;
   display: inline-block;
@@ -124,8 +153,26 @@ main {
   padding-top: 0.188rem;
 }
 
+.résumé-modal__btn {
+  white-space: nowrap;
+}
 
-/* MODIFIERS */
+.résumé-modal__img {
+  aspect-ratio: 8.5 / 11;
+  width: 100%;
+}
+
+.résumé-modal__nav {
+  background-color: #555555;
+}
+
+.résumé-modal__xbtn {
+  text-align: right;
+  width: 100%;
+}
+
+
+/* MODIFIERS _______________________________________________________________________________*/
 
 .bgd-desktop--left {
   left: 0;
@@ -143,8 +190,14 @@ main {
   right: calc(18% - 135px);
 }
 
+.bi-table__cell--title {
+  padding-bottom: 0.625rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
-/* UTILITIES */
+
+/* UTILITIES _______________________________________________________________________________*/
 
 .centered {
   display: block;
@@ -162,35 +215,14 @@ main {
 }
 
 
-/* .page-bi-table {} */
 
-.bi-table-cell {
-  height: fit-content;
-  vertical-align: top;
-  width: 50%;
-}
 
-.title-cell {
-  padding-bottom: 0.625rem;
-  padding-left: 5%;
-  padding-right: 5%;
-}
+
+
+/* __remaining__incorrect__names__ */
 
 .modal {
   z-index: 3;
-}
-
-.modal-toolbar {
-  background-color: #555555;
-}
-
-.modal-toolbar-btn {
-  white-space: nowrap;
-}
-
-.modal-toolbar-xbtn {
-  text-align: right;
-  width: 100%;
 }
 
 #youtube {
@@ -209,33 +241,8 @@ main {
   width: 30%;
 }
 
-#résumé {
-  aspect-ratio: 8.5 / 11;
-  width: 100%;
-}
 
-#résumé-modal {
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 5px #222222;
-  left: 0;
-  padding: 0;
-  position: absolute;
-  top: 2.75rem;
-  width: 70%;
-}
-
-#screen-dimmer {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 2;
-}
-
-
-/* AT-RULES */
+/* AT-RULES _______________________________________________________________________________*/
 
 @font-face {
   font-family: custom-hebrew;
@@ -264,11 +271,11 @@ main {
     margin-bottom: 0.313rem;
     margin-top: 0.625rem;
   }
-  .nav-main__link {
+  .nav__link {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
   }
-  .nav-main__link:active {
+  .nav__link:active {
     background-color: #ffffff;
     color: #000000;
   }
@@ -278,7 +285,7 @@ main {
 }
 
 @media screen and (min-width: 1043px) {
-  .nav-main__link:hover {
+  .nav__link:hover {
     background-color: #ffffff;
     color: #000000;
     transition-duration: 150ms;

@@ -49,19 +49,23 @@ class HomePage extends Page {
   static content = `
     <h1 class="desktop-hebrew-text centered">שָׁלוֹם עוֹלָם</h1>
     <h2 class="centered">My name is Ethan Alan Barnett</h2>
-    <table class="page-bi-table centered">
-      <tr>
-        <td class="bi-table-cell title-cell"><h3>Feel free to availe yourself of this cheeky "hello world!" reference:</h3></td>
-        <td class="bi-table-cell title-cell"><h3>Alternatively, you may also take a gander at my résumé (click to enlarge):</h3></td>
-      </tr>
-      <tr>
-        <td class="bi-table-cell">
-          <iframe id="youtube" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </td>
-        <td class="bi-table-cell">
-          <a href="javascript:App.modals.résumé.toggle()"><img id="résumé-thumbnail" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
-        </td>
-      </tr>
+    <table class="bi-table centered">
+      <thead>
+        <tr>
+          <th scope="col" class="bi-table__cell bi-table__cell--title"><h3>Feel free to availe yourself of this cheeky "hello world!" reference:</h3></th>
+          <th scope="col" class="bi-table__cell bi-table__cell--title"><h3>Alternatively, you may also take a gander at my résumé (click to enlarge):</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bi-table__cell">
+            <iframe id="youtube" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           </td>
+          <td class="bi-table__cell">
+            <a href="javascript:App.modals.résumé.toggle()"><img id="résumé-thumbnail" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+          </td>
+        </tr>
+      </tbody>
     </table>
     <br><br>
     <h3>This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
@@ -147,15 +151,15 @@ class RésuméModal extends Modal {
   modalName = 'résumé-modal';
   element;
   content = `
-    <div class="modal-toolbar">
+    <nav class="résumé-modal__nav">
       <table>
         <tr>
-          <td class="modal-toolbar-btn"><a class="nav-link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
-          <td class="modal-toolbar-xbtn"><a class="nav-link" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
+          <td class="résumé-modal__btn"><a class="nav__link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
+          <td class="résumé-modal__xbtn"><a class="nav__link" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
         </tr>
       </table>
-    </div>
-    <img id="résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé">
+    </nav>
+    <img class="résumé-modal__img" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé">
   `;
 }
 

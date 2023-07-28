@@ -72,6 +72,10 @@ nav {
   white-space: nowrap;
 }
 
+.modal {
+  z-index: 3;
+}
+
 #résumé-modal {
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px #222222;
@@ -122,6 +126,17 @@ nav {
   width: 50%;
 }
 
+.bi-table__résumé {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  width: 58.445%;
+}
+
+.bi-table__video {
+  aspect-ratio: 119 / 90;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
 .ftr-buttons__desc {
   font: bold 1.25rem/1.25rem custom-hebrew;
   margin: 0;
@@ -151,6 +166,10 @@ nav {
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   padding-top: 0.188rem;
+}
+
+.project__img {
+width: 30%;
 }
 
 .résumé-modal__btn {
@@ -212,33 +231,6 @@ nav {
 
 .no-scroll {
   overflow: hidden;
-}
-
-
-
-
-
-
-/* __remaining__incorrect__names__ */
-
-.modal {
-  z-index: 3;
-}
-
-#youtube {
-  aspect-ratio: 119 / 90;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  width: 100%;
-}
-
-#résumé-thumbnail {
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  width: 58.445%;
-}
-
-#portfolio-frame {
-    /* aspect-ratio: 4 / 3; */
-  width: 30%;
 }
 
 

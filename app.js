@@ -59,10 +59,10 @@ class HomePage extends Page {
       <tbody>
         <tr>
           <td class="bi-table__cell">
-            <iframe id="youtube" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="bi-table__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
            </td>
           <td class="bi-table__cell">
-            <a href="javascript:App.modals.résumé.toggle()"><img id="résumé-thumbnail" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+            <a href="javascript:App.modals.résumé.toggle()"><img class="bi-table__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
           </td>
         </tr>
       </tbody>
@@ -76,19 +76,21 @@ class HomePage extends Page {
 class ArchivePage extends Page {
   static page = 'archive';
   static content = `
-    <h1>Archive</h1>
+    <h1 class="centered">Archive</h1>
   `;
 }
 
 class PortfolioPage extends Page {
   static page = 'portfolio';
   static content = `
-    <h1>Portfolio</h1>
-    <img id="portfolio-frame" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
-    <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
-    <h3>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML file. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
-    <br>Username: Ethan
-    <br>Password: Ethan123!</h3>
+    <h1 class="centered">Portfolio</h1>
+    <article class="project">
+      <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+      <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
+      <p>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+      <br>Username: Ethan
+      <br>Password: Ethan123!</p>
+    </article>
   `;
 }
 

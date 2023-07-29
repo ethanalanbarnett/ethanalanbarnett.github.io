@@ -49,27 +49,19 @@ class HomePage extends Page {
   static content = `
     <h1 class="desktop-hebrew-text centered">שָׁלוֹם עוֹלָם</h1>
     <h2 class="centered">My name is Ethan Alan Barnett</h2>
-    <table class="bi-table centered">
-      <thead>
-        <tr>
-          <th scope="col" class="bi-table__cell bi-table__cell--title"><h3>Feel free to availe yourself of this cheeky "hello world!" reference:</h3></th>
-          <th scope="col" class="bi-table__cell bi-table__cell--title"><h3>Alternatively, you may also take a gander at my résumé (click to enlarge):</h3></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="bi-table__cell">
-            <iframe class="bi-table__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           </td>
-          <td class="bi-table__cell">
-            <a href="javascript:App.modals.résumé.toggle()"><img class="bi-table__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="flexbox">
+      <div class="flexbox__item">
+        <h3 class="flexbox__text">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
+        <iframe class="flexbox__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="flexbox__item">
+        <h3 class="flexbox__text">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
+        <a href="javascript:App.modals.résumé.toggle()"><img class="flexbox__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+      </div>
+    </div>
     <br><br>
-    <h3>This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
-    <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</h3>
+    <p class="body-text">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
+    <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
   `;
 }
 

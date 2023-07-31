@@ -287,8 +287,6 @@ width: 30%;
     color: #000000;
   }
   .résumé-modal {
-    position: fixed;
-    top: 0;
     width: 100%;
   }
 }

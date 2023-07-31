@@ -93,6 +93,7 @@ class Modal {
     } else if (App.inactiveModals.length > 0) {
       this.checkIfInactive();
     } else {
+      window.location.href = '#';
       this.render();
     }
   }
@@ -124,6 +125,7 @@ class Modal {
   render() {
     const modalList = App.body.querySelector('#modal-list');
     this.element = document.createElement('div');
+    this.element.id = this.modalName;
     this.element.className = `modal ${this.modalName}`;
     modalList.append(this.element);
     this.element.innerHTML = this.content;

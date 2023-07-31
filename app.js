@@ -49,14 +49,14 @@ class HomePage extends Page {
   static content = `
     <h1 class="desktop-hebrew-text centered">שָׁלוֹם עוֹלָם</h1>
     <h2 class="centered">My name is Ethan Alan Barnett</h2>
-    <div class="flexbox">
-      <div class="flexbox__item">
-        <h3 class="flexbox__text">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
-        <iframe class="flexbox__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="greeter">
+      <div class="greeter__item">
+        <h3 class="greeter__text">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
+        <iframe class="greeter__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class="flexbox__item">
-        <h3 class="flexbox__text">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
-        <a href="javascript:App.modals.résumé.toggle()"><img class="flexbox__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+      <div class="greeter__item">
+        <h3 class="greeter__text">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
+        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
       </div>
     </div>
     <br><br>
@@ -124,8 +124,7 @@ class Modal {
   render() {
     const modalList = App.body.querySelector('#modal-list');
     this.element = document.createElement('div');
-    this.element.id = this.modalName;
-    this.element.className = 'modal';
+    this.element.className = `modal ${this.modalName}`;
     modalList.append(this.element);
     this.element.innerHTML = this.content;
     if (App.activeModal) {
@@ -161,8 +160,7 @@ class ScreenDimmer {
   element;
   render() {
     this.element = document.createElement('div');
-    this.element.id = 'screen-dimmer';
-    this.element.className = 'hidden';
+    this.element.className = 'screen-dimmer hidden';
     App.body.append(this.element);
     this.element.addEventListener('click', this.clickHandler.bind(this));
   }

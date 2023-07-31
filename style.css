@@ -59,23 +59,25 @@ nav {
   padding-top: 20px;
 }
 
-.flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
 .ftr-buttons {
   padding: 1.25rem;
   text-align: center;
   white-space: nowrap;
 }
 
+.greeter {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: 1fr;
+}
+
 .modal {
   z-index: 3;
 }
 
-#résumé-modal {
+.résumé-modal {
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px #222222;
   left: 0;
@@ -85,7 +87,7 @@ nav {
   width: 70%;
 }
 
-#screen-dimmer {
+.screen-dimmer {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
   left: 0;
@@ -119,34 +121,6 @@ nav {
   z-index: 0;
 }
 
-.flexbox__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 20rem;
-  width: 49%;
-}
-
-.flexbox__résumé {
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 58.445%;
-}
-
-.flexbox__text {
-  margin: 0 4rem 0 4rem;
-  padding-bottom: 0.625rem;
-  text-align: center;
-}
-
-.flexbox__video {
-  aspect-ratio: 119 / 90;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  width: 100%;
-}
-
 .ftr-buttons__desc {
   font: bold 1.25rem/1.25rem custom-hebrew;
   margin: 0;
@@ -156,6 +130,33 @@ nav {
   height: 2.5rem;
   margin-bottom: 0.313rem;
   margin-top: 0.625rem;
+}
+
+.greeter__item {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 1;
+  grid-row: span 1;
+  justify-content: space-between;
+}
+
+.greeter__résumé {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 58.445%;
+}
+
+.greeter__text {
+  margin: 0 2rem 0 2rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+}
+
+.greeter__video {
+  aspect-ratio: 119 / 90;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header__nav {
@@ -275,7 +276,7 @@ width: 30%;
     background-color: #ffffff;
     color: #000000;
   }
-  #résumé-modal {
+  .résumé-modal {
     width: 100%;
   }
 }

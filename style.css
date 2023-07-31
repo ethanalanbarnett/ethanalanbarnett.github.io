@@ -230,6 +230,16 @@ width: 30%;
   text-align: center;
 }
 
+.centered-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-text {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
@@ -277,6 +287,8 @@ width: 30%;
     color: #000000;
   }
   .résumé-modal {
+    position: fixed;
+    top: 0;
     width: 100%;
   }
 }

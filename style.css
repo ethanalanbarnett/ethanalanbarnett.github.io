@@ -248,12 +248,21 @@ width: 30%;
   overflow: hidden;
 }
 
+.symbol {
+  font-family: symbola, Arial, sans-serif;
+}
+
 
 /* AT-RULES _______________________________________________________________________________*/
 
 @font-face {
   font-family: custom-hebrew;
-  src: url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
+  src: local("Ezra SIL"), local("Ezra SIL SR"), url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
+}
+
+@font-face {
+  font-family: symbola;
+  src: local("Symbola"), url(resources/fonts/symbola.ttf); /* https://www.fontspace.com/symbola-font-f22021 */
 }
 
 @media screen and (max-width: 1042px) {

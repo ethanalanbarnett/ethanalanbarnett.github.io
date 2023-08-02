@@ -150,7 +150,7 @@ class RésuméModal extends Modal {
       <table>
         <tr>
           <td class="résumé-modal__btn"><a class="nav__link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
-          <td class="résumé-modal__xbtn"><a class="nav__link" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
+          <td class="résumé-modal__xbtn"><a class="nav__link symbol" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
         </tr>
       </table>
     </nav>

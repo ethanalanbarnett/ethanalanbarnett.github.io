@@ -55,11 +55,17 @@ nav {
 }
 
 .bgd-desktop {
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
   height: calc(100vh - 9.189rem);
   overflow: hidden;
   position: absolute;
   width: 50%;
+}
+
+.bgd-frame {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  height: calc(100vh - 9.189rem);
+  position: absolute;
+  width: 100%;
 }
 
 .bgd-mobile {
@@ -125,10 +131,12 @@ nav {
 
 .bgd-desktop__img-left {
   float: left;
+  max-height: 2000px;
 }
 
 .bgd-desktop__img-right {
   float: right;
+  max-height: 2000px;
 }
 
 .bgd-mobile__img {
@@ -304,6 +312,9 @@ width: 100%;
     width: 100%;
   }
   .bgd-desktop {
+    display: none;
+  }
+  .bgd-frame {
     display: none;
   }
   .bgd-mobile {

@@ -1,6 +1,7 @@
 class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
+  static backgroundFrame = document.querySelector('#bgd-frame');
   static currentPage;
   static activeModal = false;
   static inactiveModals = [];
@@ -37,7 +38,8 @@ class Tools {
   static desktopBackgroundAdjustment() {
     const bgdLeft = document.querySelector('.bgd-desktop--left');
     const bgdRight = document.querySelector('.bgd-desktop--right');
-    App.pageElement.style.minHeight = '';
+    App.pageElement.style.minHeight = '';                               /* This simply removes the rule for the specific element, it does not change the rule for the class in CSS. By removeing the element rule, it falls back to the class rule. */
+    App.backgroundFrame.style.height = `${App.pageElement.offsetHeight}px`;
     bgdLeft.style.height = `${App.pageElement.offsetHeight}px`;
     bgdRight.style.height = `${App.pageElement.offsetHeight}px`;
   }

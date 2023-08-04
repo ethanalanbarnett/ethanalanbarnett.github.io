@@ -15,9 +15,15 @@ body::-webkit-scrollbar {
 
 footer {
   background-color: #ffffff;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
   position: relative;
   width: 100%;
+  z-index: -2;
+}
+
+header {
+  background-color: #000000;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
   z-index: 1;
 }
 
@@ -25,6 +31,7 @@ main {
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
+  clip-path: inset(-50px -50px 0px -50px);
   /* height: 2000px; */
   margin-left: auto;
   margin-right: auto;
@@ -34,6 +41,7 @@ main {
   padding-right: 3%;
   position: relative;
   width: 70%;
+  z-index: 0;
 }
 
 nav {
@@ -41,18 +49,21 @@ nav {
   width: 100%;
 }
 
+.backgrounds {
+  position: relative;
+  z-index: -1;
+}
+
 .bgd-desktop {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
   height: calc(100vh - 9.189rem);
   overflow: hidden;
   position: absolute;
   width: 50%;
-  z-index: -1;
 }
 
 .bgd-mobile {
   display: none;
-  position: relative;
-  z-index: -1;
 }
 
 .desktop-hebrew-txt {
@@ -178,11 +189,7 @@ nav {
 }
 
 .header__nav {
-  background-color: #000000;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-  position: relative;
   text-align: center;
-  z-index: 2;
 }
 
 .nav__link {
@@ -292,6 +299,7 @@ width: 100%;
 @media screen and (max-width: 1042px) {
   main {
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+    clip-path: none;
     min-height: calc(100vh - 2.813rem - 5.939rem);
     width: 100%;
   }

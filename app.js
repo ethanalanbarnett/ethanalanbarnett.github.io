@@ -13,6 +13,7 @@ class App {
     this.modals.résumé = new RésuméModal();
     window.addEventListener('resize', Tools.resizeHandler);
     Tools.resizeHandler();
+    window.onload = Tools.resizeHandler();
   }
 }
 
@@ -26,6 +27,11 @@ class Tools {
     }
     if (App.activeModal) {
       App.activeModal.resize();
+      if (App.inactiveModals.length > 0) {
+        for (const modal of App.inactiveModals) {
+          modal.resize();
+        }
+      }
     }
   }
   static desktopBackgroundAdjustment() {
@@ -157,7 +163,8 @@ class Modal {
       App.inactiveModals.push(App.activeModal);
     }
     App.activeModal = this;
-    this.resize();
+    // this.resize();
+    Tools.resizeHandler();
     App.screenDimmer.toggle();
   }
   resize() {

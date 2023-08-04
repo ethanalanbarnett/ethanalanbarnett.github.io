@@ -134,7 +134,7 @@ nav {
 }
 
 .ftr-btns__desc {
-  font: bold 1.25rem/1.25rem custom-hebrew;
+  font: bold 1.25rem/1 custom-hebrew;
   margin: 0;
 }
 
@@ -306,6 +306,7 @@ width: 100%;
   }
   .ftr-btns__desc {
     font-size: 0.938rem;
+    line-height: 1;
   }
   .ftr-btns__img {
     height: 1.563rem;

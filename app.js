@@ -19,15 +19,30 @@ class App {
 class Tools {
   static resizeHandler() {
     if (window.innerWidth <= 1042) {
-      Tools.responsiveHebrewTextAlignment();
+      Tools.mobileBackgroundAdjustment();
+      Tools.hebrewTextAlignment();
+    } else {
+      Tools.desktopBackgroundAdjustment();
     }
     if (App.activeModal) {
       App.activeModal.resize();
     }
   }
-  static responsiveHebrewTextAlignment() {
-    const olam = document.querySelector('.bgd-mobile__text--left');
-    const shalom = document.querySelector('.bgd-mobile__text--right');
+  static desktopBackgroundAdjustment() {
+    const bgdLeft = document.querySelector('.bgd-desktop--left');
+    const bgdRight = document.querySelector('.bgd-desktop--right');
+    App.pageElement.style.minHeight = '';
+    bgdLeft.style.height = `${App.pageElement.offsetHeight}px`;
+    bgdRight.style.height = `${App.pageElement.offsetHeight}px`;
+  }
+  static mobileBackgroundAdjustment() {
+    const img = document.querySelector('#bgd-mobile-img');
+    const imgHeight = img.offsetHeight;
+    App.pageElement.style.minHeight = `calc(100vh - 2.813rem - 5.939rem - ${imgHeight}px)`;
+  }
+  static hebrewTextAlignment() {
+    const olam = document.querySelector('.bgd-mobile__txt--left');
+    const shalom = document.querySelector('.bgd-mobile__txt--right');
     const olamHalfWidth = olam.offsetWidth / 2;
     const shalomHalfWidth = shalom.offsetWidth / 2;
     olam.style.left = `calc(18% - ${olamHalfWidth}px)`;
@@ -40,6 +55,7 @@ class Page {
     if (this.page !== App.currentPage) {
       App.pageElement.innerHTML = this.content;
       App.currentPage = this.page;
+      Tools.resizeHandler();
     }
   }
 }
@@ -47,20 +63,20 @@ class Page {
 class HomePage extends Page {
   static page = 'home';
   static content = `
-    <h1 class="desktop-hebrew-text centered">שָׁלוֹם עוֹלָם</h1>
+    <h1 class="desktop-hebrew-txt centered">שָׁלוֹם עוֹלָם</h1>
     <h2 class="centered">My name is Ethan Alan Barnett</h2>
     <div class="greeter">
-      <div class="greeter__item">
-        <h3 class="greeter__text">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
-        <iframe class="greeter__video" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="greeter__itm">
+        <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
+        <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class="greeter__item">
-        <h3 class="greeter__text">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
+      <div class="greeter__itm">
+        <h3 class="greeter__txt">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
         <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
       </div>
     </div>
     <br><br>
-    <p class="body-text">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
+    <p class="body-txt">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
     <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
   `;
 }
@@ -77,11 +93,19 @@ class PortfolioPage extends Page {
   static content = `
     <h1 class="centered">Portfolio</h1>
     <article class="project">
-      <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
-      <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
-      <p>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
-      <br>Username: Ethan
-      <br>Password: Ethan123!</p>
+      <div class="project__itm">
+        <picture>
+          <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
+          <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
+          <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+        </picture>
+      </div>
+      <div class="project__itm">
+        <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
+        <p>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+        <br>Username: Ethan
+        <br>Password: Ethan123!</p>
+      </div>
     </article>
   `;
 }
@@ -150,7 +174,7 @@ class RésuméModal extends Modal {
       <table>
         <tr>
           <td class="résumé-modal__btn"><a class="nav__link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
-          <td class="résumé-modal__xbtn"><a class="nav__link symbol" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
+          <td class="résumé-modal__btn résumé-modal__btn--x"><a class="nav__link symbol" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
         </tr>
       </table>
     </nav>

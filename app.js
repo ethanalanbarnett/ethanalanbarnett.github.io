@@ -1,7 +1,7 @@
 class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
-  static backgroundFrame = document.querySelector('#bgd-frame');
+  static backgroundsDiv = document.querySelector('#backgrounds-div');
   static currentPage;
   static activeModal = false;
   static inactiveModals = [];
@@ -25,28 +25,21 @@ class Tools {
       Tools.hebrewTextAlignment();
     } else {
       Tools.desktopBackgroundAdjustment();
-    }
-    if (App.activeModal) {
-      App.activeModal.resize();
-      if (App.inactiveModals.length > 0) {
-        for (const modal of App.inactiveModals) {
-          modal.resize();
-        }
-      }
-    }
+    } // The below code has been commented out because the modals are now grid items, and thus resize automatically.
+    // if (App.activeModal) {
+    //   App.activeModal.resize();
+    //   if (App.inactiveModals.length > 0) {
+    //     for (const modal of App.inactiveModals) {
+    //       modal.resize();
+    //     }
+    //   }
+    // }
   }
   static desktopBackgroundAdjustment() {
-    const bgdLeft = document.querySelector('.bgd-desktop--left');
-    const bgdRight = document.querySelector('.bgd-desktop--right');
-    App.pageElement.style.minHeight = '';                               /* This simply removes the rule for the specific element, it does not change the rule for the class in CSS. By removeing the element rule, it falls back to the class rule. */
-    App.backgroundFrame.style.height = `${App.pageElement.offsetHeight}px`;
-    bgdLeft.style.height = `${App.pageElement.offsetHeight}px`;
-    bgdRight.style.height = `${App.pageElement.offsetHeight}px`;
+    App.backgroundsDiv.style.height = `${App.pageElement.offsetHeight}px`;
   }
   static mobileBackgroundAdjustment() {
-    const img = document.querySelector('#bgd-mobile-img');
-    const imgHeight = img.offsetHeight;
-    App.pageElement.style.minHeight = `calc(100vh - 2.813rem - 5.939rem - ${imgHeight}px)`;
+    App.backgroundsDiv.style.height = ''; // this simply removes the custom set height for the element set by the desktopBackgroundAdjustment() function. It does not change the classes.
   }
   static hebrewTextAlignment() {
     const olam = document.querySelector('.bgd-mobile__txt--left');
@@ -165,7 +158,6 @@ class Modal {
       App.inactiveModals.push(App.activeModal);
     }
     App.activeModal = this;
-    // this.resize();
     Tools.resizeHandler();
     App.screenDimmer.toggle();
   }

@@ -65,7 +65,7 @@ class HomePage extends Page {
   static page = 'home';
   static content = `
     <h1 class="desktop-hebrew-txt centered">שָׁלוֹם עוֹלָם</h1>
-    <h2 class="centered">My name is Ethan Alan Barnett</h2>
+    <h2 class="main__title centered">My name is Ethan Alan Barnett</h2>
     <div class="greeter">
       <div class="greeter__itm">
         <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
@@ -85,25 +85,27 @@ class HomePage extends Page {
 class ArchivePage extends Page {
   static page = 'archive';
   static content = `
-    <h1 class="centered">Archive</h1>
+    <h1 class="main__title centered">Archive</h1>
   `;
 }
 
 class PortfolioPage extends Page {
   static page = 'portfolio';
   static content = `
-    <h1 class="centered">Portfolio</h1>
+    <h1 class="main__title centered">Portfolio</h1>
     <article class="project">
       <div class="project__itm">
+        <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
         <picture>
           <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
           <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
-          <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+          <a href="portfolio/bigthicket/app.html">
+            <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+          </a>
         </picture>
       </div>
       <div class="project__itm">
-        <h2><a href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
-        <p>This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+        <p class="project__p">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
         <br>Username: Ethan
         <br>Password: Ethan123!</p>
       </div>

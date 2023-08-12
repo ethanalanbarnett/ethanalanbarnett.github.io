@@ -8,6 +8,8 @@ class App {
   static modals = {};
   static screenDimmer;
   static init() {
+    // if (window.location.href ===)
+    console.log(window.location.pathname.substring(1));
     HomePage.render();
     this.screenDimmer = new ScreenDimmer();
     this.screenDimmer.render();

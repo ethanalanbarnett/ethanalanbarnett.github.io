@@ -72,11 +72,11 @@ class Tools {
 class Page {
   static render() {
     if (this.page !== App.currentPage) {
-      if (this.page === 'home') {
-        history.pushState({ page: 1 }, 'title', window.location.origin);
-      } else {
-        history.pushState({ page: 1 }, 'title', window.location.origin + this.page);
-      }
+      // if (this.page === 'home') {
+      //   history.pushState({ page: 1 }, 'title', window.location.origin);
+      // } else {
+      //   history.pushState({ page: 1 }, 'title', window.location.origin + this.page);
+      // }
       App.pageElement.innerHTML = this.content;
       App.currentPage = this.page;
       Tools.resizeHandler();

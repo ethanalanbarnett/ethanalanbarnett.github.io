@@ -8,9 +8,7 @@ class App {
   static modals = {};
   static screenDimmer;
   static init() {
-    // if (window.location.href ===)
-    console.log(window.location.pathname.substring(1));
-    HomePage.render();
+    Tools.urlRoute();
     this.screenDimmer = new ScreenDimmer();
     this.screenDimmer.render();
     this.modals.résumé = new RésuméModal();
@@ -21,6 +19,14 @@ class App {
 }
 
 class Tools {
+  static urlRoute() {
+    if (window.location.hash.length > 1) {
+      const path = window.location.hash.replace('#', '');
+      history.pushState({ page: 1 }, 'title', window.location.href + path);
+    } else {
+      HomePage.render();
+    }
+  }
   static resizeHandler() {
     if (window.innerWidth <= 1042) {
       Tools.mobileBackgroundAdjustment();

@@ -22,7 +22,16 @@ class Tools {
   static urlRoute() {
     if (window.location.hash.length > 1) {
       const path = window.location.hash.replace('#', '');
-      history.pushState({ page: 1 }, 'title', window.location.href + path);
+      history.pushState({ page: 1 }, 'title', window.location.origin + path);
+      if (path.substring(1) === 'résumé') {
+        window.location.href = 'https://ethanalanbarnett.github.io/resources/documents/Ethan\'s Résumé.pdf';
+      } else if (path.substring(1) === 'portfolio') {
+        PortfolioPage.render();
+      } else if (path.substring(1) === 'archive') {
+        ArchivePage.render();
+      } else {
+        HomePage.render();
+      }
     } else {
       HomePage.render();
     }
@@ -90,13 +99,6 @@ class HomePage extends Page {
   `;
 }
 
-class ArchivePage extends Page {
-  static page = 'archive';
-  static content = `
-    <h1 class="main__title centered">Archive</h1>
-  `;
-}
-
 class PortfolioPage extends Page {
   static page = 'portfolio';
   static content = `
@@ -118,6 +120,13 @@ class PortfolioPage extends Page {
         <br>Password: Ethan123!</p>
       </div>
     </article>
+  `;
+}
+
+class ArchivePage extends Page {
+  static page = 'archive';
+  static content = `
+    <h1 class="main__title centered">Archive</h1>
   `;
 }
 

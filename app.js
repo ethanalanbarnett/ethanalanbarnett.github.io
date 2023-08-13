@@ -21,19 +21,20 @@ class App {
 class Tools {
   static initUrlRoute() {
     if (window.location.hash.length > 1) {
-      let path = window.location.hash.replace('#', '');
+      let path = window.location.hash.slice(2);
       if (path[path.length - 1] === '/') {
         path = path.slice(0, -1);
       }
-      history.pushState(null, '', path);
-      if (path.slice(1) === 'resume') {
+      if (path === 'resume') {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
-      } else if (path.slice(1) === 'portfolio') {
+      } else if (path === 'portfolio') {
+        history.pushState(null, '', path);
         PortfolioPage.render('init');
-      } else if (path.slice(1) === 'archive') {
+      } else if (path === 'archive') {
+        history.pushState(null, '', path);
         ArchivePage.render('init');
       } else {
-        history.pushState(null, '', '/');
+        history.pushState(null, '', '');
         HomePage.render('init');
       }
     } else {
@@ -77,7 +78,7 @@ class Page {
     if (this.page !== App.currentPage) {
       if (option !== 'init') {
         if (this.page === 'home') {
-          history.pushState(null, '', '/');
+          history.pushState(null, '', '');
         } else {
           history.pushState(null, '', this.page);
         }

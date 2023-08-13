@@ -12,8 +12,9 @@ class App {
     this.screenDimmer = new ScreenDimmer();
     this.screenDimmer.render();
     this.modals.résumé = new RésuméModal();
-    window.addEventListener('resize', Tools.resizeHandler);
     Tools.resizeHandler();
+    window.addEventListener('popstate', Tools.popState());
+    window.addEventListener('resize', Tools.resizeHandler);
     window.onload = Tools.resizeHandler();
   }
 }
@@ -34,11 +35,26 @@ class Tools {
         history.pushState(null, '', path);
         ArchivePage.render('init');
       } else {
-        history.pushState(null, '', '');
+        history.pushState(null, '', '/');
         HomePage.render('init');
       }
     } else {
       HomePage.render('init');
+    }
+  }
+  static popState() {
+    const uri = window.location.pathname.slice(1);
+    switch (uri) {
+      case 'portfolio':
+        PortfolioPage.render('init');
+        break;
+      case 'archive':
+        ArchivePage.render('init');
+        break;
+      case 'home':
+      case '':
+        HomePage.render('init');
+        break;
     }
   }
   static resizeHandler() {
@@ -78,7 +94,7 @@ class Page {
     if (this.page !== App.currentPage) {
       if (option !== 'init') {
         if (this.page === 'home') {
-          history.pushState(null, '', '');
+          history.pushState(null, '', '/');
         } else {
           history.pushState(null, '', this.page);
         }

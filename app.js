@@ -8,7 +8,7 @@ class App {
   static modals = {};
   static screenDimmer;
   static init() {
-    Tools.urlRoute();
+    Tools.initUrlRoute();
     this.screenDimmer = new ScreenDimmer();
     this.screenDimmer.render();
     this.modals.résumé = new RésuméModal();
@@ -19,9 +19,12 @@ class App {
 }
 
 class Tools {
-  static urlRoute() {
+  static initUrlRoute() {
     if (window.location.hash.length > 1) {
       const path = window.location.hash.replace('#', '');
+      if (path[path.length - 1] === '/') {
+        path.pop();
+      }
       history.pushState(null, '', path);
       if (path.substring(1) === 'resume') {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;

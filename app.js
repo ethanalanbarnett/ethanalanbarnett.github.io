@@ -13,7 +13,7 @@ class App {
     this.screenDimmer.render();
     this.modals.résumé = new RésuméModal();
     Tools.resizeHandler();
-    window.addEventListener('popstate', Tools.popState());
+    window.addEventListener('popstate', Tools.popState);
     window.addEventListener('resize', Tools.resizeHandler);
     window.onload = Tools.resizeHandler();
   }

@@ -22,7 +22,7 @@ class Tools {
   static urlRoute() {
     if (window.location.hash.length > 1) {
       const path = window.location.hash.replace('#', '');
-      history.pushState({ page: 1 }, 'title', window.location.origin + path);
+      history.pushState(null, '', window.location.origin + path);
       if (path.substring(1) === 'resume') {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
       } else if (path.substring(1) === 'portfolio') {
@@ -30,7 +30,7 @@ class Tools {
       } else if (path.substring(1) === 'archive') {
         ArchivePage.render();
       } else {
-        history.pushState({ page:1 }, 'title', window.location.origin);
+        history.pushState(null, '', window.location.origin);
         HomePage.render();
       }
     } else {
@@ -72,11 +72,11 @@ class Tools {
 class Page {
   static render() {
     if (this.page !== App.currentPage) {
-      // if (this.page === 'home') {
-      //   history.pushState({ page: 1 }, 'title', window.location.origin);
-      // } else {
-      //   history.pushState({ page: 1 }, 'title', window.location.origin + this.page);
-      // }
+      if (this.page === 'home') {
+        history.pushState(null, '', window.location.origin);
+      } else {
+        history.pushState(null, '', window.location.origin + this.page);
+      }
       App.pageElement.innerHTML = this.content;
       App.currentPage = this.page;
       Tools.resizeHandler();

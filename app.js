@@ -21,9 +21,9 @@ class App {
 class Tools {
   static initUrlRoute() {
     if (window.location.hash.length > 1) {
-      const path = window.location.hash.replace('#', '');
+      let path = window.location.hash.replace('#', '');
       if (path[path.length - 1] === '/') {
-        path.pop();
+        path = path.slice(0, -1);
       }
       history.pushState(null, '', path);
       if (path.substring(1) === 'resume') {

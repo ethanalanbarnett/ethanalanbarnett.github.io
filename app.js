@@ -26,18 +26,18 @@ class Tools {
         path = path.slice(0, -1);
       }
       history.pushState(null, '', path);
-      if (path.substring(1) === 'resume') {
+      if (path.slice(1) === 'resume') {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
-      } else if (path.substring(1) === 'portfolio') {
-        PortfolioPage.render();
-      } else if (path.substring(1) === 'archive') {
-        ArchivePage.render();
+      } else if (path.slice(1) === 'portfolio') {
+        PortfolioPage.render('init');
+      } else if (path.slice(1) === 'archive') {
+        ArchivePage.render('init');
       } else {
         history.pushState(null, '', '/');
-        HomePage.render();
+        HomePage.render('init');
       }
     } else {
-      HomePage.render();
+      HomePage.render('init');
     }
   }
   static resizeHandler() {
@@ -73,12 +73,14 @@ class Tools {
 }
 
 class Page {
-  static render() {
+  static render(option) {
     if (this.page !== App.currentPage) {
-      if (this.page === 'home') {
-        history.pushState(null, '', '/');
-      } else {
-        history.pushState(null, '', this.page);
+      if (option !== 'init') {
+        if (this.page === 'home') {
+          history.pushState(null, '', '/');
+        } else {
+          history.pushState(null, '', this.page);
+        }
       }
       App.pageElement.innerHTML = this.content;
       App.currentPage = this.page;

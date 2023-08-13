@@ -22,7 +22,7 @@ class Tools {
   static urlRoute() {
     if (window.location.hash.length > 1) {
       const path = window.location.hash.replace('#', '');
-      history.pushState(null, '', window.location.origin + path);
+      history.pushState(null, '', path);
       if (path.substring(1) === 'resume') {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
       } else if (path.substring(1) === 'portfolio') {
@@ -30,7 +30,7 @@ class Tools {
       } else if (path.substring(1) === 'archive') {
         ArchivePage.render();
       } else {
-        history.pushState(null, '', window.location.origin);
+        history.pushState(null, '', '/');
         HomePage.render();
       }
     } else {
@@ -73,9 +73,9 @@ class Page {
   static render() {
     if (this.page !== App.currentPage) {
       if (this.page === 'home') {
-        history.pushState(null, '', window.location.origin);
+        history.pushState(null, '', '/');
       } else {
-        history.pushState(null, '', window.location.origin + this.page);
+        history.pushState(null, '', this.page);
       }
       App.pageElement.innerHTML = this.content;
       App.currentPage = this.page;
@@ -92,7 +92,7 @@ class HomePage extends Page {
     <div class="greeter">
       <div class="greeter__itm">
         <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
-        <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!--<iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
       </div>
       <div class="greeter__itm">
         <h3 class="greeter__txt">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>

@@ -2,7 +2,8 @@ class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
   static backgroundsDiv = document.querySelector('#backgrounds-div');
-  static currentPage;
+  static activePage;
+  static inactivePages = [];
   static activeModal = false;
   static inactiveModals = [];
   static modals = {};
@@ -90,71 +91,115 @@ class Tools {
 }
 
 class Page {
+  checkIfInactive() {
+    let i = 0;
+    let found;
+    for (const modal of App.inactiveModals) {
+      if (modal.modalName === this.modalName) {
+        this.element.remove();
+        App.inactiveModals.splice(i, 1);
+        found = true;
+      } else {
+        i++;
+        found = false;
+      }
+    }
+    if (!found) {
+      this.render();
+    }
+  }
+  activate(option) {
+    if (App.activePage.pageName !== this.pageName) {
+      if (App.inactivePages.length > 0) {
+        let i = 0;
+        for (const page of App.inactivePages) {
+          if (page.pageName === this.pageName) {
+            App.activePage.element.classList.toggle('hidden');
+            page.element.classList.toggle('hidden');
+            App.inactivePages.push(App.activePage);
+            App.activePage = page;
+            App.inactivePages.splice(i, 1);
+          }
+        }
+      } else {
+        this.render();
+      }
+    }
+  }
   static render(option) {
-    if (this.page !== App.currentPage) {
+    if (this.pageName !== App.activePage) {
       if (option !== 'init') {
-        if (this.page === 'home') {
+        if (this.pageName === 'home') {
           history.pushState(null, '', '/');
         } else {
-          history.pushState(null, '', this.page);
+          history.pushState(null, '', this.pageName);
         }
       }
       App.pageElement.innerHTML = this.content;
-      App.currentPage = this.page;
+      App.activePage = this.page;
       Tools.resizeHandler();
     }
   }
 }
 
 class HomePage extends Page {
-  static page = 'home';
-  static content = `
-    <h1 class="desktop-hebrew-txt centered">שָׁלוֹם עוֹלָם</h1>
-    <h2 class="main__title centered">My name is Ethan Alan Barnett</h2>
-    <div class="greeter">
-      <div class="greeter__itm">
-        <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
-        <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  pageName = 'home';
+  element;
+  content = `
+    <article id="home-page">
+      <h1 class="desktop-hebrew-txt centered">שָׁלוֹם עוֹלָם</h1>
+      <h2 class="main__title centered">My name is Ethan Alan Barnett</h2>
+      <div class="greeter">
+        <div class="greeter__itm">
+          <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
+          <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="greeter__itm">
+          <h3 class="greeter__txt">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
+          <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+        </div>
       </div>
-      <div class="greeter__itm">
-        <h3 class="greeter__txt">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
-        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
-      </div>
-    </div>
-    <br><br>
-    <p class="body-txt">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
-    <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
+      <br><br>
+      <p class="body-txt">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
+      <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
+    </article>
   `;
 }
 
 class PortfolioPage extends Page {
-  static page = 'portfolio';
-  static content = `
-    <h1 class="main__title centered">Portfolio</h1>
-    <article class="project">
-      <div class="project__itm">
-        <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
-        <picture>
-          <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
-          <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
-          <a href="portfolio/bigthicket/app.html">
-            <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
-          </a>
-        </picture>
-      </div>
-      <div class="project__itm">
-        <p class="project__p">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
-        <br>Username: Ethan
-        <br>Password: Ethan123!</p>
-      </div>
+  pageName = 'portfolio';
+  element;
+  content = `
+    <article id="portfolio-page">
+      <h1 class="main__title centered">Portfolio</h1>
+      <section class="project">
+        <div class="project__itm">
+          <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
+          <picture>
+            <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
+            <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
+            <a href="portfolio/bigthicket/app.html">
+              <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+            </a>
+          </picture>
+        </div>
+        <div class="project__itm">
+          <p class="project__p">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+          <br>Username: Ethan
+          <br>Password: Ethan123!</p>
+        </div>
+      </section>
     </article>
   `;
 }
 
 class ArchivePage extends Page {
-  static page = 'archive';
-  static content = `
-    <h1 class="main__title centered">Archive</h1>
+  pageName = 'archive';
+  element;
+  content = `
+    <article id="archive-page">
+      <h1 class="main__title centered">Archive</h1>
+    </article>
   `;
 }
 

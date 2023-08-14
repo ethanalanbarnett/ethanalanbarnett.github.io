@@ -2,17 +2,21 @@ class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
   static backgroundsDiv = document.querySelector('#backgrounds-div');
-  static activePage;
+  static activePage = false;
   static inactivePages = [];
+  static pages = {};
   static activeModal = false;
   static inactiveModals = [];
   static modals = {};
   static screenDimmer;
   static init() {
     Tools.initUrlRoute();
+    this.pages.homePage = new HomePage();
+    this.pages.portfolioPage = new PortfolioPage();
+    this.pages.archivePage = new ArchivePage();
+    this.modals.résumé = new RésuméModal();
     this.screenDimmer = new ScreenDimmer();
     this.screenDimmer.render();
-    this.modals.résumé = new RésuméModal();
     Tools.resizeHandler();
     window.addEventListener('popstate', Tools.popState);
     window.addEventListener('resize', Tools.resizeHandler);
@@ -31,30 +35,30 @@ class Tools {
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
       } else if (path === 'portfolio') {
         history.pushState(null, '', path);
-        PortfolioPage.render('init');
+        App.pages.portfolioPage.render('init');
       } else if (path === 'archive') {
         history.pushState(null, '', path);
-        ArchivePage.render('init');
+        App.pages.archivePage.render('init');
       } else {
         history.pushState(null, '', '/');
-        HomePage.render('init');
+        App.pages.homePage.render('init');
       }
     } else {
-      HomePage.render('init');
+      App.pages.homePage.render('init');
     }
   }
   static popState() {
     const uri = window.location.pathname.slice(1);
     switch (uri) {
       case 'portfolio':
-        PortfolioPage.render('init');
+        App.pages.portfolioPage.render('init');
         break;
       case 'archive':
-        ArchivePage.render('init');
+        App.pages.archivePage.render('init');
         break;
       case 'home':
       case '':
-        HomePage.render('init');
+        App.pages.homePage.render('init');
         break;
     }
   }
@@ -91,23 +95,6 @@ class Tools {
 }
 
 class Page {
-  checkIfInactive() {
-    let i = 0;
-    let found;
-    for (const modal of App.inactiveModals) {
-      if (modal.modalName === this.modalName) {
-        this.element.remove();
-        App.inactiveModals.splice(i, 1);
-        found = true;
-      } else {
-        i++;
-        found = false;
-      }
-    }
-    if (!found) {
-      this.render();
-    }
-  }
   activate(option) {
     if (App.activePage.pageName !== this.pageName) {
       if (App.inactivePages.length > 0) {
@@ -122,23 +109,24 @@ class Page {
           }
         }
       } else {
-        this.render();
+        this.render(option);
       }
     }
   }
-  static render(option) {
-    if (this.pageName !== App.activePage) {
-      if (option !== 'init') {
-        if (this.pageName === 'home') {
-          history.pushState(null, '', '/');
-        } else {
-          history.pushState(null, '', this.pageName);
-        }
+  render(option) {
+    if (option !== 'init') {
+      if (this.pageName === 'home') {
+        history.pushState(null, '', '/');
+      } else {
+        history.pushState(null, '', this.pageName);
       }
-      App.pageElement.innerHTML = this.content;
-      App.activePage = this.page;
-      Tools.resizeHandler();
     }
+    App.pageElement.append(this.content);
+    if (App.activePage) {
+      App.inactivePages.push(App.activePage);
+    }
+    App.activePage = this;
+    Tools.resizeHandler();
   }
 }
 

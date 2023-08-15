@@ -49,7 +49,7 @@ class Tools {
   }
   static pageSwitch(uri, option) {
     switch (uri) {
-      case 'resume':
+      case 'resume' || 'Resume' || 'RESUME' || 'résumé' || 'Résumé' || 'RÉSUMÉ':
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
         break;
       case 'portfolio' || 'Portfolio' || 'PORTFOLIO':
@@ -60,6 +60,7 @@ class Tools {
         break;
       case 'home' || 'Home' || 'HOME' || '':
         App.pages.homePage.activate(option);
+        break;
       default:
         App.pages.notFoundPage = new NotFoundPage(uri);
         App.pages.notFoundPage.activate(option);
@@ -201,7 +202,7 @@ class NotFoundPage extends Page {
   content;
   constructor(uri) {
     super();
-    content = `
+    this.content = `
     <h1 class="main__title centered">404 Error</h1>
     <h3 class="centered">There is no page with the name of ${uri}</h3>
   `;

@@ -49,16 +49,16 @@ class Tools {
   }
   static pageSwitch(uri, option) {
     switch (uri) {
-      case 'resume' || 'Resume' || 'RESUME' || 'résumé' || 'Résumé' || 'RÉSUMÉ':
+      case 'resume': case 'Resume': case 'RESUME': case 'résumé': case 'Résumé': case 'RÉSUMÉ':
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
         break;
-      case 'portfolio' || 'Portfolio' || 'PORTFOLIO':
+      case 'portfolio': case 'Portfolio': case 'PORTFOLIO':
         App.pages.portfolioPage.activate(option);
         break;
-      case 'archive' || 'Archive' || 'ARCHIVE':
+      case 'archive': case 'Archive': case 'ARCHIVE':
         App.pages.archivePage.activate(option);
         break;
-      case 'home' || 'Home' || 'HOME' || '':
+      case 'home': case 'Home': case 'HOME': case '':
         App.pages.homePage.activate(option);
         break;
       default:

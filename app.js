@@ -28,6 +28,7 @@ class Tools {
   static initUriRoute() {
     if (window.location.hash.length > 1) {
       let uri = window.location.hash.slice(2);
+      uri = decodeURIComponent(uri);
       if (uri[uri.length - 1] === '/') {
         uri = uri.slice(0, -1);
       }
@@ -49,6 +50,9 @@ class Tools {
   }
   static pageSwitch(uri, option) {
     switch (uri) {
+      case 'home': case 'Home': case 'HOME': case '':
+        App.pages.homePage.activate(option);
+        break;
       case 'resume': case 'Resume': case 'RESUME': case 'résumé': case 'Résumé': case 'RÉSUMÉ':
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
         break;
@@ -57,9 +61,6 @@ class Tools {
         break;
       case 'archive': case 'Archive': case 'ARCHIVE':
         App.pages.archivePage.activate(option);
-        break;
-      case 'home': case 'Home': case 'HOME': case '':
-        App.pages.homePage.activate(option);
         break;
       default:
         App.pages.notFoundPage = new NotFoundPage(uri);

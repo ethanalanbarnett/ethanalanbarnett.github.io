@@ -1,7 +1,7 @@
 class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
-  static backgroundsDiv = document.querySelector('#backgrounds-div');
+  static backgroundsDiv = document.querySelector('#Backgrounds');
   static activePage = false;
   static inactivePages = [];
   static pages = {};
@@ -26,15 +26,15 @@ class App {
 
 class Tools {
   static initUriRoute() {
-    if (window.location.hash.length > 1) {
+    if (window.location.hash.length < 1) {
+      App.pages.homePage.activate();
+    } else {
       let uri = window.location.hash.slice(2);
       uri = decodeURIComponent(uri);
       if (uri[uri.length - 1] === '/') {
         uri = uri.slice(0, -1);
       }
       Tools.pageSwitch(uri);
-    } else {
-      App.pages.homePage.activate('no-uri-update');
     }
   }
   static popState() {
@@ -111,7 +111,7 @@ class Page {
       for (const page of App.inactivePages) {
         if (page.pageName === this.pageName) {
           if (option !== 'no-uri-update') {
-            Tools.uriUpdate(this.pageName);
+            Tools.uriUpdate(this.pageName.toLowerCase());
           }
           found = true;
           page.element.classList.toggle('hidden');
@@ -131,10 +131,10 @@ class Page {
   }
   render(option) {
     if (option !== 'no-uri-update') {
-      Tools.uriUpdate(this.pageName);
+      Tools.uriUpdate(this.pageName.toLowerCase());
     }
     this.element = document.createElement('article');
-    this.element.id = `${this.pageName}-page`;
+    this.element.id = `${this.pageName}_Page`;
     this.element.innerHTML = this.content;
     App.pageElement.append(this.element);
     App.activePage = this;
@@ -143,7 +143,7 @@ class Page {
 }
 
 class HomePage extends Page {
-  pageName = 'home';
+  pageName = 'Home';
   element;
   content = `
     <h1 class="desktop-hebrew-txt centered">שָׁלוֹם עוֹלָם</h1>
@@ -165,7 +165,7 @@ class HomePage extends Page {
 }
 
 class PortfolioPage extends Page {
-  pageName = 'portfolio';
+  pageName = 'Portfolio';
   element;
   content = `
     <h1 class="main__title centered">Portfolio</h1>
@@ -190,7 +190,7 @@ class PortfolioPage extends Page {
 }
 
 class ArchivePage extends Page {
-  pageName = 'archive';
+  pageName = 'Archive';
   element;
   content = `
     <h1 class="main__title centered">Archive</h1>
@@ -217,16 +217,19 @@ class Modal {
     } else if (App.inactiveModals.length > 0) {
       this.checkIfInactive();
     } else {
-      window.location.href = '#';
       this.render();
     }
   }
   removeActive() {
     this.element.remove();
-    App.activeModal = false;
-    if (App.inactiveModals.length > 0) {
+    if (App.inactiveModals.length < 1) {
+      App.activeModal = false;
+      window.location.hash = '';
+      history.pushState(null, '', window.location.href.replace('#', ''));
+    } else {
       const mostRecentModal = App.inactiveModals.pop();
       App.activeModal = mostRecentModal;
+      window.location.hash = App.activeModal.modalName;
     }
   }
   checkIfInactive() {
@@ -248,10 +251,11 @@ class Modal {
     }
   }
   render() {
-    const modalList = App.body.querySelector('#modal-list');
+    const modalList = App.body.querySelector('#Modal_List');
+    const className = this.modalName.toLowerCase().replace('_', '-').replace("'", '') + '-modal';
     this.element = document.createElement('div');
     this.element.id = this.modalName;
-    this.element.className = `modal ${this.modalName}`;
+    this.element.className = `modal ${className}`;
     modalList.append(this.element);
     this.element.innerHTML = this.content;
     if (App.activeModal) {
@@ -260,6 +264,7 @@ class Modal {
     App.activeModal = this;
     Tools.resizeHandler();
     App.screenDimmer.toggle();
+    window.location.hash = this.modalName;
   }
   resize() {
     const halfWidth = this.element.offsetWidth / 2;
@@ -268,7 +273,7 @@ class Modal {
 }
 
 class RésuméModal extends Modal {
-  modalName = 'résumé-modal';
+  modalName = "Ethan's_Résumé";
   element;
   content = `
     <nav class="résumé-modal__nav">

@@ -73,15 +73,7 @@ class Tools {
       Tools.hebrewTextAlignment();
     } else {
       Tools.desktopBackgroundAdjustment();
-    } // The below code has been commented out because the modals are now grid items, and thus resize automatically.
-    // if (App.activeModal) {
-    //   App.activeModal.resize();
-    //   if (App.inactiveModals.length > 0) {
-    //     for (const modal of App.inactiveModals) {
-    //       modal.resize();
-    //     }
-    //   }
-    // }
+    }
   }
   static desktopBackgroundAdjustment() {
     App.backgroundsDiv.style.height = `${App.pageElement.offsetHeight}px`;
@@ -265,10 +257,6 @@ class Modal {
     Tools.resizeHandler();
     App.screenDimmer.toggle();
     window.location.hash = this.modalName;
-  }
-  resize() {
-    const halfWidth = this.element.offsetWidth / 2;
-    this.element.style.marginLeft = `calc(50% - ${halfWidth}px)`;
   }
 }
 

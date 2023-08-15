@@ -30,10 +30,10 @@ class Tools {
       App.pages.homePage.activate();
     } else {
       let uri = window.location.hash.slice(2);
-      uri = decodeURIComponent(uri);
       if (uri[uri.length - 1] === '/') {
         uri = uri.slice(0, -1);
       }
+      uri = decodeURIComponent(uri).toLowerCase();
       Tools.pageSwitch(uri);
     }
   }
@@ -50,16 +50,16 @@ class Tools {
   }
   static pageSwitch(uri, option) {
     switch (uri) {
-      case 'home': case 'Home': case 'HOME': case '':
+      case 'home': case '':
         App.pages.homePage.activate(option);
         break;
-      case 'resume': case 'Resume': case 'RESUME': case 'résumé': case 'Résumé': case 'RÉSUMÉ':
+      case 'resume': case 'résumé':
         window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
         break;
-      case 'portfolio': case 'Portfolio': case 'PORTFOLIO':
+      case 'portfolio':
         App.pages.portfolioPage.activate(option);
         break;
-      case 'archive': case 'Archive': case 'ARCHIVE':
+      case 'archive':
         App.pages.archivePage.activate(option);
         break;
       default:

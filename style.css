@@ -45,13 +45,15 @@ main {
   display: grid;
   grid-area: clmn-left / clmn-left / clmn-right / clmn-right;
   grid-template: 'bgd-left bgd-main bgd-right' 1fr / 1fr 70% 1fr;
-  position: relative;
   z-index: 1;
 }
 
 .bgd-desktop {
-  display: flex;
-  height: 100%;
+  background-image: url(resources/images/pattern_background.png);
+  display: grid;
+  grid-template: 
+    'ethan' auto
+    'pattern' 1fr / 1fr;
   overflow: hidden;
 }
 
@@ -118,6 +120,23 @@ main {
 
 
 /* ELEMENTS _______________________________________________________________________________*/
+
+.bgd-desktop__frame {
+  box-shadow: 0 0 160px 150px rgba(0, 0, 0, 1);
+  grid-area: pattern;
+}
+
+.bgd-desktop__img {
+  aspect-ratio: 239 / 500;
+  box-shadow: 0 0 160px 150px rgba(0, 0, 0, 1);
+  display: block;
+  height: auto;
+  min-width: 100%;
+}
+
+.bgd-desktop__picture {
+  grid-area: ethan;
+}
 
 .bgd-mobile__img {
   display: block;
@@ -240,13 +259,15 @@ main {
 /* MODIFIERS _______________________________________________________________________________*/
 
 .bgd-desktop--left {
+  background-position: right top;
   grid-area: bgd-left;
-  justify-content: left;
+  justify-self: start;
 }
 
 .bgd-desktop--right {
+  background-position: left top;
   grid-area: bgd-right;
-  justify-content: right;
+  justify-self: end;
 }
 
 .résumé-modal__btn--x {
@@ -360,14 +381,11 @@ main {
 }
 
 @media screen and (min-width: 6373px) {
-  .bgd-desktop__img-left {
-    aspect-ratio: 239 / 500;
-    height: auto;
-    width: 30%;
+  .bgd-desktop--left {
+    justify-self: stretch;
   }
-  .bgd-desktop__img-right {
-    aspect-ratio: 239 / 500;
-    height: auto;
-    width: 30%;
+  
+  .bgd-desktop--right {
+    justify-self: stretch;
   }
 }

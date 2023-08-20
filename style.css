@@ -64,6 +64,7 @@ main {
 
 .bgd-mobile {
   display: none;
+  position: relative;
 }
 
 .desktop-hebrew-txt {

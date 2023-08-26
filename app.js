@@ -131,12 +131,12 @@ class HomePage extends Page {
     <h2 class="main__title centered">My name is Ethan Alan Barnett</h2>
     <div class="greeter">
       <div class="greeter__itm">
-        <h3 class="greeter__txt">Feel free to availe yourself of this cheeky "hello world!" reference:</h3>
-        <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3 class="greeter__txt">Take a gander at my résumé (click to enlarge):</h3>
+        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
       </div>
       <div class="greeter__itm">
-        <h3 class="greeter__txt">Alternatively, you may also take a gander at my résumé (click to enlarge):</h3>
-        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+        <h3 class="greeter__txt">Alternatively, you may also availe yourself of this cheeky "hello world!" reference:</h3>
+        <iframe class="greeter__vid" src="https://www.youtube-nocookie.com/embed/kqdBD6MMciA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
     <br><br>

@@ -28,6 +28,8 @@ header {
   background-color: #000000;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
   grid-area: header;
+  position: sticky;
+  top: 0;
   z-index: 3;
 }
 

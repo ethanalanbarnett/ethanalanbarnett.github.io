@@ -141,7 +141,7 @@ class HomePage extends Page {
     </div>
     <br><br>
     <p class="body-txt">This site is obviously rough and unfinished. Its purpose is to display my abilities as I learn front-end web development.
-    <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
+    <br>At the moment, this site is running on vanilla HTML, CSS, and JavaScript: as that is my current focus.</p>
     <h1 class="centered">_________________</h1>
   `;
 }

@@ -2,44 +2,44 @@ class App {
   static body = document.querySelector('body');
   static pageElement = document.querySelector('main');
   static backgroundsDiv = document.querySelector('#Backgrounds');
+  static activePage = false;
+  static inactivePages = [];
   static pages = {};
   static activeModal = false;
   static inactiveModals = [];
   static modals = {};
   static screenDimmer;
   static init() {
-    App.pages.homePage = new HomePage();
-    App.pages.portfolioPage = new PortfolioPage();
-    App.pages.archivePage = new ArchivePage();
-    App.modals.résumé = new RésuméModal();
-    App.screenDimmer = new ScreenDimmer();
-    App.pages.homePage.render();
-    App.pages.portfolioPage.render();
-    App.pages.archivePage.render();
-    App.screenDimmer.render();
+    this.pages.homePage = new HomePage();
+    this.pages.portfolioPage = new PortfolioPage();
+    this.pages.archivePage = new ArchivePage();
     Tools.initUriRoute();
+    this.modals.résumé = new RésuméModal();
+    this.screenDimmer = new ScreenDimmer();
+    this.screenDimmer.render();
+    Tools.resizeHandler();
     window.addEventListener('popstate', Tools.popState);
     window.addEventListener('resize', Tools.resizeHandler);
-    Tools.resizeHandler();
+    window.onload = Tools.resizeHandler();
   }
 }
 
 class Tools {
   static initUriRoute() {
-    if (window.location.hash.length > 0) {
-      const uri = Tools.getUri();
+    if (window.location.hash.length < 1) {
+      App.pages.homePage.activate();
+    } else {
+      let uri = window.location.hash.slice(2);
+      if (uri[uri.length - 1] === '/') {
+        uri = uri.slice(0, -1);
+      }
+      uri = decodeURIComponent(uri).toLowerCase();
       Tools.pageSwitch(uri);
     }
   }
   static popState() {
-    const uri = Tools.getUri();
-    if (uri === '404') {
-      App.pages.notFoundPage = new NotFoundPage(uri);
-      App.pages.notFoundPage.render('404');
-    }
-    if (uri === `ethan's_résumé` && App.activeModal.modalName !== `Ethan's_Résumé`) {
-      App.modals.résumé.toggle();
-    }
+    const uri = window.location.pathname.slice(1);
+    Tools.pageSwitch(uri, 'no-uri-update');
   }
   static uriUpdate(page) {
     if (page === 'home') {
@@ -48,44 +48,24 @@ class Tools {
       history.pushState(null, '', page);
     }
   }
-  static pageSwitch(hash) {
-    if (App.pages.notFoundPage) {
-      App.pages.notFoundPage.renav();
-      delete App.pages.notFoundPage;
-    }
-    switch (hash) {
+  static pageSwitch(uri, option) {
+    switch (uri) {
       case 'home': case '':
-        if (Tools.getUri('no-decode')) {
-          Tools.eraseHash();
-        }
+        App.pages.homePage.activate(option);
         break;
       case 'resume': case 'résumé':
-        App.modals.résumé.toggle();
+        window.location.href = `https://ethanalanbarnett.github.io/resources/documents/Ethan's Résumé.pdf`;
         break;
       case 'portfolio':
-        window.location.hash = 'Portfolio';
+        App.pages.portfolioPage.activate(option);
         break;
       case 'archive':
-        window.location.hash = 'Archive';
+        App.pages.archivePage.activate(option);
         break;
       default:
-        App.pages.notFoundPage = new NotFoundPage(hash);
-        App.pages.notFoundPage.render('404');
+        App.pages.notFoundPage = new NotFoundPage(uri);
+        App.pages.notFoundPage.activate(option);
     }
-  }
-  static getUri(option) {
-    let uri = window.location.hash.slice(1);
-      if (uri[uri.length - 1] === '/') {
-        uri = uri.slice(0, -1);
-      }
-      if (option !== 'no-decode') {
-        uri = decodeURIComponent(uri).toLowerCase();
-      }
-      return uri;
-  }
-  static eraseHash() {
-    const hash = Tools.getUri('no-decode');
-    history.pushState(null, '', window.location.href.replace(`#${hash}`, ''));
   }
   static resizeHandler() {
     if (window.innerWidth <= 1042) {
@@ -112,14 +92,45 @@ class Tools {
 }
 
 class Page {
+  activate(option) {
+    if (!App.activePage) {
+      this.render(option);
+    } else if (App.activePage.pageName !== this.pageName) {
+      App.activePage.element.classList.toggle('hidden');
+      App.inactivePages.push(App.activePage);
+      let i = 0;
+      let found;
+      for (const page of App.inactivePages) {
+        if (page.pageName === this.pageName) {
+          if (option !== 'no-uri-update') {
+            Tools.uriUpdate(this.pageName.toLowerCase());
+          }
+          found = true;
+          page.element.classList.toggle('hidden');
+          App.activePage = page;
+          App.inactivePages.splice(i, 1);
+          Tools.resizeHandler();
+          break;
+        } else {
+          found = false;
+          i++
+        }
+      }
+      if (!found) {
+        this.render(option);
+      }
+    }
+  }
   render(option) {
+    if (option !== 'no-uri-update') {
+      Tools.uriUpdate(this.pageName.toLowerCase());
+    }
     this.element = document.createElement('article');
-    this.element.id = this.pageName;
+    this.element.id = `${this.pageName}_Page`;
     this.element.innerHTML = this.content;
     App.pageElement.append(this.element);
-    if (option === '404') {
-      this.notFound();
-    }
+    App.activePage = this;
+    Tools.resizeHandler();
   }
 }
 
@@ -140,9 +151,8 @@ class HomePage extends Page {
       </div>
     </div>
     <br><br>
-    <p class="body-txt">This site is obviously rough and unfinished. Its purpose is to display my abilities as I learn front-end web development.
+    <p class="body-txt">This site is obviously rough and unfinished (beware the 'Portfolio' page). Its purpose is to display my abilities as I learn front-end web development.
     <br>At the moment, this site is running on vanilla HTML, CSS, and JS: as that is my current focus.</p>
-    <h1 class="centered">_________________</h1>
   `;
 }
 
@@ -168,7 +178,6 @@ class PortfolioPage extends Page {
         <br>Password: Ethan123!</p>
       </div>
     </section>
-    <h1 class="centered">_________________</h1>
   `;
 }
 
@@ -191,21 +200,6 @@ class NotFoundPage extends Page {
     <h3 class="centered">There is no page with the name of ${uri}</h3>
   `;
   }
-  notFound() {
-    this.routine(this.pageName);
-  }
-  renav() {
-    this.routine(App.pages.homePage.pageName);
-    this.content = '';
-  }
-  routine(uri) {
-    Tools.uriUpdate(uri);
-    for (const page in App.pages) {
-      if (App.pages[page].pageName !== '404') {
-        App.pages[page].element.classList.toggle('hidden');
-      }
-    }
-  }
 }
 
 class Modal {
@@ -217,13 +211,13 @@ class Modal {
     } else {
       this.render();
     }
-    Tools.resizeHandler();
   }
   removeActive() {
     this.element.remove();
     if (App.inactiveModals.length < 1) {
       App.activeModal = false;
-      Tools.eraseHash();
+      window.location.hash = '';
+      history.pushState(null, '', window.location.href.replace('#', ''));
     } else {
       const mostRecentModal = App.inactiveModals.pop();
       App.activeModal = mostRecentModal;
@@ -260,6 +254,7 @@ class Modal {
       App.inactiveModals.push(App.activeModal);
     }
     App.activeModal = this;
+    Tools.resizeHandler();
     App.screenDimmer.toggle();
     window.location.hash = this.modalName;
   }
@@ -302,4 +297,4 @@ class ScreenDimmer {
   }
 }
 
-window.addEventListener('load', App.init);
+App.init();

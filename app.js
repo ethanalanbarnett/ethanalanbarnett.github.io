@@ -57,6 +57,7 @@ class Tools {
       case 'home': case '':
         if (Tools.getUri('no-decode')) {
           Tools.eraseHash();
+          document.documentElement.scrollTop = 0;
         }
         break;
       case 'resume': case 'résumé':

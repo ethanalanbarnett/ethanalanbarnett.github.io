@@ -3,9 +3,9 @@
 body {
   display: grid;
   grid-template: 
-  'header header header'
+  'header header header' auto
   'clmn-left main clmn-right' minmax(0, 1fr)
-  'footer footer footer' / 1fr 70% 1fr;
+  'footer footer footer' auto / 1fr 70% 1fr;
   font-family: custom-hebrew;
   font-size: 1rem;
   margin: 0;

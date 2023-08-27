@@ -12,6 +12,7 @@ class App {
     Tools.resizeHandler();
   });
   static init() {
+    Tools.resizeHandler();  // this is just a safety precaution. I don't think it's needed, but just in case a page renders in on mobile and the body does not change size. I'm paranoid.
     App.resize.observe(App.body);
     App.pages.homePage = new HomePage();
     App.pages.portfolioPage = new PortfolioPage();

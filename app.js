@@ -9,18 +9,22 @@ class App {
   static modals = {};
   static screenDimmer;
   static init() {
+    Tools.resizeHandler();
     App.pages.homePage = new HomePage();
     App.pages.portfolioPage = new PortfolioPage();
     App.pages.archivePage = new ArchivePage();
     App.modals.résumé = new RésuméModal();
     App.screenDimmer = new ScreenDimmer();
+    window.addEventListener('resize', Tools.resizeHandler);
+    window.addEventListener('popstate', Tools.popState);
+    window.addEventListener('load', App.load);
+  }
+  static load() {
     App.pages.homePage.render();
     App.pages.portfolioPage.render();
     App.pages.archivePage.render();
     App.screenDimmer.render();
     Tools.initUriRoute();
-    window.addEventListener('popstate', Tools.popState);
-    window.addEventListener('resize', Tools.resizeHandler);
     Tools.resizeHandler();
   }
 }
@@ -310,4 +314,4 @@ class ScreenDimmer {
   }
 }
 
-window.addEventListener('load', App.init);
+App.init();

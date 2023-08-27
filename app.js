@@ -1,31 +1,29 @@
 class App {
   static body = document.querySelector('body');
   static header = document.querySelector('header');
-  static pageElement = document.querySelector('main');
+  static main = document.querySelector('main');
   static backgroundsDiv = document.querySelector('#Backgrounds');
   static pages = {};
   static activeModal = false;
   static inactiveModals = [];
   static modals = {};
   static screenDimmer;
-  static init() {
+  static resize = new ResizeObserver(entries => {
     Tools.resizeHandler();
+  });
+  static init() {
+    App.resize.observe(App.body);
     App.pages.homePage = new HomePage();
     App.pages.portfolioPage = new PortfolioPage();
     App.pages.archivePage = new ArchivePage();
     App.modals.résumé = new RésuméModal();
     App.screenDimmer = new ScreenDimmer();
-    window.addEventListener('resize', Tools.resizeHandler);
-    window.addEventListener('popstate', Tools.popState);
-    window.addEventListener('load', App.load);
-  }
-  static load() {
     App.pages.homePage.render();
     App.pages.portfolioPage.render();
     App.pages.archivePage.render();
     App.screenDimmer.render();
     Tools.initUriRoute();
-    Tools.resizeHandler();
+    window.addEventListener('popstate', Tools.popState);
   }
 }
 
@@ -102,7 +100,7 @@ class Tools {
     }
   }
   static desktopBackgroundAdjustment() {
-    App.backgroundsDiv.style.height = `${App.pageElement.offsetHeight}px`;
+    App.backgroundsDiv.style.height = `${App.main.offsetHeight}px`;
   }
   static mobileBackgroundAdjustment() {
     App.backgroundsDiv.style.height = ''; // this simply removes the custom set height for the element set by the desktopBackgroundAdjustment() function. It does not change the classes.
@@ -122,7 +120,7 @@ class Page {
     this.element = document.createElement('article');
     this.element.id = this.pageName;
     this.element.innerHTML = this.content;
-    App.pageElement.append(this.element);
+    App.main.append(this.element);
     if (option === '404') {
       this.notFound();
     }
@@ -227,7 +225,6 @@ class Modal {
     } else {
       this.render();
     }
-    Tools.resizeHandler();
   }
   deactivate() {
     this.element.remove();

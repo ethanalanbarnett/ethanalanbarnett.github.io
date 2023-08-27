@@ -316,11 +316,13 @@ main {
 /* AT-RULES _______________________________________________________________________________*/
 
 @font-face {
+  font-display: swap;
   font-family: custom-hebrew;
   src: local("Ezra SIL"), local("Ezra SIL SR"), url(resources/fonts/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
 @font-face {
+  font-display: swap;
   font-family: symbola;
   src: local("Symbola"), url(resources/fonts/symbola.ttf); /* https://www.fontspace.com/symbola-font-f22021 */
 }

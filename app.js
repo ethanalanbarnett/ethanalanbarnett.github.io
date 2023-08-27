@@ -1,5 +1,6 @@
 class App {
   static body = document.querySelector('body');
+  static header = document.querySelector('header');
   static pageElement = document.querySelector('main');
   static backgroundsDiv = document.querySelector('#Backgrounds');
   static pages = {};
@@ -55,9 +56,9 @@ class Tools {
     }
     switch (hash) {
       case 'home': case '':
+        document.documentElement.scrollTop = 0;
         if (Tools.getUri('no-decode')) {
           Tools.eraseHash();
-          document.documentElement.scrollTop = 0;
         }
         break;
       case 'resume': case 'résumé':
@@ -210,9 +211,13 @@ class NotFoundPage extends Page {
 }
 
 class Modal {
+  static xButtonHandler() {
+    App.screenDimmer.clickHandler();
+    document.documentElement.scrollTop = 0;
+  }
   toggle() {
     if (App.activeModal.modalName === this.modalName) {
-      this.removeActive();
+      this.deactivate();
     } else if (App.inactiveModals.length > 0) {
       this.checkIfInactive();
     } else {
@@ -220,15 +225,16 @@ class Modal {
     }
     Tools.resizeHandler();
   }
-  removeActive() {
+  deactivate() {
     this.element.remove();
     if (App.inactiveModals.length < 1) {
       App.activeModal = false;
+      App.header.style.position = ''; // This removes the element level style and reverts back to the CSS.
       Tools.eraseHash();
     } else {
       const mostRecentModal = App.inactiveModals.pop();
       App.activeModal = mostRecentModal;
-      window.location.hash = App.activeModal.modalName;
+      window.location.hash = mostRecentModal.modalName;
     }
   }
   checkIfInactive() {
@@ -250,6 +256,7 @@ class Modal {
     }
   }
   render() {
+    App.header.style.position = 'static';
     const modalList = App.body.querySelector('#Modal_List');
     const className = this.modalName.toLowerCase().replace('_', '-').replace("'", '') + '-modal';
     this.element = document.createElement('div');
@@ -274,7 +281,7 @@ class RésuméModal extends Modal {
       <table>
         <tr>
           <td class="résumé-modal__btn"><a class="nav__link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
-          <td class="résumé-modal__btn résumé-modal__btn--x"><a class="nav__link symbol" href="javascript:App.screenDimmer.clickHandler()" download>🗙</a></td>
+          <td class="résumé-modal__btn résumé-modal__btn--x"><a class="nav__link symbol" href="javascript:Modal.xButtonHandler()" download>🗙</a></td>
         </tr>
       </table>
     </nav>

@@ -5,8 +5,8 @@ body {
 }
 
 .header-main {
-  background-image: url(/assets/img/banner.jpg);
-  /* background-image: url(/assets/img/banner-blue.jpg); */
+  background-image: url(/ask_life/assets/img/banner.jpg);
+  /* background-image: url(/ask_life/assets/img/banner-blue.jpg); */
   background-position: center;
   background-size: cover;
   min-height: 100vh;
@@ -158,5 +158,5 @@ body {
 @font-face {
   font-display: swap;
   font-family: padma;
-  src: local("GIST-TMOTPadma"), url(/assets/font/tmotpdn_ship.ttf);
+  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
 }

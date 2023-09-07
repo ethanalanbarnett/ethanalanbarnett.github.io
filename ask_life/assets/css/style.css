@@ -1,0 +1,162 @@
+/* BLOCKS ______________________________________________________________________________________________ */
+
+body {
+  margin: 0;
+}
+
+.header-main {
+  background-image: url(/assets/img/banner.jpg);
+  /* background-image: url(/assets/img/banner-blue.jpg); */
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.sticky-bar {
+  background-color: #ffffff;
+  height: 2.6rem;
+  position: sticky;
+  top: 0;
+}
+
+/* ELEMENTS ______________________________________________________________________________________________ */
+
+.header-main__attr {
+  bottom: 0.5rem;
+  font-size: 0.7rem;
+  margin: 0;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.header-main__attr-a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.header-main__glyph {
+  height: 1.2rem;
+}
+
+.header-main__imgs {
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  width: 35%;
+}
+
+.header-main__li {
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.3rem 0 0.3rem 0;
+}
+
+.header-main__li-a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header-main__li-a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transition-duration: 150ms;
+}
+
+.header-main__logo {
+  width: 100%;
+}
+
+.header-main__nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.6);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.header-main__slogan {
+  width: 100%;
+}
+
+.header-main__subtitle {
+  color: #ffffff;
+  font: 1.2rem/2 Arial, sans-serif;
+  text-shadow: 0 0 0.2rem #000000;
+}
+
+.header-main__subtitle-div {
+  left: 5%;
+  position: absolute;
+  bottom: 25%;
+  width: 25%;
+}
+
+.header-main__ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+.sticky-bar__txt {
+  color: #ffffff;
+  left: 0.75%;
+  line-height: 0;
+  margin: 0;
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+}
+
+.sticky-bar__wrapper {
+  height: 2.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* MODIFIERS ______________________________________________________________________________________________ */
+
+
+
+/* UTILITIES ______________________________________________________________________________________________ */
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.centered-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-txt {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.padma {
+  font-family: padma, 'Times New Roman', Times, serif;
+}
+
+/* AT-Rules ______________________________________________________________________________________________ */
+
+@font-face {
+  font-display: swap;
+  font-family: padma;
+  src: local("GIST-TMOTPadma"), url(/assets/font/tmotpdn_ship.ttf);
+}

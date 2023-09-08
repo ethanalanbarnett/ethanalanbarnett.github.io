@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .header-main {
@@ -20,6 +21,10 @@ body {
 }
 
 /* ELEMENTS ______________________________________________________________________________________________ */
+
+.about-us__p {
+  text-indent: 2rem;
+}
 
 .header-main__attr {
   bottom: 0.5rem;
@@ -83,7 +88,8 @@ body {
 
 .header-main__subtitle {
   color: #ffffff;
-  font: 1.2rem/2 Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2;
   text-shadow: 0 0 0.2rem #000000;
 }
 

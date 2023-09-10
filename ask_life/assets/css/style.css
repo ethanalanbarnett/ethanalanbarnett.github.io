@@ -1,8 +1,54 @@
+/* AT-Rules ______________________________________________________________________________________________ */
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v6/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: padma;
+  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
+}
+
+
 /* BLOCKS ______________________________________________________________________________________________ */
 
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  color: #5d6163;
+  font: 1.688rem/1.875rem 'Libre Baskerville', serif;
+  margin: 0.563rem 0 1rem 0;
+  text-transform: uppercase;
+}
+
+h2::after {
+  background-image: linear-gradient(to right, #a88900, #3ec500);
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 16px auto 32px auto;
+  width: 100px;
+}
+
+main {
+  margin: 0 auto 0 auto;
+  width: 75vw;
+}
+
+p {
+  color: #4d5153;
+  line-height: 2.5;
+  margin: 0;
+  text-indent: 3rem;
 }
 
 .header-main {
@@ -22,8 +68,14 @@ body {
 
 /* ELEMENTS ______________________________________________________________________________________________ */
 
-.about-us__p {
-  text-indent: 2rem;
+.h2__subtitle {
+  color: #35393c;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  text-indent: 0;
+  text-transform: uppercase;
 }
 
 .header-main__attr {
@@ -117,6 +169,7 @@ body {
   margin: 0;
   position: absolute;
   text-decoration: none;
+  text-transform: uppercase;
   top: 50%;
 }
 
@@ -149,7 +202,7 @@ body {
   margin-right: auto;
 }
 
-.centered-txt {
+.centered-text {
   text-align: center;
 }
 
@@ -159,12 +212,4 @@ body {
 
 .padma {
   font-family: padma, 'Times New Roman', Times, serif;
-}
-
-/* AT-Rules ______________________________________________________________________________________________ */
-
-@font-face {
-  font-display: swap;
-  font-family: padma;
-  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
 }

@@ -25,7 +25,7 @@ body {
 h2 {
   color: #5d6163;
   font: 1.688rem/1.875rem 'Libre Baskerville', serif;
-  margin: 0.563rem 0 1rem 0;
+  margin: 0 0 1rem 0;
   text-transform: uppercase;
 }
 
@@ -51,34 +51,7 @@ p {
   text-indent: 3rem;
 }
 
-.header-main {
-  background-image: url(/ask_life/assets/img/banner.jpg);
-  /* background-image: url(/ask_life/assets/img/banner-blue.jpg); */
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-.sticky-bar {
-  background-color: #ffffff;
-  height: 2.6rem;
-  position: sticky;
-  top: 0;
-}
-
-/* ELEMENTS ______________________________________________________________________________________________ */
-
-.h2__subtitle {
-  color: #35393c;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0 0 0.5rem 0;
-  text-indent: 0;
-  text-transform: uppercase;
-}
-
-.header-main__attr {
+.attribution {
   bottom: 0.5rem;
   font-size: 0.7rem;
   margin: 0;
@@ -86,9 +59,47 @@ p {
   right: 0.5rem;
 }
 
-.header-main__attr-a {
+.footer-main {
+  background-image: url(/ask_life/assets/img/banner-bottom.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+  position: relative;
+}
+
+.header-main {
+  background-image: url(/ask_life/assets/img/banner-top.jpg);
+  /* background-image: url(/ask_life/assets/img/banner-blue.jpg); */
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sticky-bar {
+  background-color: #ffffff;
+  height: 2.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* ELEMENTS ______________________________________________________________________________________________ */
+
+.attribution__link {
   color: #cccccc;
   text-decoration: none;
+}
+
+.h2__subtitle {
+  color: #35393c;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  margin: 0;
+  text-indent: 0;
+  text-transform: uppercase;
 }
 
 .header-main__glyph {
@@ -131,7 +142,7 @@ p {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-main__slogan {
@@ -139,16 +150,14 @@ p {
 }
 
 .header-main__subtitle {
+  bottom: 25%;
   color: #ffffff;
   font-size: 1.2rem;
-  line-height: 2;
-  text-shadow: 0 0 0.2rem #000000;
-}
-
-.header-main__subtitle-div {
   left: 5%;
+  line-height: 2;
   position: absolute;
-  bottom: 25%;
+  text-indent: 0;
+  text-shadow: 0 0 0.2rem #000000;
   width: 25%;
 }
 
@@ -161,6 +170,11 @@ p {
   margin: 0 auto 0 auto;
   padding: 0;
   width: 50%;
+}
+
+.section-header {
+  position: relative;
+  top: -2.6rem;
 }
 
 .sticky-bar__txt {
@@ -180,7 +194,7 @@ p {
   top: 0;
   white-space: nowrap;
   width: min-content;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* MODIFIERS ______________________________________________________________________________________________ */

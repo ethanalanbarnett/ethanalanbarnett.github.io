@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="67.696335"
+   height="67.712166"
+   version="1.0"
+   id="svg17"
+   sodipodi:docname="Email_icon-black.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview19"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.0736682"
+     inkscape:cx="34.988919"
+     inkscape:cy="37.745621"
+     inkscape:window-width="1440"
+     inkscape:window-height="839"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17" />
+  <defs
+     id="defs5" />
+  <path
+     fill="#eeeeec"
+     stroke="#eeeeec"
+     stroke-width="0.844846"
+     d="m 67.273909,33.856083 c 0.0044,18.46362 -14.962118,33.433661 -33.425737,33.433661 -18.463629,0 -33.4301225,-14.970041 -33.4257481,-33.433661 C 0.4180495,15.392464 15.384543,0.42242295 33.848172,0.42242295 c 18.463619,0 33.430112,14.97004105 33.425737,33.43366005 z"
+     id="path9" />
+  <path
+     fill="none"
+     stroke="#eeeeec"
+     d="M 33.182674,11.968461 V 32.731413 H 58.737075"
+     id="path11" />
+  <path
+     fill="#2e3436"
+     stroke="#eeeeec"
+     stroke-width="0.9"
+     d="m 12.419721,21.950649 h 42.52412 v 23.757608 h -42.52412 z"
+     id="path13" />
+  <path
+     fill="none"
+     stroke="#eeeeec"
+     d="M 11.421503,20.952431 33.810718,33.87885 55.061806,21.609529"
+     id="path15" />
+</svg>

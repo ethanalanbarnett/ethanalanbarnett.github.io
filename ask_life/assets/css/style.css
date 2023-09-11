@@ -10,22 +10,50 @@
 
 @font-face {
   font-display: swap;
-  font-family: padma;
+  font-family: 'Padma';
   src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
 }
 
 
 /* BLOCKS ______________________________________________________________________________________________ */
 
+a {
+  color: #000000;
+}
+
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+dd {
+  color: #4d5153;
+  line-height: 2;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1.3rem;
 }
 
 h2 {
   color: #5d6163;
   font: 1.688rem/1.875rem 'Libre Baskerville', serif;
-  margin: 0 0 1rem 0;
+  margin: 0;
   text-transform: uppercase;
 }
 
@@ -35,7 +63,7 @@ h2::after {
   content: "";
   display: block;
   height: 4px;
-  margin: 16px auto 32px auto;
+  margin: 16px auto 0 auto;
   width: 100px;
 }
 
@@ -44,7 +72,7 @@ hr {
   background-size: cover;
   border-style: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-  margin: 10px 0 10px 0;
+  margin: calc(10px + 2.6rem) 0 calc(10px + 2.6rem) 0;
   height: 20vh;
 }
 
@@ -60,13 +88,27 @@ section {
   width: 75vw;
 }
 
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
+  margin: 0 0 40px 0;
+  padding: 1.3rem;
+}
+
 .footer-main {
+  align-items: start;
   background-image: url(/ask_life/assets/img/banner-bottom.jpg);
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
   height: 20vh;
   margin: 10px 0 0 0;
+  padding: 0 1.25rem 0 1.25rem;
 }
 
 .header-main {
@@ -89,6 +131,45 @@ section {
 }
 
 /* ELEMENTS ______________________________________________________________________________________________ */
+
+.card__flex {
+  align-items: center;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.contact-us__address {
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 1.4rem;
+}
+
+.contact-us__div {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+.contact-us__email {
+  color: #5d6163;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.contact-us__img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer-main__copyright {
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+.footer-main__logo {
+  height: 25%;
+}
 
 .h2__subtitle {
   color: #35393c;
@@ -134,6 +215,17 @@ section {
   width: 100%;
 }
 
+.header-main__menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
 .header-main__nav {
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.6);
@@ -160,15 +252,15 @@ section {
   width: 25%;
 }
 
-.header-main__ul {
+.icon-frame {
   align-items: center;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 50%;
+  box-shadow: 0 5px 25px 0 rgba(53, 57, 60, 0.25);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0 auto 0 auto;
-  padding: 0;
-  width: 50%;
+  justify-content: center;
+  min-height: 100px;
+  min-width: 100px;
 }
 
 .main__hr-1 {
@@ -188,30 +280,12 @@ section {
   top: -2.6rem;
 }
 
-.services__article {
-  border-radius: 15px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-  margin: 40px 0 40px 0;
-  padding: 1.3rem;
-}
-
-.services__div {
-  align-items: center;
-  border-radius: 100%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  min-height: 100px;
-  min-width: 100px;
-}
-
-.services__flex {
-  align-items: center;
-  display: flex;
-  gap: 1.3rem;
+.services__a {
+  color: #5d6163;
 }
 
 .services__h3 {
+  font: 1.2rem/1.4rem 'Libre Baskerville', serif;
   margin: 0;
   text-align: center;
 }
@@ -219,6 +293,12 @@ section {
 .services__img {
   height: 70%;
   width: 70%;
+}
+
+.services__intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 40px 0;
 }
 
 .sticky-bar__txt {
@@ -243,11 +323,11 @@ section {
 
 /* MODIFIERS ______________________________________________________________________________________________ */
 
-.services__div--isha {
+.services__img-wrapper--isha {
   background-color: #9b4932;
 }
 
-.services__div--sankara {
+.services__img-wrapper--sankara {
   background-color: #0a1f43;
 }
 
@@ -276,5 +356,5 @@ section {
 }
 
 .padma {
-  font-family: padma, 'Times New Roman', Times, serif;
+  font-family: 'Padma', 'Times New Roman', Times, serif;
 }

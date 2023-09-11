@@ -1,28 +1,3 @@
-/* AT-Rules ______________________________________________________________________________________________ */
-
-@font-face {
-  font-display: fallback;
-  font-family: 'Libre Baskerville';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v6/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2) format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Padma';
-  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
-}
-
-@font-face {
-  font-display: fallback;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
-}
-
-
 /* BLOCKS ______________________________________________________________________________________________ */
 
 a {
@@ -68,7 +43,7 @@ h2::after {
 }
 
 hr {
-  background-position: center;
+  background-image: url(/ask_life/assets/img/banner-hr.jpg);
   background-size: cover;
   border-style: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
@@ -97,23 +72,16 @@ section {
 }
 
 .footer-main {
-  align-items: start;
   background-image: url(/ask_life/assets/img/banner-bottom.jpg);
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.625rem;
-  height: 20vh;
-  margin: 10px 0 0 0;
-  padding: 0 1.25rem 0 1.25rem;
+  height: 50vh;
+  margin: calc(10px + 2.6rem) 0 0 0;
 }
 
 .header-main {
   background-image: url(/ask_life/assets/img/banner-top.jpg);
-  /* background-image: url(/ask_life/assets/img/banner-blue.jpg); */
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
@@ -168,7 +136,17 @@ section {
 }
 
 .footer-main__logo {
-  height: 25%;
+  height: 30%;
+}
+
+.footer-main__wrapper {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  height: 50%;
+  justify-content: space-evenly;
+  padding: 0 1.25rem 0 1.25rem;
 }
 
 .h2__subtitle {
@@ -264,15 +242,15 @@ section {
 }
 
 .main__hr-1 {
-  background-image: url(/ask_life/assets/img/hr-1.jpg);
+  background-position: top;
 }
 
 .main__hr-2 {
-  background-image: url(/ask_life/assets/img/hr-2.jpg);
+  background-position: center;
 }
 
 .main__hr-3 {
-  background-image: url(/ask_life/assets/img/hr-3.jpg);
+  background-position: bottom;
 }
 
 .section-header {
@@ -356,5 +334,38 @@ section {
 }
 
 .padma {
-  font-family: 'Padma', 'Times New Roman', Times, serif;
+  font-family: 'Padma', serif;
 }
+
+
+/* AT-Rules ______________________________________________________________________________________________ */
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v6/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Padma';
+  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+}
+
+@media (max-width: 768px) {
+  hr {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 769px) {}

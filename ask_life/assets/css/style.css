@@ -39,9 +39,13 @@ h2::after {
   width: 100px;
 }
 
-main {
-  margin: 0 auto 0 auto;
-  width: 75vw;
+hr {
+  background-position: center;
+  background-size: cover;
+  border-style: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  margin: 10px 0 10px 0;
+  height: 20vh;
 }
 
 p {
@@ -51,20 +55,18 @@ p {
   text-indent: 3rem;
 }
 
-.attribution {
-  bottom: 0.5rem;
-  font-size: 0.7rem;
-  margin: 0;
-  position: absolute;
-  right: 0.5rem;
+section {
+  margin: 0 auto 0 auto;
+  width: 75vw;
 }
 
 .footer-main {
   background-image: url(/ask_life/assets/img/banner-bottom.jpg);
   background-position: center;
   background-size: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   height: 20vh;
-  position: relative;
+  margin: 10px 0 0 0;
 }
 
 .header-main {
@@ -72,6 +74,8 @@ p {
   /* background-image: url(/ask_life/assets/img/banner-blue.jpg); */
   background-position: center;
   background-size: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  margin: 0 0 10px 0;
   min-height: 100vh;
   position: relative;
 }
@@ -85,11 +89,6 @@ p {
 }
 
 /* ELEMENTS ______________________________________________________________________________________________ */
-
-.attribution__link {
-  color: #cccccc;
-  text-decoration: none;
-}
 
 .h2__subtitle {
   color: #35393c;
@@ -172,9 +171,54 @@ p {
   width: 50%;
 }
 
+.main__hr-1 {
+  background-image: url(/ask_life/assets/img/hr-1.jpg);
+}
+
+.main__hr-2 {
+  background-image: url(/ask_life/assets/img/hr-2.jpg);
+}
+
+.main__hr-3 {
+  background-image: url(/ask_life/assets/img/hr-3.jpg);
+}
+
 .section-header {
   position: relative;
   top: -2.6rem;
+}
+
+.services__article {
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  margin: 40px 0 40px 0;
+  padding: 1.3rem;
+}
+
+.services__div {
+  align-items: center;
+  border-radius: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.services__flex {
+  align-items: center;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.services__h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.services__img {
+  height: 70%;
+  width: 70%;
 }
 
 .sticky-bar__txt {
@@ -199,6 +243,13 @@ p {
 
 /* MODIFIERS ______________________________________________________________________________________________ */
 
+.services__div--isha {
+  background-color: #9b4932;
+}
+
+.services__div--sankara {
+  background-color: #0a1f43;
+}
 
 
 /* UTILITIES ______________________________________________________________________________________________ */

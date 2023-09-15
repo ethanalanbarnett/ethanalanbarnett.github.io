@@ -21,8 +21,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="5.0018388"
-     inkscape:cx="-10.596103"
-     inkscape:cy="19.392868"
+     inkscape:cx="32.588016"
+     inkscape:cy="30.588751"
      inkscape:window-width="1440"
      inkscape:window-height="839"
      inkscape:window-x="0"
@@ -32,18 +32,18 @@
   <defs
      id="defs5" />
   <g
-     id="g3027"
-     transform="translate(-1.6893306e-4,9.2915806)">
+     id="g3071">
     <path
        fill="#2e3436"
        stroke="#eeeeec"
        stroke-width="0.9"
-       d="m 1.248218,1.4312307 h 42.52412 V 25.188839 H 1.248218 Z"
-       id="path13" />
+       d="M 1.2480491,10.722811 H 43.772169 V 34.48042 H 1.2480491 Z"
+       id="path13"
+       style="stroke:#ffffff;stroke-opacity:1" />
     <path
        fill="none"
        stroke="#eeeeec"
-       d="M 0.25,0.4330127 22.639215,13.359432 43.890303,1.0901107"
+       d="M 0.24983107,9.7245933 22.639046,22.651013 43.890134,10.381691"
        id="path15" />
   </g>
 </svg>

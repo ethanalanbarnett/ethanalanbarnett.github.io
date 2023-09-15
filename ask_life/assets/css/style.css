@@ -145,11 +145,6 @@ section {
   text-transform: uppercase;
 }
 
-.contact-us__img {
-  height: 100%;
-  width: 100%;
-}
-
 .footer-main__copyright {
   color: #ffffff;
   font-size: 0.75rem;
@@ -247,6 +242,11 @@ section {
   width: 25%;
 }
 
+.icon-frame__img {
+  height: 70%;
+  width: 70%;
+}
+
 .main__hr-1 {
   background-position: top;
 }
@@ -290,11 +290,6 @@ section {
   color: #5d6163;
 }
 
-.services__img {
-  height: 70%;
-  width: 70%;
-}
-
 .services__intro {
   font-size: 1.2rem;
   font-weight: 400;
@@ -322,7 +317,7 @@ section {
 
 /* MODIFIERS ______________________________________________________________________________________________ */
 
-.services__img-wrapper--isha {
+.icon-frame__img-wrapper--isha {
   background-color: #9b4932;
 }
 

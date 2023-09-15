@@ -58,6 +58,7 @@ hr {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--gap) * 2);
 }
 
 p {
@@ -94,7 +95,7 @@ section {
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   height: 50vh;
-  margin: var(--gap) 0 0;
+  width: 100vw;
 }
 
 .header-main {
@@ -102,9 +103,9 @@ section {
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-  margin: 0 0 10px;
   min-height: 100vh;
   position: relative;
+  width: 100vw;
 }
 
 .icon-frame {
@@ -117,14 +118,6 @@ section {
 
 .services {
   width: 100vw;
-}
-
-.sticky-bar {
-  background-color: #ffffff;
-  height: var(--gap);
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 /* ELEMENTS ______________________________________________________________________________________________ */
@@ -227,13 +220,15 @@ section {
 }
 
 .header-main__nav {
+  backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
+  height: var(--gap);
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header-main__slogan {

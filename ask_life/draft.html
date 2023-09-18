@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
   </head>
-  <body class="flex-column">
+  <body class="flex flex--column">
 
     <header class="header-main">
       <nav class="header-main__nav">
@@ -26,10 +26,10 @@
       <p class="header-main__subtitle">To aid in the education of the underprivileged and the universal improvement of humanity.</p>
     </header>
 
-    <main class="flex-column">
+    <main class="flex flex--column">
 
-      <section id="About_Us" class="about-us flex-column">
-        <header class="flex-column section-header">
+      <section id="About_Us" class="about-us flex flex--column">
+        <header class="flex flex--column section-header">
           <aside class="h2__subtitle">ASK • Life</aside>
           <h2 class="centered">About Us</h2>
         </header>
@@ -42,16 +42,16 @@
 
       <hr class="main__hr-1" />
 
-      <section id="Services" class="services flex-column">
-        <header class="flex-column section-header">
+      <section id="Services" class="services flex flex--column">
+        <header class="flex flex--column section-header">
           <aside class="h2__subtitle">Supported Projects</aside>
           <h2 class="centered">Services</h2>
         </header>
         <h3 class="services__intro centered">ASK Life foundation is currently involved in funding projects alongside the following organizations:</h3>
         <div class="services__carousel">
 
-          <article class="services__card card flex-column">
-            <a class="flex-column icon-frame icon-frame__img-wrapper--isha"  href="https://www.ishaoutreach.org/en/isha-vidhya" target="_blank">
+          <article class="services__card card flex flex--column">
+            <a class="flex flex--column icon-frame icon-frame__img-wrapper--isha"  href="https://www.ishaoutreach.org/en/isha-vidhya" target="_blank">
               <img class="icon-frame__img" src="/ask_life/assets/img/services/isha.png" alt="Isha Vidhya logo">
             </a>
             <h3 class="services__h3 centered"><a class="services__h3-link" href="https://www.ishaoutreach.org/en/isha-vidhya" target="_blank">Isha Vidhya</a></h3>
@@ -64,8 +64,8 @@
             <button class="services__show-more" type="button" onclick="carouselShowMoreHandler(this)">Read More ›</button>
           </article>
 
-          <article class="services__card card flex-column">
-            <a class="flex-column icon-frame" href="https://theimho.org/home/" target="_blank">
+          <article class="services__card card flex flex--column">
+            <a class="flex flex--column icon-frame" href="https://theimho.org/home/" target="_blank">
               <img class="icon-frame__img" src="/ask_life/assets/img/services/imho.png" alt="IMHO logo">
             </a>
             <h3 class="services__h3 centered"><a class="services__h3-link" href="https://theimho.org/home/" target="_blank">IMHO</a></h3>
@@ -75,8 +75,8 @@
             <button class="services__show-more" type="button" onclick="carouselShowMoreHandler(this)">Read More ›</button>
           </article>
 
-          <article class="services__card card flex-column">
-            <a class="flex-column icon-frame" href="https://school4change.in/" target="_blank">
+          <article class="services__card card flex flex--column">
+            <a class="flex flex--column icon-frame" href="https://school4change.in/" target="_blank">
               <img class="icon-frame__img" src="/ask_life/assets/img/services/school4change.png" alt="School4Change logo">
             </a>
             <h3 class="services__h3 centered"><a class="services__h3-link" href="https://school4change.in/" target="_blank">School4Change</a></h3>
@@ -87,8 +87,8 @@
             <button class="services__show-more" type="button" onclick="carouselShowMoreHandler(this)">Read More ›</button>
           </article>
 
-          <article class="services__card card flex-column">
-            <a class="flex-column icon-frame" href="https://www.giftofvision.org/" target="_blank">
+          <article class="services__card card flex flex--column">
+            <a class="flex flex--column icon-frame" href="https://www.giftofvision.org/" target="_blank">
               <img class="icon-frame__img" src="/ask_life/assets/img/services/sankara.png" alt="Sankara Eye foundation logo">
             </a>
             <h3 class="services__h3 centered"><a class="services__h3-link" href="https://www.giftofvision.org/" target="_blank">Sankara Eye foundation</a></h3>
@@ -99,8 +99,8 @@
             <button class="services__show-more" type="button" onclick="carouselShowMoreHandler(this)">Read More ›</button>
           </article>
 
-          <article class="services__card card flex-column">
-            <a class="flex-column icon-frame" href="https://setxnonprofit.org/" target="_blank">
+          <article class="services__card card flex flex--column">
+            <a class="flex flex--column icon-frame" href="https://setxnonprofit.org/" target="_blank">
               <img class="icon-frame__img" src="/ask_life/assets/img/services/setxnonprofit.png" alt="Southeast Texas Nonprofit logo">
             </a>
             <h3 class="services__h3 centered"><a class="services__h3-link" href="https://setxnonprofit.org/" target="_blank">Nutrition for Seniors</a></h3> <!-- This is the name of a service, but not the organization -->
@@ -118,37 +118,47 @@
 
       <hr class="main__hr-2" />
 
-      <section id="FAQ" class="faq flex-column">
-        <header class="flex-column section-header">
+      <section id="FAQ" class="faq flex flex--column">
+        <header class="flex flex--column section-header">
           <aside class="h2__subtitle">Frequently Asked Questions</aside>
           <h2 class="centered">FAQ</h2>
         </header>
-        <dl class="flex-column">
-          <div class="card">
-            <dt>When was ASK Life founded?</dt>
-            <dd>ASK Life was technically founded in 2021, but it wasn't until 2023 that the foundation became active.</dd>
+        <div class="faq__container">
+          <dl class="faq__dl flex flex--column">
+            <div class="card">
+              <dt>When was ASK Life founded?</dt>
+              <dd>ASK Life was technically founded in 2021, but it wasn't until 2023 that the foundation became active.</dd>
+            </div>
+            <div class="card">
+              <dt>Why is it called ASK Life?</dt>
+              <dd>ASK are the initials of Dr. Jayaraj's father. The ASK Life logo is also the first initial of his fathers name using the Tamil letter <span class="padma">எ</span>.</dd>
+            </div>
+            <div class="card">
+              <dt>Can I donate?</dt>
+              <dd>ASK Life is not looking for donations, but if you would like to help out, you are more than welcome to donate to those causes that ASK Life is supporting.</dd>
+            </div>
+          </dl>
+          <div class="faq__picture-container flex flex--column">
+            <picture class="faq__picture card">
+              <img class="faq__img" src="assets/img/banner splice/beach-day.jpg" alt="Beach during daytime">
+            </picture>
+            <picture class="faq__picture card">
+              <img class="faq__img" src="assets/img/banner splice/beach-evening.jpg" alt="Beach at sunset">
+            </picture>
           </div>
-          <div class="card">
-            <dt>Why is it called ASK Life?</dt>
-            <dd>ASK are the initials of Dr. Jayaraj's father. The ASK Life logo is also the first initial of his fathers name using the Tamil letter <span class="padma">எ</span>.</dd>
-          </div>
-          <div class="card">
-            <dt>Can I donate?</dt>
-            <dd>ASK Life is not looking for donations, but if you would like to help out, you are more than welcome to donate to those causes that ASK Life is supporting.</dd>
-          </div>
-        </dl>
+        </div>
       </section>
 
       <hr class="main__hr-3" />
 
-      <section id="Contact_Us" class="contact-us flex-column">
-        <header class="flex-column section-header">
+      <section id="Contact_Us" class="contact-us flex flex--column">
+        <header class="flex flex--column section-header">
           <aside class="h2__subtitle">Reach Out</aside>
           <h2 class="centered">Contact Us</h2>
         </header>
         <div class="contact-us__div card">
           <div class="card__flex">
-            <a class="flex-column icon-frame" href="mailto:jasharaj@yahoo.com">
+            <a class="flex flex--column icon-frame" href="mailto:jasharaj@yahoo.com">
               <img class="icon-frame__img" src="/ask_life/assets/img/email-icon.svg" alt="Email icon">
             </a>
             <address class="contact-us__address"><span class="contact-us__email">Email:</span> <a href="mailto:jasharaj@yahoo.com">jasharaj@yahoo.com</a></address>

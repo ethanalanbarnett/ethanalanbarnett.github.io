@@ -7,12 +7,45 @@
 
 /* BLOCKS ______________________________________________________________________________________________ */
 
+::-webkit-scrollbar {
+  height: 0.7vw;
+  width: 0.7vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7e8182;
+  border: 0.2vw solid #cecece;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  border-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #565b5c;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #1b6acb;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cecece;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background-color: #0000;
+  margin: 0 1.875rem;
+}
+
 a {
   color: #000000;
 }
 
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 body, dl, h2, h3, hr, p {
@@ -77,14 +110,14 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
   box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
+  box-sizing: border-box;
   padding: 1.3rem;
   width: 100%;
 }
 
-.flex-column {
+.flex {
   align-items: center;
   display: flex;
-  flex-direction: column;
   gap: var(--gap);
   justify-content: center;
 }
@@ -143,6 +176,32 @@ section {
   font-family: 'Libre Baskerville', serif;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.faq__container {
+  display: grid;
+  gap: var(--gap);
+  grid-template: 'faq images' minmax(0, 1fr) / minmax(0, 3fr) minmax(0, 1fr);
+}
+
+.faq__dl {
+  grid-area: faq;
+}
+
+.faq__img {
+  height: 100%;
+  width: 100%;
+}
+
+.faq__picture {
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.3);
+  overflow: hidden;
+  padding: 0;
+}
+
+.faq__picture-container {
+  grid-area: images;
 }
 
 .footer-main__copyright {
@@ -264,7 +323,6 @@ section {
 }
 
 .services__card {
-  box-sizing: border-box;
   gap: 1.5rem;
   height: max-content;
   max-width: 320px;
@@ -316,6 +374,14 @@ section {
 
 
 /* MODIFIERS ______________________________________________________________________________________________ */
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--row {
+  flex-direction: row;
+}
 
 .icon-frame__img-wrapper--isha {
   background-color: #9b4932;

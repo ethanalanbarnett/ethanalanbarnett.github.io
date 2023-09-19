@@ -151,6 +151,7 @@ section {
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   display: grid;
+  height: 100vh;
   row-gap: 1vh;
   justify-items: center;
   width: 100vw;
@@ -469,7 +470,7 @@ section {
       "open" minmax(0, 1fr)
       "subtitle" auto
       "arrow" calc(var(--gap) / 2) / 100vw;
-      height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
   }
   .header-main__panel--aux {
     grid-area: 5 / 1 / 7;
@@ -488,7 +489,6 @@ section {
     "subtitle open" minmax(0, 1fr)
     "arrow open" var(--gap)
     "bottom-bar bottom-bar" calc(var(--gap) - 1vh) / 20% 1fr;
-    height: 100vh;
   }
   .header-main__panel--aux {
     display: none;

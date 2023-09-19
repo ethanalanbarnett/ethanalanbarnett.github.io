@@ -98,6 +98,7 @@ hr {
 }
 
 html {
+  height: -webkit-fill-available;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--gap) * 2);
 }

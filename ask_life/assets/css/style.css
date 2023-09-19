@@ -5,7 +5,7 @@
 }
 
 
-/* BLOCKS ______________________________________________________________________________________________ */
+/* PSUEDO ELEMENTS ______________________________________________________________________________________________ */
 
 ::-webkit-scrollbar {
   height: 0.7vw;
@@ -18,16 +18,16 @@
   border-radius: 100vw;
 }
 
+::-webkit-scrollbar-thumb:active {
+  background-color: #1b6acb;
+}
+
 ::-webkit-scrollbar-thumb:horizontal {
   border-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #565b5c;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #1b6acb;
 }
 
 ::-webkit-scrollbar-track {
@@ -39,8 +39,16 @@
   margin: 0 1.875rem;
 }
 
+
+/* TAGS ______________________________________________________________________________________________ */
+
 a {
   color: #000000;
+}
+
+a:hover {
+  opacity: 0.5;
+  transition-duration: 150ms;
 }
 
 body {
@@ -48,7 +56,7 @@ body {
   overflow-x: hidden;
 }
 
-body, dl, h2, h3, hr, p {
+body, dl, h2, h3, hr, menu, p {
   margin: 0;
 }
 
@@ -106,6 +114,9 @@ section {
   width: 75vw;
 }
 
+
+/* BLOCKS ______________________________________________________________________________________________ */
+
 .card {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
@@ -133,17 +144,21 @@ section {
 
 .header-main {
   align-items: center;
-  background-image: url(/ask_life/assets/img/banner-top.jpg);
+  background-image: 
+    /* linear-gradient(to left, #0000 58%, #000 78%), */
+    url(/ask_life/assets/img/banner-top.jpg);
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   display: grid;
+  row-gap: 1vh;
   grid-template: 
-    "top-bar top-bar" var(--gap)
-    "left-top open" minmax(0, 1fr)
-    "left-center open" minmax(0, 1fr)
-    "left-bottom open" minmax(0, 3fr)
-    "bottom-bar bottom-bar" calc(var(--gap) * 2) / 20% 1fr;
+    "top-bar top-bar" calc(var(--gap) * 2 - 1vh)
+    "logo open" auto
+    "slogan open" auto
+    "subtitle open" minmax(0, 3fr)
+    "arrow open" var(--gap)
+    "bottom-bar bottom-bar" calc(var(--gap) - 1vh) / 20% 1fr;
   height: 100vh;
   justify-items: center;
   position: relative;
@@ -190,7 +205,7 @@ section {
 .faq__container {
   display: grid;
   gap: var(--gap);
-  grid-template: 'faq images' minmax(0, 1fr) / minmax(0, 3fr) minmax(0, 1fr);
+  grid-template: 'faq images' minmax(0, 1fr) / minmax(0, 2fr) minmax(0, 1fr);
 }
 
 .faq__dl {
@@ -238,21 +253,36 @@ section {
   text-transform: uppercase;
 }
 
-.header-main__arrow {
-  color: #fff;
-  font-size: 7rem;
-  grid-area: bottom-bar;
-  /* transform: rotate(90deg); */
+.header-main__arrow-a {
+  grid-area: arrow;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
 
-.header-main__glyph {
+.header-main__arrow-img {
+  display: inline-block;
+  height: 100%;
+}
+
+.header-main__aside {
+  align-self: stretch;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
+  grid-area: 1 / 1 / 7;
+  justify-self: stretch;
+}
+
+.header-main__icon {
+  display: block;
   height: 1.2rem;
 }
 
 .header-main__li {
   font-size: 1.2rem;
   line-height: 1;
-  padding: 0.3rem 0 0.3rem 0;
 }
 
 .header-main__li-a {
@@ -262,14 +292,10 @@ section {
   text-decoration: none;
 }
 
-.header-main__li-a:hover {
-  color: rgba(255, 255, 255, 0.5);
-  transition-duration: 150ms;
-}
-
 .header-main__logo {
-  grid-area: left-top;
-  width: 100%;
+  grid-area: logo;
+  width: 90%;
+  z-index: 1;
 }
 
 .header-main__menu {
@@ -278,33 +304,40 @@ section {
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
-  margin: 0 auto;
   padding: 0;
   width: 50%;
 }
 
 .header-main__nav {
+  align-items: center;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  height: var(--gap);
+  justify-content: center;
+  left: 0;
   position: fixed;
+  right: 0;
   top: 0;
-  width: 100vw;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-main__slogan {
-  grid-area: left-center;
-  width: 100%;
+  grid-area: slogan;
+  width: 90%;
+  z-index: 1;
 }
 
 .header-main__subtitle {
   color: #ffffff;
   font-size: 1.2rem;
-  grid-area: left-bottom;
+  grid-area: subtitle;
   line-height: 2;
   text-indent: 0;
   text-shadow: 0 0 0.2rem #000000;
+  width: 90%;
+  z-index: 1;
 }
 
 .icon-frame__img {
@@ -351,7 +384,7 @@ section {
 }
 
 .services__h3-link {
-  color: #5d6163;
+  text-decoration: none;
 }
 
 .services__intro {
@@ -376,6 +409,11 @@ section {
   border: none;
   cursor: pointer;
   font: 900 1rem 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.services__show-more:hover {
+  opacity: 0.5;
+  transition-duration: 150ms;
 }
 
 
@@ -411,10 +449,6 @@ section {
   display: none;
 }
 
-.padma {
-  font-family: 'Padma', serif;
-}
-
 
 /* AT-Rules ______________________________________________________________________________________________ */
 
@@ -424,12 +458,6 @@ section {
   font-style: normal;
   font-weight: 400;
   src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v6/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2) format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Padma';
-  src: local("GIST-TMOTPadma"), url(/ask_life/assets/font/tmotpdn_ship.ttf);
 }
 
 @font-face {

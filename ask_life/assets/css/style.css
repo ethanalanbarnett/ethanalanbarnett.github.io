@@ -89,6 +89,7 @@ hr {
   border-style: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   height: 20vh;
+  height: 20svh;
   width: 100vw;
 }
 
@@ -134,6 +135,7 @@ section {
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   height: 50vh;
+  height: 50lvh;
   width: 100vw;
 }
 
@@ -146,6 +148,7 @@ section {
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   display: grid;
+  height: 100vh;
   height: 100svh;
   row-gap: 1vh;
   justify-items: center;
@@ -158,6 +161,12 @@ section {
   box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.25);
   height: 100px;
   width: 100px;
+}
+
+.panel {
+  backdrop-filter: blur(10px);
+  background-color: oklch(0% 0 0 / 0.6);
+  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
 }
 
 .services {
@@ -288,9 +297,6 @@ section {
 
 .header-main__nav {
   align-items: center;
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
   display: flex;
   height: var(--gap);
   justify-content: center;
@@ -303,9 +309,6 @@ section {
 
 .header-main__panel {
   align-self: stretch;
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
   justify-self: stretch;
 }
 
@@ -455,6 +458,15 @@ section {
   /* hr {
     background-size: cover;
   } */
+  section {
+    width: 90vw;
+  }
+  .faq__container {
+    display: block;
+  }
+  .faq__picture-container {
+    display: none;
+  }
   .header-main {
     grid-template: 
       "top-bar" var(--gap)

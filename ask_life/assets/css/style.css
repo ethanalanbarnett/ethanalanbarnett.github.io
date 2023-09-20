@@ -457,18 +457,18 @@ section {
   } */
   .header-main {
     grid-template: 
-      "top-bar" calc(var(--gap) * 1.5 - 1vh)
+      "top-bar" var(--gap)
       "logo" auto
       "slogan" auto
       "open" minmax(0, 1fr)
       "subtitle" auto
       "arrow" calc(var(--gap) / 2)
-      "bottom-bar" var(--gap) / 100vw;
+      "bottom-bar" calc(var(--gap) / 2 - 1vh) / 100vw;
   }
-  .header-main__panel--aux {
+  .header-main__panel--auxiliary {
     grid-area: 5 / 1 / 8;
   }
-  .header-main__panel--main {
+  .header-main__panel--primary {
     grid-area: 1 / 1 / 4;
   }
   .header-main__slogan {
@@ -493,10 +493,10 @@ section {
     "arrow open" var(--gap)
     "bottom-bar bottom-bar" calc(var(--gap) - 1vh) / 20% 1fr;
   }
-  .header-main__panel--aux {
+  .header-main__panel--auxiliary {
     display: none;
   }
-  .header-main__panel--main {
+  .header-main__panel--primary {
     grid-area: 1 / 1 / 7;
   }
   .services__show-more:hover {

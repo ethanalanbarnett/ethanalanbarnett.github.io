@@ -46,11 +46,6 @@ a {
   color: #000000;
 }
 
-a:hover {
-  opacity: 0.5;
-  transition-duration: 150ms;
-}
-
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -98,7 +93,6 @@ hr {
 }
 
 html {
-  height: -webkit-fill-available;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--gap) * 2);
 }
@@ -402,11 +396,6 @@ section {
   font: 900 1rem 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-.services__show-more:hover {
-  opacity: 0.5;
-  transition-duration: 150ms;
-}
-
 
 /* MODIFIERS ______________________________________________________________________________________________ */
 
@@ -460,6 +449,9 @@ section {
 }
 
 @media (max-width: 768px) {
+  a:active {
+    opacity: 0.5;
+  }
   /* hr {
     background-size: cover;
   } */
@@ -470,18 +462,28 @@ section {
       "slogan" auto
       "open" minmax(0, 1fr)
       "subtitle" auto
-      "arrow" calc(var(--gap) / 2) / 100vw;
-    max-height: -webkit-fill-available;
+      "arrow" calc(var(--gap) / 2)
+      "bottom-bar" var(--gap) / 100vw;
   }
   .header-main__panel--aux {
-    grid-area: 5 / 1 / 7;
+    grid-area: 5 / 1 / 8;
   }
   .header-main__panel--main {
     grid-area: 1 / 1 / 4;
   }
+  .header-main__slogan {
+    padding-bottom: 1vh;
+  }
+  .services__show-more:active {
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: 769px) {
+  a:hover {
+    opacity: 0.5;
+    transition-duration: 150ms;
+  }
   .header-main {
     grid-template: 
     "top-bar top-bar" calc(var(--gap) * 2 - 1vh)
@@ -496,5 +498,9 @@ section {
   }
   .header-main__panel--main {
     grid-area: 1 / 1 / 7;
+  }
+  .services__show-more:hover {
+    opacity: 0.5;
+    transition-duration: 150ms;
   }
 }

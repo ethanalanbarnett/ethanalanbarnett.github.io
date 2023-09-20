@@ -165,7 +165,7 @@ section {
 
 .panel {
   backdrop-filter: blur(10px);
-  background-color: oklch(0% 0 0 / 0.6);
+  background-color: oklch(0% 0 0 / 0.5);
   box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
 }
 

@@ -2,8 +2,7 @@ const clickCurtain = document.querySelector('#click-curtain');
 let burgerMenuOpen = false;
 
 const hamburgerToggle = () => {
-  const button = document.querySelector('#hamburger-button');
-  const menu = button.nextElementSibling;
+  const menu = document.querySelector('#main-menu');
   menu.classList.toggle('visible-flex');
   menu.classList.toggle('panel');
   menu.classList.toggle('panel--positioned');
@@ -21,20 +20,6 @@ const hamburgerCheck = () => {
   }
 }
 
-const hashErase = () => {
-  history.pushState(null, '', window.location.href.replace(`#`, ''));
-}
-
-const hashCheck = () => {
-  let uri = window.location.hash.slice(1);
-  if (uri[uri.length - 1] === '/') {
-    uri = uri.slice(0, -1);
-  }
-  if (uri.length === 0) {
-    hashErase();
-  }
-}
-
 const hamburgerHandler = () => {
   hamburgerToggle();
 }
@@ -44,7 +29,14 @@ const clickCurtainHandler = () => {
 }
 
 const hashChangeHandler = () => {
-  hashCheck();
+  hamburgerCheck();
+}
+
+const scrollToTopHandler = () => {
+  const header = document.querySelector('#header-main');
+  const hash = window.location.hash;
+  history.pushState(null, '', window.location.href.replace(`${hash}`, ''));
+  header.scrollIntoView();
   hamburgerCheck();
 }
 

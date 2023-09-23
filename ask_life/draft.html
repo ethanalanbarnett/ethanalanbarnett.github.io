@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
   </head>
+
   <body class="flex flex--column">
 
-    <header class="header-main">
+    <header id="header-main" class="header-main">
       <nav class="header-main__nav panel panel--positioned">
-        <button id="hamburger-button" class="header-main__hamburger button" type="button" onclick="hamburgerHandler()">Menu</button>
-        <menu class="header-main__menu">
+        <button class="header-main__hamburger button" type="button" onclick="hamburgerHandler()">Menu</button>
+        <menu id="main-menu" class="header-main__menu">
           <li class="header-main__li">
-            <a class="header-main__li-a" href="#">
+            <a class="header-main__li-a" href="javascript:scrollToTopHandler()">
               <img class="header-main__icon" src="assets/img/ask_life_foundation_icon.svg" alt="ASK-Life Foundation Icon">
             </a>
           </li>

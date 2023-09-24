@@ -5,6 +5,12 @@ const resize = new ResizeObserver(entries => {
 });
 let burgerMenuOpen = false;
 
+const copyrightYearUpdater = () => {
+  const copyrightYear = document.querySelector('#copyright-year');
+  const currentYear = new Date().getFullYear();
+  copyrightYear.innerHTML = currentYear;
+}
+
 const hamburgerToggle = () => {
   const menu = document.querySelector('#main-menu');
   menu.classList.toggle('visible-flex');
@@ -52,11 +58,12 @@ const carouselShowMoreHandler = btn => {
     btn.innerHTML = 'Show Less ‹';
   } else {
     btn.innerHTML = 'Read More ›';
-    article.scrollIntoView();
+    article.scrollIntoView({behavior: 'instant'});
   }
 }
 
 resize.observe(root);
+copyrightYearUpdater();
 
 clickCurtain.addEventListener('click', clickCurtainHandler);
 window.addEventListener('hashchange', hashChangeHandler);

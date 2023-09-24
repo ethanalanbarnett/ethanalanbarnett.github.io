@@ -1,4 +1,8 @@
+const root = document.querySelector('html');
 const clickCurtain = document.querySelector('#click-curtain');
+const resize = new ResizeObserver(entries => {
+  hamburgerCheck();
+});
 let burgerMenuOpen = false;
 
 const hamburgerToggle = () => {
@@ -42,13 +46,17 @@ const scrollToTopHandler = () => {
 
 const carouselShowMoreHandler = btn => {
   const p = btn.previousElementSibling;
+  const article = btn.parentElement;
   p.classList.toggle('services__paragraph-container--clamped');
   if (btn.innerHTML === 'Read More ›') {
     btn.innerHTML = 'Show Less ‹';
   } else {
     btn.innerHTML = 'Read More ›';
+    article.scrollIntoView();
   }
 }
+
+resize.observe(root);
 
 clickCurtain.addEventListener('click', clickCurtainHandler);
 window.addEventListener('hashchange', hashChangeHandler);

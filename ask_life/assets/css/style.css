@@ -273,16 +273,17 @@ section {
 }
 
 .header-main__arrow-a {
+  aspect-ratio: 1.08 / 1;
   grid-area: arrow;
-  height: 100%;
-  text-align: center;
-  width: 100%;
+  height: 5vh;
+  width: auto;
   z-index: 1;
 }
 
 .header-main__arrow-img {
-  display: inline-block;
+  display: block;
   height: 100%;
+  width: 100%;
 }
 
 .header-main__hamburger {
@@ -546,7 +547,7 @@ section {
     "logo open" auto
     "slogan open" auto
     "subtitle open" minmax(0, 1fr)
-    "arrow open" var(--gap)
+    "arrow open" auto
     "bottom-bar bottom-bar" calc(var(--gap) - 1vh) / 20% 1fr;
   }
   .header-main__hamburger {

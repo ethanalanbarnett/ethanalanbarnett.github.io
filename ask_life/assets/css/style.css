@@ -275,7 +275,7 @@ section {
 .header-main__arrow-a {
   aspect-ratio: 1.08 / 1;
   grid-area: arrow;
-  height: 5vh;
+  height: min(5vh, 5vw);
   width: auto;
   z-index: 1;
 }
@@ -592,6 +592,11 @@ section {
 
 .hidden {
   display: none;
+}
+
+.tamil {
+  color: #000000;
+  font-weight: 900;
 }
 
 .visible {

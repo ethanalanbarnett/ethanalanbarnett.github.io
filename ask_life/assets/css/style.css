@@ -478,8 +478,8 @@ section {
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
 }
-/* 768px */
-@media (max-width: 500px) {
+/* 768px   width <= 35em       max-aspect-ratio: 3/4*/
+@media (orientation: portrait) {
   a:active {
     opacity: 0.5;
   }
@@ -541,7 +541,16 @@ section {
   }
 }
 
-@media (min-width: 501px) {
+@media (orientation: portrait) and (min-aspect-ratio: 0.6/1) {
+  .header-main__logo {
+    width: 50%;
+  }
+  .header-main__slogan {
+    width: 50%;
+  }
+}
+/* width > 35em     min-aspect-ratio: 3.0001/4 */
+@media (orientation: landscape) {
   a:hover {
     opacity: 0.5;
     transition-duration: 150ms;
@@ -582,6 +591,28 @@ section {
   .button:hover {
     opacity: 0.5;
     transition-duration: 150ms;
+  }
+}
+
+@media (orientation: landscape) and (width < 50em) {
+  .header-main {
+    grid-template-columns: 30% 1fr;
+  }
+  .header-main__menu {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (height < 32em) {
+  .header-main {
+    /* grid-template: 
+    "top-bar top-bar" var(--gap)
+    "logo open" auto
+    "slogan open" auto
+    "subtitle open" minmax(0, 1fr)
+    "arrow open" auto / 30% 1fr; */
+    grid-template-rows: var(--gap) auto auto minmax(0, 1fr) auto;
   }
 }
 

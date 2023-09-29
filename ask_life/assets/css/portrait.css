@@ -1,0 +1,71 @@
+/* 768px   width <= 35em       max-aspect-ratio: 3/4*/
+@media (orientation: portrait) {
+  a:active {
+    opacity: 0.5;
+  }
+  section {
+    width: 90vw;
+  }
+  .faq__container {
+    display: block;
+  }
+  .faq__picture-container {
+    display: none;
+  }
+  .footer-main__container {
+    align-items: center;
+  }
+  .header-main {
+    grid-template: 
+      "top-bar" var(--gap)
+      "logo" auto
+      "slogan" auto
+      "open" minmax(0, 1fr)
+      "subtitle" auto
+      "arrow" calc(var(--gap) / 2)
+      "bottom-bar" calc(var(--gap) / 2 - 1vh) / 100vw;
+  }
+  .header-main__icon {
+    height: 1.8rem;
+  }
+  .header-main__li-a {
+    font-size: 1.8rem;
+  }
+  .header-main__menu {
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: 0.7rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    z-index: 2;
+  }
+  .header-main__nav {
+    justify-content: end;
+  }
+  .header-main__panel--auxiliary {
+    grid-area: 5 / 1 / 8;
+  }
+  .header-main__panel--primary {
+    grid-area: 1 / 1 / 4;
+  }
+  .header-main__slogan {
+    padding-bottom: 1vh;
+  }
+  .button:active {
+    opacity: 0.5;
+  }
+}
+
+@media (orientation: portrait) and (min-aspect-ratio: 0.6/1) {
+  .header-main__logo {
+    width: 50%;
+  }
+  .header-main__slogan {
+    width: 50%;
+  }
+}

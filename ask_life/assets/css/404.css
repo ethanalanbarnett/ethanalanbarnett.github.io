@@ -29,7 +29,13 @@
 }
 
 .header-main__logo {
+  position: relative;
   width: 50%;
+}
+
+.header-main__logo-wrapper {
+  text-align: center;
+  width: 100%;
 }
 
 .header-main__nav {

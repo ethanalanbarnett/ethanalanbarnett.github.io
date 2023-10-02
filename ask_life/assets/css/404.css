@@ -57,15 +57,17 @@
   width: 50%;
 }
 
-
 @media (orientation: portrait) {
-
   .header-main__logo {
     width: 100%;
   }
-
   .header-main__slogan {
     width: 100%;
   }
+}
 
+@media (width < 50em) {
+  .header-main__panel--primary {
+    width: 100%;
+  }
 }

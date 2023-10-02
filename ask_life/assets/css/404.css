@@ -30,6 +30,7 @@
 
 .header-main__logo {
   position: relative;
+  vertical-align: bottom;
   width: 50%;
 }
 

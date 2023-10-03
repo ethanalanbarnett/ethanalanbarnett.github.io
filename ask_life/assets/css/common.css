@@ -135,7 +135,7 @@ section {
 
 .footer-main {
   background-image: url(/ask_life/assets/img/banner-bottom.jpg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   height: 50vh;
@@ -171,7 +171,7 @@ section {
 }
 
 .panel::before {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(7px);
   background-color: oklch(0% 0 0 / 0.6);
   box-shadow: 0 0 5px 1.25px rgba(0, 0, 0, 0.4);
   content: "";
@@ -222,30 +222,8 @@ section {
   text-transform: uppercase;
 }
 
-.faq__container {
-  display: grid;
-  gap: var(--gap);
-  grid-template: 'faq images' minmax(0, 1fr) / minmax(0, 2fr) minmax(0, 1fr);
-}
-
 .faq__dl {
-  grid-area: faq;
-}
-
-.faq__img {
-  height: 100%;
-  width: 100%;
-}
-
-.faq__picture {
-  border-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.3);
-  overflow: hidden;
-  padding: 0;
-}
-
-.faq__picture-container {
-  grid-area: images;
+  width: min(45rem, 100%);
 }
 
 .faq__tamil {
@@ -256,18 +234,23 @@ section {
 .footer-main__copyright {
   color: #ffffff;
   font-size: 0.75rem;
+  z-index: 1;
 }
 
 .footer-main__logo {
-  height: 30%;
+  z-index: 1;
 }
 
 .footer-main__container {
-  align-items: start;
-  gap: 0;
-  height: 50%;
-  justify-content: space-evenly;
-  padding: 0 1.25rem 0 1.25rem;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 1vh;
+  justify-content: center;
+  padding: 1vh;
+}
+
+.footer-main__container::before {
+  background-color: oklch(0% 0 0 / 0.3);
 }
 
 .h2__subtitle {

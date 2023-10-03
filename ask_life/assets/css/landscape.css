@@ -5,6 +5,23 @@
     transition-duration: 150ms;
   }
 
+  .footer-main {
+    justify-content: start;
+  }
+
+  .footer-main__container {
+    height: 100%;
+    width: 20%;
+  }
+
+  .footer-main__copyright {
+    width: 100%;
+  }
+  
+  .footer-main__logo {
+    width: 100%;
+  }
+
   .header-main {
     grid-template: 
     "top-bar top-bar" calc(var(--gap) * 2 - 1vh)
@@ -67,6 +84,10 @@
 }
 
 @media (orientation: landscape) and (width < 50em) {
+
+  .footer-main__container {
+    width: 30%;
+  }
 
   .header-main {
     grid-template-columns: 30% 1fr;

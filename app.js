@@ -156,23 +156,40 @@ class PortfolioPage extends Page {
   element;
   content = `
     <h1 class="main__title centered">Portfolio</h1>
-    <section class="project">
-      <div class="project__itm">
-        <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
-        <picture>
-          <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
-          <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
-          <a href="portfolio/bigthicket/app.html">
-            <img class="project__img" src="resources/images/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+      <section class="project">
+        <div class="project__itm">
+          <h2 class="project__h2"><a class="project__link" href="https://www.asklife.org/">ASK • Life</a></h2>
+          <a href="https://www.asklife.org/">
+            <picture>
+              <!-- <source srcset="resources/portfolio/images/ask_life_foundation_screenshot.jxl" type="image/jxl"> -->
+              <source srcset="resources/images/portfolio/ask_life_foundation_screenshot.avif" type="image/avif">
+              <source srcset="resources/images/portfolio/ask_life_foundation_screenshot.webp" type="image/webp">
+              <img class="project__img" src="resources/images/portfolio/ask_life_foundation_screenshot.png" alt="ASK • Life Screenshot">
+            </picture>
           </a>
-        </picture>
-      </div>
-      <div class="project__itm">
-        <p class="project__p">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
-        <br>Username: Ethan
-        <br>Password: Ethan123!</p>
-      </div>
-    </section>
+        </div>
+        <div class="project__itm">
+          <p class="project__p">ASK Life Foundation is a private nonprofit that supports projects to educate poor and remote children as well as other charitable causes.
+          <br>This site is written in vanilla HTML, CSS, and JavaScript and hosted via Google Firebase.</p>
+        </div>
+      </section>
+      <section class="project">
+        <div class="project__itm">
+          <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
+          <picture>
+            <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
+            <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
+            <a href="portfolio/bigthicket/app.html">
+              <img class="project__img" src="resources/images/portfolio/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+            </a>
+          </picture>
+        </div>
+        <div class="project__itm">
+          <p class="project__p">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+          <br>Username: Ethan
+          <br>Password: Ethan123!</p>
+        </div>
+      </section>
     <h1 class="centered">_________________</h1>
   `;
 }

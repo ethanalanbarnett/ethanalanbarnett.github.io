@@ -1,0 +1,23 @@
+PNG:
+
+ask_life_foundation_screenshot.png	960x540 72dpi
+	Pixel format: 8 bpc RGB
+	Compression level: 9
+	Save resolution: True
+
+
+WEBP:
+
+ask_life_foundation_screenshot.webp	960x540 72dpi
+	Source type: Picture
+	Image quality: 100.0
+	Alpha quality: 0.0
+
+
+AVIF:
+
+ask_life_foundation_screenshot.avif	960x540 72dpi
+	Quality: 25
+	Pixel format: YUV420
+	Bit depth: 8 bit/channel
+	Encoder speed: Slow

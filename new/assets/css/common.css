@@ -1,0 +1,43 @@
+/* VARIABLES ________________________________________________________________________________________ */
+
+:root {
+  --gap-standard: 2.6rem;
+  --theme-grey-dark: #242525;
+  --theme-grey-light: #363838;
+  --theme-grey-medium: #2d2e2e;
+  --theme-orange-bright: #f8991d;
+  --theme-orange-dull: #b1701b;
+  --theme-teal-bright: #0D98BA;
+  --theme-teal-dull: ;
+}
+
+/* PSUEDO ELEMENTS __________________________________________________________________________________ */
+
+
+/* TAGS _____________________________________________________________________________________________ */
+
+body {
+  background-color: var(--theme-grey-light);
+  display: grid;
+  grid-template: "main" minmax(0, 1fr) / minmax(0, 1fr);
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-width: 100vw;
+  min-width: 100svw;
+}
+
+main {
+  background-color: var(--theme-grey-dark);
+  grid-area: main;
+  margin: calc(var(--gap-standard) / 2) var(--gap-standard);
+}
+
+
+/* BLOCKS ___________________________________________________________________________________________ */
+
+
+/* ELEMENTS _________________________________________________________________________________________ */
+
+
+/* MODIFIERS ________________________________________________________________________________________ */

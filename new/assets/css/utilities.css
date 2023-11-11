@@ -1,0 +1,27 @@
+/* TYPES ____________________________________________________________________________________________ */
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
+  box-sizing: border-box;
+  padding: 1.3rem;
+}
+
+
+/* STATES ___________________________________________________________________________________________ */
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

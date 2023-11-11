@@ -1,0 +1,5 @@
+@media (orientation: landscape) {}
+
+@media (orientation: landscape) and (height < 32em) {}
+
+@media (orientation: landscape) and (width < 50em) {}

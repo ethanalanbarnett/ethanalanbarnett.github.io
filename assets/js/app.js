@@ -137,7 +137,7 @@ class HomePage extends Page {
     <div class="greeter">
       <div class="greeter__itm">
         <h3 class="greeter__txt">Take a gander at my résumé (click to enlarge):</h3>
-        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+        <a href="javascript:App.modals.résumé.toggle()"><img class="greeter__résumé" src="assets/img/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
       </div>
       <div class="greeter__itm">
         <h3 class="greeter__txt">Alternatively, you may also availe yourself of this cheeky "hello world!" reference:</h3>
@@ -161,10 +161,10 @@ class PortfolioPage extends Page {
           <h2 class="project__h2"><a class="project__link" href="https://www.asklife.org/">ASK • Life</a></h2>
           <a href="https://www.asklife.org/">
             <picture>
-              <!-- <source srcset="resources/portfolio/images/ask_life_foundation_screenshot.jxl" type="image/jxl"> -->
-              <source srcset="resources/images/portfolio/ask_life_foundation_screenshot.avif" type="image/avif">
-              <source srcset="resources/images/portfolio/ask_life_foundation_screenshot.webp" type="image/webp">
-              <img class="project__img" src="resources/images/portfolio/ask_life_foundation_screenshot.png" alt="ASK • Life Screenshot">
+              <!-- <source srcset="assets/portfolio/img/ask_life_foundation_screenshot.jxl" type="image/jxl"> -->
+              <source srcset="assets/img/portfolio/ask_life_foundation_screenshot.avif" type="image/avif">
+              <source srcset="assets/img/portfolio/ask_life_foundation_screenshot.webp" type="image/webp">
+              <img class="project__img" src="assets/img/portfolio/ask_life_foundation_screenshot.png" alt="ASK • Life Screenshot">
             </picture>
           </a>
         </div>
@@ -177,10 +177,10 @@ class PortfolioPage extends Page {
         <div class="project__itm">
           <h2 class="project__h2"><a class="project__link" href="portfolio/bigthicket/app.html">Big Thicket Network</a></h2>
           <picture>
-            <!-- <source srcset="resources/images/big_thicket_network_screenshot.jxl" type="image/jxl">
-            <source srcset="resources/images/big_thicket_network_screenshot.webp" type="image/webp"> -->
+            <!-- <source srcset="assets/img/big_thicket_network_screenshot.jxl" type="image/jxl">
+            <source srcset="assets/img/big_thicket_network_screenshot.webp" type="image/webp"> -->
             <a href="portfolio/bigthicket/app.html">
-              <img class="project__img" src="resources/images/portfolio/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
+              <img class="project__img" src="assets/img/portfolio/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot">
             </a>
           </picture>
         </div>
@@ -299,12 +299,12 @@ class RésuméModal extends Modal {
     <nav class="résumé-modal__nav">
       <table>
         <tr>
-          <td class="résumé-modal__btn"><a class="nav__link" href="resources/documents/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
+          <td class="résumé-modal__btn"><a class="nav__link" href="assets/doc/Ethan's Résumé.pdf" target="_blank">Open PDF</a></td>
           <td class="résumé-modal__btn résumé-modal__btn--x"><a class="nav__link symbol" href="javascript:Modal.xButtonHandler()" download>🗙</a></td>
         </tr>
       </table>
     </nav>
-    <img class="résumé-modal__img" src="resources/images/Ethan's Résumé.svg" alt="Ethan's Résumé">
+    <img class="résumé-modal__img" src="assets/img/Ethan's Résumé.svg" alt="Ethan's Résumé">
   `;
 }
 

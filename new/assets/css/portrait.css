@@ -1,9 +1,15 @@
 @media (orientation: portrait) {
   main {
-    margin: var(--gap-standard) calc(var(--gap-standard) / 2);
+    margin: var(--gap-standard) var(--gap-half);
   }
   .card {
-    padding: var(--gap-standard) calc(var(--gap-standard) / 2);
+    padding: var(--gap-standard) var(--gap-half);
+  }
+  .project {
+    gap: var(--gap-standard) var(--gap-half);
+  }
+  .project__item {
+    gap: var(--gap-standard) var(--gap-half);
   }
 }
 

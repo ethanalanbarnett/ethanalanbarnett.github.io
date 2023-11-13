@@ -1,6 +1,8 @@
 /* VARIABLES ________________________________________________________________________________________ */
 
 :root {
+  --gap-double: calc(var(--gap-standard) * 2);
+  --gap-half: calc(var(--gap-standard) / 2);
   --gap-standard: 1.3rem;
   --theme-grey-dark: #242525;
   --theme-grey-light: #363838;
@@ -20,6 +22,12 @@
 
 * {
   margin: 0;
+}
+
+a {
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 body {
@@ -43,7 +51,7 @@ hr {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--gap) * 2);
+  scroll-padding-top: var(--gap-double);
 }
 
 main {
@@ -61,13 +69,12 @@ main {
 }
 
 .project {
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
-  gap: calc(var(--gap-standard) / 2);
-
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-template-rows: auto;
+  row-gap: var(--gap-standard);
+  column-gap: var(--gap-half);
+  justify-content: center;
 }
 
 
@@ -76,26 +83,34 @@ main {
 .project__title {
   font-size: 1.5rem;
   line-height: 1.5rem;
-  margin: 0 0 3% 0;
 }
 
 .project__image {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
   display: block;
-  width: 100%;
+  width: min(35rem, 100%);
 }
 
 .project__item {
   align-items: center;
   display: flex;
   flex-direction: column;
-  grid-area: span 1 / span 1;
-  justify-content: space-between;
 }
 
-.project__link {
-  color: #fff;
-  text-decoration: none;
+.project__picture-wrapper {
+  width: min(35rem, 100%);
 }
 
 
 /* MODIFIERS ________________________________________________________________________________________ */
+
+.project__item--first {
+  width: min(35rem, 100%);
+}
+
+.project__item--second {
+  flex-grow: 1;
+  width: min(10rem, 100%);
+}

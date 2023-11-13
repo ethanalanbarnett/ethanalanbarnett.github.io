@@ -1,14 +1,16 @@
 /* VARIABLES ________________________________________________________________________________________ */
 
 :root {
-  --gap-standard: 2.6rem;
+  --gap-standard: 1.3rem;
   --theme-grey-dark: #242525;
   --theme-grey-light: #363838;
   --theme-grey-medium: #2d2e2e;
-  --theme-orange-bright: #f8991d;
-  --theme-orange-dull: #b1701b;
-  --theme-teal-bright: #0D98BA;
-  --theme-teal-dull: ;
+  /* --theme-orange-bright: #f8991d; */
+  /* --theme-orange-dull: #b1701b; */
+  /* --theme-orange-isha: #9b4932; */
+  --theme-orange-logo: #ff5100;
+  /* --theme-teal-bright: #0D98BA; */
+  --theme-teal-logo: #0177a2;
 }
 
 /* PSUEDO ELEMENTS __________________________________________________________________________________ */
@@ -16,28 +18,84 @@
 
 /* TAGS _____________________________________________________________________________________________ */
 
+* {
+  margin: 0;
+}
+
 body {
   background-color: var(--theme-grey-light);
+  color: #fff;
   display: grid;
   grid-template: "main" minmax(0, 1fr) / minmax(0, 1fr);
-  margin: 0;
   min-height: 100vh;
   min-height: 100svh;
   min-width: 100vw;
   min-width: 100svw;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
+hr {
+  color: var(--theme-orange-logo);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--gap) * 2);
+}
+
 main {
-  background-color: var(--theme-grey-dark);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-standard);
   grid-area: main;
-  margin: calc(var(--gap-standard) / 2) var(--gap-standard);
 }
 
 
 /* BLOCKS ___________________________________________________________________________________________ */
 
+.logo-main {
+  height: 40vmin;
+}
+
+.project {
+  display: flex;
+  flex-flow: row wrap;
+  gap: calc(var(--gap-standard) / 2);
+
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: auto;
+}
+
 
 /* ELEMENTS _________________________________________________________________________________________ */
+
+.project__title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0 3% 0;
+}
+
+.project__image {
+  display: block;
+  width: 100%;
+}
+
+.project__item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: span 1 / span 1;
+  justify-content: space-between;
+}
+
+.project__link {
+  color: #fff;
+  text-decoration: none;
+}
 
 
 /* MODIFIERS ________________________________________________________________________________________ */

@@ -1,3 +1,10 @@
-@media (orientation: portrait) {}
+@media (orientation: portrait) {
+  main {
+    margin: var(--gap-standard) calc(var(--gap-standard) / 2);
+  }
+  .card {
+    padding: var(--gap-standard) calc(var(--gap-standard) / 2);
+  }
+}
 
-@media (orientation: portrait) and (min-aspect-ratio: 0.6/1) {}
+/* @media (orientation: portrait) and (min-aspect-ratio: 0.6/1) {} */

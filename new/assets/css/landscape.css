@@ -1,5 +1,12 @@
-@media (orientation: landscape) {}
+@media (orientation: landscape) {
+  main {
+    margin: calc(var(--gap-standard) / 2) var(--gap-standard);
+  }
+  .card {
+    padding: calc(var(--gap-standard) / 2) var(--gap-standard);
+  }
+}
 
-@media (orientation: landscape) and (height < 32em) {}
+/* @media (orientation: landscape) and (height < 32em) {}
 
-@media (orientation: landscape) and (width < 50em) {}
+@media (orientation: landscape) and (width < 50em) {} */

@@ -1,12 +1,13 @@
 @media (orientation: landscape) {
+  body {
+    gap: var(--gap-half) var(--gap-standard);
+    padding: var(--gap-half) var(--gap-standard);
+  }
   .card {
     padding: var(--gap-half) var(--gap-standard);
   }
   .flex {
     gap: var(--gap-half) var(--gap-standard);
-  }
-  .flex--major-component {
-    margin: var(--gap-half) var(--gap-standard);
   }
   .project {
     gap: var(--gap-half) var(--gap-standard);

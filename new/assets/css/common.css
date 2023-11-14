@@ -30,11 +30,13 @@ a {
   text-decoration: none;
 }
 
+address {
+  font-style: normal;
+}
+
 body {
   background-color: var(--theme-grey-light);
   color: #fff;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   min-height: 100svh;
   min-width: 100vw;
@@ -43,10 +45,19 @@ body {
 
 code {
   color: var(--theme-teal-logo);
+  font-weight: 900;
+}
+
+footer {
+  width: 100%;
 }
 
 h1, h2 {
   text-align: center;
+}
+
+header {
+  width: 100%;
 }
 
 hr {

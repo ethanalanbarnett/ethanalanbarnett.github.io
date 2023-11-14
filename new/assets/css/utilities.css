@@ -12,6 +12,24 @@
   background-color: var(--theme-grey-dark);
 }
 
+.card--white {
+  background-color: #fff;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex--column {
+  flex-flow: column nowrap;
+}
+
+.flex--standard-gap {
+  gap: var(--gap-standard);
+}
+
 
 /* STATES ___________________________________________________________________________________________ */
 

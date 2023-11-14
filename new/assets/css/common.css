@@ -33,12 +33,16 @@ a {
 body {
   background-color: var(--theme-grey-light);
   color: #fff;
-  display: grid;
-  grid-template: "main" minmax(0, 1fr) / minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   min-height: 100svh;
   min-width: 100vw;
   min-width: 100svw;
+}
+
+code {
+  color: var(--theme-teal-logo);
 }
 
 h1, h2 {
@@ -59,13 +63,6 @@ html {
   scroll-padding-top: var(--gap-double);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-standard);
-  grid-area: main;
-}
-
 
 /* BLOCKS ___________________________________________________________________________________________ */
 
@@ -74,10 +71,11 @@ main {
 }
 
 .project {
-  align-items: center;
-  display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+}
+
+.résumé {
+  width: min(35rem, 100%);
 }
 
 
@@ -95,10 +93,13 @@ main {
   width: 100%;
 }
 
-.project__item {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+.résumé__image {
+  display: block;
+  width: 100%;
+}
+
+.résumé__link {
+  display: block;
 }
 
 

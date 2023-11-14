@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="5000"
+   height="55.563709"
+   viewBox="0 0 5000 55.563709"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="hr.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4"
+     inkscape:cx="2372"
+     inkscape:cy="-19.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Celtic-knot-basic</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="title4">One very basic form of Celtic or pseudo-Celtic linear knotwork.  By AnonMoos (public domain)</title>
+  <defs
+     id="defs8">
+    <path
+       id="ThreeLoops"
+       d="m 241.355,431.355 a 50,50 0 0 1 -70.71,0 l -70.711,-70.71 a 50,50 0 1 0 0,70.71 l 70.711,-70.71 a 50,50 0 0 1 70.71,0 l 70.711,70.71 a 50,50 0 1 0 0,-70.71 z" />
+    <path
+       id="FigureEight"
+       d="m 170.645,431.355 a 50,50 0 0 1 -70.711,0 L 64.579,396 99.934,360.645 a 50,50 0 0 1 70.711,0 l 70.71,70.71 a 50,50 0 0 0 70.711,0 L 347.421,396 312.066,360.645 a 50,50 0 0 0 -70.711,0 z" />
+  </defs>
+  <g
+     id="g877">
+    <use
+       xlink:href="#ThreeLoops"
+       id="use10"
+       transform="matrix(0.46308945,0,0,-0.46308945,2404.6036,211.16528)"
+       style="fill:none;stroke:#242525;stroke-width:20;stroke-opacity:1" />
+    <use
+       stroke-width="12"
+       stroke="#ffffff"
+       xlink:href="#ThreeLoops"
+       id="use12"
+       transform="matrix(0.46308945,0,0,-0.46308945,2404.6036,211.16528)"
+       style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+    <use
+       xlink:href="#FigureEight"
+       id="use14"
+       transform="matrix(0.46308945,0,0,-0.46308945,2404.6036,211.16528)"
+       style="fill:none;stroke:#242525;stroke-width:20;stroke-opacity:1" />
+    <use
+       stroke-width="12"
+       stroke="#ffffff"
+       xlink:href="#FigureEight"
+       id="use16"
+       transform="matrix(0.46308945,0,0,-0.46308945,2404.6036,211.16528)"
+       style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+    <path
+       d="m 2499.5957,4.631087 a 23.154472,23.154472 0 0 0 -15.9682,6.77824 l -6.9464,6.946342 m 19.8457,5.953015 6.9464,6.946341 m -3.0689,19.677597 a 23.154472,23.154472 0 0 0 15.9682,-6.77824 l 6.9464,-6.946342 m -59.5371,-12.899356 6.9463,6.946341 m 58.5438,-6.946341 6.9463,6.946341 m -101.305,19.677597 a 23.154472,23.154472 0 0 0 15.9688,-6.77824 l 6.9463,-6.946342 M 2565.0868,4.631087 a 23.154472,23.154472 0 0 0 -15.9687,6.77824 l -6.9464,6.946342"
+       id="path18"
+       style="fill:none;stroke:#242525;stroke-width:9.26179;stroke-opacity:1" />
+    <path
+       stroke-width="5.55707"
+       stroke="#ffffff"
+       d="m 2500,4.6273823 a 23.154472,23.154472 0 0 0 -16.3725,6.7819447 l -7.1779,7.177887 m 19.8457,5.489925 7.4094,7.409431 M 2500,50.936327 a 23.154472,23.154472 0 0 0 16.3725,-6.781945 l 7.1779,-7.177886 m -60.0002,-12.899357 7.4095,7.409431 m 58.0806,-7.409431 7.4095,7.409431 m -101.9404,19.449757 a 23.154472,23.154472 0 0 0 16.3726,-6.781945 l 7.1778,-7.177886 M 2565.4906,4.6273823 a 23.154472,23.154472 0 0 0 -16.3725,6.7819447 l -7.1779,7.177887"
+       id="path20"
+       style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+    <rect
+       style="fill:#0177a2;fill-opacity:1;stroke:none;stroke-width:4.07376;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect4171"
+       width="2392.1501"
+       height="5.5500002"
+       x="0"
+       y="25.006855" />
+    <rect
+       style="fill:#0177a2;fill-opacity:1;stroke:none;stroke-width:4.07377;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect4171-3"
+       width="2392.1516"
+       height="5.5500002"
+       x="2607.8484"
+       y="25.006855" />
+  </g>
+</svg>

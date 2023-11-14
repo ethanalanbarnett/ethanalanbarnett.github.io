@@ -78,6 +78,16 @@ html {
   scroll-padding-top: var(--gap-double);
 }
 
+li {
+  display: inline;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+menu, ul {
+  padding: 0;
+}
+
 
 /* BLOCKS ___________________________________________________________________________________________ */
 
@@ -96,7 +106,7 @@ html {
 
 /* ELEMENTS _________________________________________________________________________________________ */
 
-.header-primary__picture {
+.header-main__picture {
   background-image: url(/new/assets/img/ethan_alan_barnett_wide.jpg);
   background-image: -webkit-image-set(
     "/new/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),

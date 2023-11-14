@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="5000"
+   height="55.563709"
+   viewBox="0 0 5000 55.563709"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="hr.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.125"
+     inkscape:cx="2160"
+     inkscape:cy="-352"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Celtic-knot-basic</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="title4">One very basic form of Celtic or pseudo-Celtic linear knotwork.  By AnonMoos (public domain)</title>
+  <defs
+     id="defs8">
+    <path
+       id="ThreeLoops"
+       d="m 241.355,431.355 a 50,50 0 0 1 -70.71,0 l -70.711,-70.71 a 50,50 0 1 0 0,70.71 l 70.711,-70.71 a 50,50 0 0 1 70.71,0 l 70.711,70.71 a 50,50 0 1 0 0,-70.71 z" />
+    <path
+       id="FigureEight"
+       d="m 170.645,431.355 a 50,50 0 0 1 -70.711,0 L 64.579,396 99.934,360.645 a 50,50 0 0 1 70.711,0 l 70.71,70.71 a 50,50 0 0 0 70.711,0 L 347.421,396 312.066,360.645 a 50,50 0 0 0 -70.711,0 z" />
+  </defs>
+  <g
+     id="g344">
+    <g
+       id="g3072"
+       transform="matrix(0.24119242,0,0,0.24119242,2403.6774,-3.476683)">
+      <use
+         xlink:href="#ThreeLoops"
+         id="use10"
+         transform="matrix(1.92,0,0,-1.92,3.84,889.92)"
+         style="fill:none;stroke:#242525;stroke-width:20;stroke-opacity:1" />
+      <use
+         stroke-width="12"
+         stroke="#ffffff"
+         xlink:href="#ThreeLoops"
+         id="use12"
+         transform="matrix(1.92,0,0,-1.92,3.84,889.92)"
+         style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+      <use
+         xlink:href="#FigureEight"
+         id="use14"
+         transform="matrix(1.92,0,0,-1.92,3.84,889.92)"
+         style="fill:none;stroke:#242525;stroke-width:20;stroke-opacity:1" />
+      <use
+         stroke-width="12"
+         stroke="#ffffff"
+         xlink:href="#FigureEight"
+         id="use16"
+         transform="matrix(1.92,0,0,-1.92,3.84,889.92)"
+         style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+      <path
+         d="M 397.68384,33.61536 A 96,96 0 0 0 331.4784,61.7184 l -28.8,28.8 M 384.96,115.2 413.76,144 m -12.72384,81.58464 A 96,96 0 0 0 467.2416,197.4816 l 28.8,-28.8 M 249.1968,115.2 l 28.8,28.8 m 242.7264,-28.8 28.8,28.8 m -420.01728,81.58464 a 96,96 0 0 0 66.20736,-28.10304 l 28.8,-28.8 M 669.21408,33.61536 A 96,96 0 0 0 603.00672,61.7184 l -28.8,28.8"
+         id="path18"
+         style="fill:none;stroke:#242525;stroke-width:38.4;stroke-opacity:1" />
+      <path
+         stroke-width="23.04"
+         stroke="#ffffff"
+         d="m 399.36,33.6 a 96,96 0 0 0 -67.8816,28.1184 l -29.76,29.76 M 384,114.24 l 30.72,30.72 m -15.36,80.64 a 96,96 0 0 0 67.8816,-28.1184 l 29.76,-29.76 M 248.2368,114.24 l 30.72,30.72 m 240.8064,-30.72 30.72,30.72 M 127.83168,225.6 a 96,96 0 0 0 67.8816,-28.1184 l 29.76,-29.76 M 670.88832,33.6 a 96,96 0 0 0 -67.8816,28.1184 l -29.76,29.76"
+         id="path20"
+         style="fill:none;stroke:#0177a2;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#ff5100;fill-opacity:1;stroke:none;stroke-width:4.07376;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect4171"
+       width="2392.1501"
+       height="5.5500002"
+       x="0"
+       y="25.006855" />
+    <rect
+       style="fill:#ff5100;fill-opacity:1;stroke:none;stroke-width:4.07377;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect4171-3"
+       width="2392.1516"
+       height="5.5500002"
+       x="2607.8484"
+       y="25.006855" />
+  </g>
+</svg>

@@ -25,7 +25,7 @@
 }
 
 a {
-  color: #fff;
+  color: var(--theme-orange-logo);
   font-weight: 900;
   text-decoration: none;
 }
@@ -46,7 +46,12 @@ h1, h2 {
 }
 
 hr {
-  color: var(--theme-orange-logo);
+  background-image: url(/new/assets/img/hr.svg);
+  background-position: center;
+  background-size: cover;
+  border-style: none;
+  height: 0.8rem;
+  width: 100%;
 }
 
 html {
@@ -72,8 +77,6 @@ main {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  row-gap: var(--gap-standard);
-  column-gap: var(--gap-half);
   justify-content: center;
 }
 
@@ -81,8 +84,7 @@ main {
 /* ELEMENTS _________________________________________________________________________________________ */
 
 .project__title {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1;
 }
 
 .project__image {
@@ -90,17 +92,13 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
   display: block;
-  width: min(35rem, 100%);
+  width: 100%;
 }
 
 .project__item {
   align-items: center;
   display: flex;
   flex-direction: column;
-}
-
-.project__picture-wrapper {
-  width: min(35rem, 100%);
 }
 
 

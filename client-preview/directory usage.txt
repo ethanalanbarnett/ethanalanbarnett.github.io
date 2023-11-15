@@ -1,0 +1,1 @@
+Use this directory to build the client's website. Each site should be it's own folder named identically to its future domain name (e.g. clientsite.com). After the job is completed and their site is hosted elsewhere, remove their site folder from this directory. Do not maintain previous clients' sites here.

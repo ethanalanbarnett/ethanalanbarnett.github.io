@@ -109,16 +109,16 @@ menu, ul {
 .header-main__picture {
   background-image: url(/assets/img/ethan_alan_barnett_wide.jpg);
   background-image: -webkit-image-set(
-    "/new/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
-    "/new/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
-    "/new/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
-    "/new/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
+    "/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
+    "/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
+    "/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
+    "/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
   );
   background-image: image-set(
-    "/new/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
-    "/new/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
-    "/new/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
-    "/new/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
+    "/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
+    "/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
+    "/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
+    "/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
   );
   background-position: center;
   background-size: cover;

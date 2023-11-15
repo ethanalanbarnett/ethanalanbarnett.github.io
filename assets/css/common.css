@@ -65,7 +65,7 @@ header {
 }
 
 hr {
-  background-image: url(/new/assets/img/hr.svg);
+  background-image: url(/assets/img/hr.svg);
   background-position: center;
   background-size: cover;
   border-style: none;
@@ -107,7 +107,7 @@ menu, ul {
 /* ELEMENTS _________________________________________________________________________________________ */
 
 .header-main__picture {
-  background-image: url(/new/assets/img/ethan_alan_barnett_wide.jpg);
+  background-image: url(/assets/img/ethan_alan_barnett_wide.jpg);
   background-image: -webkit-image-set(
     "/new/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
     "/new/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),

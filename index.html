@@ -1,72 +1,159 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Alan Barnett</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preload" as="font" href="assets/font/ezrasilsr.ttf" type="font/ttf" crossorigin="anonymous">
-    <link rel="prefetch" as="font" href="assets/font/symbola.ttf" type="font/ttf" crossorigin="anonymous">
-    <script src="assets/js/app.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, user-scalable=yes" />
+    <meta name="google-site-verification" content="" />
+
+    <!-- SEO (https://metatags.io) -->
+    <meta name="title" content="Ethan Alan Barnett" />
+    <meta name="description" content="Ethan Alan Barnett is a freelance web developer. This is his professional portfolio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ethanalanbarnett.com/" />
+    <meta property="og:title" content="Ethan Alan Barnett" />
+    <meta property="og:description" content="Ethan Alan Barnett is a freelance web developer. This is his professional portfolio." />
+    <meta property="og:image" content="https://www.ethanalanbarnett.com/assets/img/banners/banner_meta.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.ethanalanbarnett.com/" />
+    <meta property="twitter:title" content="Ethan Alan Barnett" />
+    <meta property="twitter:description" content="Ethan Alan Barnett is a freelance web developer. This is his professional portfolio." />
+    <meta property="twitter:image" content="https://www.ethanalanbarnett.com/assets/img/banners/banner_meta.jpg" />
+    <meta name="twitter:image:alt" content="Ethan Alan Barnett banner" />
+
+    <!-- favicon (https://realfavicongenerator.net/) -->
+    <!-- <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="assets/img/icons/safari-pinned-tab.svg" color="#444444" /> -->
+
+    <!-- style -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="assets/font/libertinusmono-regular.woff2" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/landscape.css" media="all and (orientation: landscape)" />
+    <link rel="stylesheet" type="text/css" href="assets/css/portrait.css" media="all and (orientation: portrait)" />
+    <link rel="stylesheet" type="text/css" href="assets/css/utilities.css" media="all" />
+    <style>
+      @font-face {
+        font-display: fallback;
+        font-family: 'Libertinus Mono';
+        font-style: normal;
+        src: local('Libertinus Mono'), local('LibertinusMono-Regular'), url(assets/font/libertinusmono-regular.woff2) format('woff2');
+      }
+      * {
+        font-family: 'Libertinus Mono', 'Courier New', Courier, monospace;
+      }
+      code {
+        font-family: 'Droid Sans Mono', 'monospace', monospace;
+      }
+    </style>
+
+    <!-- scripts -->
+    <script src="assets/js/script.js" defer></script>
   </head>
-  <body>
-    <header>
-      <nav class="header__nav">
-        <a class="nav__link" href="javascript:Tools.pageSwitch('home')">Home</a>
-        <a class="nav__link" href="javascript:Tools.pageSwitch('résumé')">Résumé</a>
-        <a class="nav__link" href="#Portfolio">Portfolio</a>
-        <a class="nav__link" href="javascript:Tools.pageSwitch('archive')">Archive</a>
+
+  <body class="flex flex--column">
+
+    <header class="header-page flex flex--column flex--standard-gap flex--major-component card card--dark">
+      <nav>
+        <menu>
+          <li><a href="#">Portfolio</a></li>
+          <span>•</span>
+          <li><a href="#">Résumé</a></li>
+          <span>•</span>
+          <li><a href="#">Contact</a></li>
+        </menu>
       </nav>
     </header>
-    <div id="Backgrounds" class="backgrounds-div">
-      <div class="bgd-frame"></div>
-      <div class="bgd-mobile">
-        <picture class="bgd-mobile__picture">
-          <source srcset="assets/img/background/ethan_alan_barnett_wide.jxl" type="image/jxl" />
-          <source srcset="assets/img/background/ethan_alan_barnett_wide.avif" type="image/avif" />
-          <source srcset="assets/img/background/ethan_alan_barnett_wide.webp" type="image/webp" />
-          <img class="bgd-mobile__img" src="assets/img/background/ethan_alan_barnett_wide.jpg" alt="Ethan Alan Barnett wide crop" />
-        </picture>
-        <h1 class="bgd-mobile__txt bgd-mobile__txt--left">עוֹלָם</h1>
-        <h1 class="bgd-mobile__txt bgd-mobile__txt--right">שָׁלוֹם</h1>
-      </div>
-      <div class="bgd-desktop bgd-desktop--left">
-        <picture class="bgd-desktop__picture">
-          <source srcset="assets/img/background/ethan_alan_barnett_left.jxl" type="image/jxl" />
-          <source srcset="assets/img/background/ethan_alan_barnett_left.avif" type="image/avif" />
-          <source srcset="assets/img/background/ethan_alan_barnett_left.webp" type="image/webp" />
-          <img class="bgd-desktop__img" src="assets/img/background/ethan_alan_barnett_left.jpg" alt="Ethan Alan Barnett left crop" />
-        </picture>
-        <div class="bgd-desktop__frame"></div>
-      </div>
-      <div class="bgd-desktop bgd-desktop--right">
-        <picture class="bgd-desktop__picture">
-          <source srcset="assets/img/background/ethan_alan_barnett_right.jxl" type="image/jxl" />
-          <source srcset="assets/img/background/ethan_alan_barnett_right.avif" type="image/avif" />
-          <source srcset="assets/img/background/ethan_alan_barnett_right.webp" type="image/webp" />
-          <img class="bgd-desktop__img" src="assets/img/background/ethan_alan_barnett_right.jpg" alt="Ethan Alan Barnett right crop" />
-        </picture>
-        <div class="bgd-desktop__frame"></div>
-      </div>
-    </div>
-    <main>
+
+    <main class="flex flex--column flex--standard-gap flex--major-component card card--dark">
+
+      <header class="flex flex--column flex--standard-gap">
+        <img class="logo-main" src="assets/img/Ethan Alan Initials Logo.svg" alt="Ethan Alan logo" />
+        <div class="flex flex--column card">
+          <h1>My name is Ethan Alan Barnett</h1>
+          <div class="flex">
+            <div class="header-main__picture"></div>
+            <p>I am a freelance, front-end web developer and designer. Take a gander at some of my work below, or see my <a href="assets/doc/Ethan's Résumé.pdf" target="_blank">résumé</a>.</p>
+          </div>
+        </div>
+      </header>
+
+      <hr />
+
+      <article class="flex flex--column flex--standard-gap">
+        <h2>Portfolio</h2>
+        <section class="project flex card">
+          <header class="project__item--first flex flex--column">
+            <h3><a class="project__link" href="https://www.asklife.org/" target="_blank">ASK • Life</a></h3>
+            <a class="project__picture-wrapper" href="https://www.asklife.org/" target="_blank">
+              <picture>
+                <!-- <source srcset="assets/img/portfolio/ask_life_foundation_screenshot.jxl" type="image/jxl" /> -->
+                <source srcset="assets/img/portfolio/ask_life_foundation_screenshot.avif" type="image/avif" />
+                <source srcset="assets/img/portfolio/ask_life_foundation_screenshot.webp" type="image/webp" />
+                <img class="project__image" src="assets/img/portfolio/ask_life_foundation_screenshot.png" alt="ASK • Life Screenshot" />
+              </picture>
+            </a>
+          </header>
+          <div class="project__item--second flex flex--column">
+            <p class="project__paragraph">ASK Life Foundation is a private nonprofit that supports projects to educate poor and remote children as well as other charitable causes.
+            <br>This site is written in vanilla HTML, CSS, and JavaScript and hosted via Google Firebase.</p>
+          </div>
+        </section>
+        <section class="project flex card">
+          <header class="project__item--first flex flex--column">
+            <h3><a class="project__link" href="portfolio/bigthicket/app.html" target="_blank">Big Thicket Network</a></h3>
+            <a class="project__picture-wrapper" href="portfolio/bigthicket/app.html" target="_blank">
+              <picture>
+                <!-- <source srcset="assets/img/portfolio/big_thicket_network_screenshot.jxl" type="image/jxl" />
+                <source srcset="assets/img/portfolio/big_thicket_network_screenshot.webp" type="image/webp" /> -->
+                <img class="project__image" src="assets/img/portfolio/big_thicket_network_screenshot.png" alt="Big Thicket Network Screenshot" />
+              </picture>
+            </a>
+          </header>
+          <div class="project__item--second flex flex--column">
+            <p class="project__paragraph">This dummy (front-end only) web app is generated with vanilla JavaScript into an otherwise empty HTML boilerplate. It allows a user to log in and create microblog posts. It is written with an object oriented approach (as well as a bad CSS approach: for now).
+            <br>Username: Ethan
+            <br>Password: Ethan123!</p>
+          </div>
+        </section>
+      </article>
+
+      <hr />
+
+      <article class="flex flex--column flex--standard-gap">
+        <h2>Résumé</h2>
+        <section class="résumé flex flex--column card">
+          <h3><a href="assets/doc/Ethan's Résumé.pdf" target="_blank">Click to open PDF</a></h3>
+          <a class="résumé__link" href="assets/doc/Ethan's Résumé.pdf" target="_blank"><img class="résumé__image card card--white" src="assets/img/Ethan's Résumé.svg" alt="Ethan's Résumé"></a>
+        </section>
+      </article>
+
+      <hr />
+
+      <article class="flex flex--column flex--standard-gap">
+        <section class="card flex flex--column">
+          <p>This site is running vanilla HTML, CSS, and JavaScript.</p>
+          <code class="card card--dark">console.log(<a href="https://www.youtube.com/watch?v=kqdBD6MMciA" target="_blank">'hello world!'</a>);</code>
+        </section>
+      </article>
+
     </main>
-    <footer>
-      <div class="ftr-btns">
-        <p class="ftr-btns__desc">Made with love. Oh! and these technologies:</p>
-        <a class="ftr-btns__img-link" href="https://web.archive.org/web/20120308030806/http://www.amd.com/us/press-releases/Pages/Press_Release_751.aspx" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/AMD64_Logo_grayscale.svg" alt="AMD64 icon"></a>
-        <a class="ftr-btns__img-link" href="https://www.kernel.org/linux.html" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/TuxFlat_grayscale.svg" alt="Linux icon"></a>
-        <a class="ftr-btns__img-link" href="https://fedoraproject.org/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/Fedora_icon_(2021)_grayscale.svg" alt="Fedora icon"></a>
-        <a class="ftr-btns__img-link" href="https://code.visualstudio.com/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/Visual_Studio_Code_1.35_icon_grayscale.svg" alt="Visual Studio Code icon"></a>
-        <a class="ftr-btns__img-link" href="https://262.ecma-international.org/14.0/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/Javascript_Logo_grayscale.png" alt="JavaScript icon"></a>
-        <a class="ftr-btns__img-link" href="https://html.spec.whatwg.org/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/HTML5_logo_and_wordmark_grayscale.svg" alt="HTML 5 icon"></a>
-        <a class="ftr-btns__img-link" href="https://www.w3.org/TR/CSS/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/CSS3_logo_and_wordmark_grayscale.svg" alt="CSS 3 icon"></a>
-        <a class="ftr-btns__img-link" href="https://httpwg.org/specs/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/HTTP_logo_grayscale.svg" alt="HTTP icon"></a>
-        <a class="ftr-btns__img-link" href="https://git-scm.com/" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/Git_icon_grayscale.svg" alt="Git Logo"></a>
-        <a class="ftr-btns__img-link" href="https://github.com/about" target="_blank"><img class="ftr-btns__img" src="assets/img/icon/grayscale/GitHub_Invertocat_Logo.svg" alt="GitHub icon"></a>
-      </div>
+
+    <footer class="flex flex--column flex--standard-gap flex--major-component card card--dark">
+      <address>
+        <ul>
+          <li><a href="mailto:ethanalanbarnett@protonmail.com">Email</a></li>
+          <span>•</span>
+          <li><a href="https://www.fiverr.com/s2/a311fc20f6" target="_blank">Fiverr</a></li>
+          <span>•</span>
+          <li><a href="https://www.linkedin.com/in/ethan-alan-barnett" target="_blank">Linkedin</a></li>
+        </ul>
+      </address>
     </footer>
-    <div id="Modal_List" class="modal-list"></div>
+
   </body>
 </html>

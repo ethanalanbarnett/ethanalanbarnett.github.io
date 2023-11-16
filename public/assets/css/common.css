@@ -75,7 +75,7 @@ hr {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--gap-double);
+  scroll-padding-top: var(--gap-standard);
 }
 
 li {
@@ -93,6 +93,9 @@ menu, ul {
 
 .logo-main {
   height: 40vmin;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .project {
@@ -152,6 +155,10 @@ menu, ul {
 
 
 /* MODIFIERS ________________________________________________________________________________________ */
+
+.logo-main--spin {
+  transform: rotate(-405deg);
+}
 
 .project__item--first {
   width: min(35rem, 100%);

@@ -57,14 +57,14 @@
 
   <body class="flex flex--column">
 
-    <header class="header-page flex flex--column flex--standard-gap flex--major-component card card--dark">
+    <header id="header_page" class="header-page flex flex--column flex--standard-gap flex--major-component card card--dark">
       <nav>
         <menu>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <span>•</span>
-          <li><a href="#">Résumé</a></li>
+          <li><a href="#résumé">Résumé</a></li>
           <span>•</span>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </menu>
       </nav>
     </header>
@@ -72,7 +72,7 @@
     <main class="flex flex--column flex--standard-gap flex--major-component card card--dark">
 
       <header class="flex flex--column flex--standard-gap">
-        <img class="logo-main" src="assets/img/Ethan Alan Initials Logo.svg" alt="Ethan Alan logo" />
+        <img id="logo" class="logo-main" src="assets/img/Ethan Alan Initials Logo.svg" alt="Ethan Alan logo" />
         <div class="flex flex--column card">
           <h1>My name is Ethan Alan Barnett</h1>
           <div class="flex">
@@ -84,7 +84,7 @@
 
       <hr />
 
-      <article class="flex flex--column flex--standard-gap">
+      <article id="portfolio" class="flex flex--column flex--standard-gap">
         <h2>Portfolio</h2>
         <section class="project flex card">
           <header class="project__item--first flex flex--column">
@@ -124,7 +124,7 @@
 
       <hr />
 
-      <article class="flex flex--column flex--standard-gap">
+      <article id="résumé" class="flex flex--column flex--standard-gap">
         <h2>Résumé</h2>
         <section class="résumé flex flex--column card">
           <h3><a href="assets/doc/Ethan's Résumé.pdf" target="_blank">Click to open PDF</a></h3>
@@ -143,7 +143,7 @@
 
     </main>
 
-    <footer class="flex flex--column flex--standard-gap flex--major-component card card--dark">
+    <footer id="contact" class="flex flex--column flex--standard-gap flex--major-component card card--dark">
       <address>
         <ul>
           <li><a href="mailto:ethanalanbarnett@protonmail.com">Email</a></li>

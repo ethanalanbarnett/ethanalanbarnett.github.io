@@ -72,7 +72,7 @@ header {
 }
 
 hr {
-  background-image: url(/assets/img/hr.svg);
+  background-image: url(../img/hr.svg);
   background-position: center;
   background-size: cover;
   border-style: none;
@@ -117,18 +117,18 @@ menu, ul {
 /* ELEMENTS _________________________________________________________________________________________ */
 
 .header-main__picture {
-  background-image: url(/assets/img/ethan_alan_barnett_wide.jpg);
+  background-image: url(../img/ethan_alan_barnett_wide.jpg);
   background-image: -webkit-image-set(
-    "/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
-    "/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
-    "/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
-    "/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
+    "../img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
+    "../img/ethan_alan_barnett_wide.avif" type("image/avif"),
+    "../img/ethan_alan_barnett_wide.webp" type("image/webp"),
+    "../img/ethan_alan_barnett_wide.jpg" type("image/jpg")
   );
   background-image: image-set(
-    "/assets/img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
-    "/assets/img/ethan_alan_barnett_wide.avif" type("image/avif"),
-    "/assets/img/ethan_alan_barnett_wide.webp" type("image/webp"),
-    "/assets/img/ethan_alan_barnett_wide.jpg" type("image/jpg")
+    "../img/ethan_alan_barnett_wide.jxl" type("image/jxl"),
+    "../img/ethan_alan_barnett_wide.avif" type("image/avif"),
+    "../img/ethan_alan_barnett_wide.webp" type("image/webp"),
+    "../img/ethan_alan_barnett_wide.jpg" type("image/jpg")
   );
   background-position: center;
   background-size: cover;

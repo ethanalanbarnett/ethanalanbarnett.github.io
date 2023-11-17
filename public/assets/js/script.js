@@ -10,7 +10,6 @@ const scrollToTop = () => {
 }
 
 const rotateLogo = () => {
-  console.log(logo);
   logo.classList.toggle('logo-main--spin');
 }
 

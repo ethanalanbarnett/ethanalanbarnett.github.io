@@ -52,6 +52,13 @@ footer {
   width: 100%;
 }
 
+footer:target {
+  box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.3);
+  transition-delay: 0.8s;
+  transition-duration: 0.5s;
+  transition-property: box-shadow;
+}
+
 h1 {
   font-size: 1.6rem;
 }
@@ -157,7 +164,7 @@ menu, ul {
 /* MODIFIERS ________________________________________________________________________________________ */
 
 .logo-main--spin {
-  transform: rotate(-405deg);
+  transform: rotate(-405deg) scale(0.5);
 }
 
 .project__item--first {

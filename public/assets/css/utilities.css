@@ -1,15 +1,19 @@
 /* TYPES ____________________________________________________________________________________________ */
 
+.border-dark {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
 .card {
   background-color: var(--theme-grey-light);
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
-  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
 }
 
 .card--dark {
   background-color: var(--theme-grey-dark);
+  box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.1);
 }
 
 .card--white {

@@ -99,6 +99,7 @@ menu, ul {
 /* BLOCKS ___________________________________________________________________________________________ */
 
 .logo-main {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.15));
   height: 40vmin;
   transition-property: transform;
   transition-duration: 0.5s;
@@ -144,9 +145,7 @@ menu, ul {
 }
 
 .project__image {
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
-  box-shadow: 0 0 25px 0 rgba(53, 57, 60, 0.19);
   display: block;
   width: 100%;
 }

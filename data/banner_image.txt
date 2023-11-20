@@ -1,0 +1,30 @@
+Idea, I can add little graphics next to my logo on some of these. A code svg: </> and a paint brush svg. These represent front-end design. Alternate colors with the logo.
+
+Business Card:
+Aspect Ratio:		7:4
+Pixels:			>= 1050 x 600 (@ 300ppi)
+Millimeters:		88.9 x 50.8
+Inches:			3.5 x 2
+Components:		Logo, Profile Image, Contact (including phone), Services Provided
+			
+
+Meta Image:
+Aspect Ratio:		1.91:1
+Pixels:			>= 1200 x 630
+File Size:		< 1MB
+Formats:		PNG, JPG
+Components:		Logo, Profile Image
+
+Linkedin Banner:
+Aspect Ratio:		4:1
+Pixels:			1584 x 396
+File Size:		<= 8MB
+Formats:		PNG, JPG
+Components:		Logo, Services Provided?
+
+Fiverr:
+Aspect Ratio:		1280:769 (recommended) 1280:773.03 (minimum) 1280:773.12 (maximum)
+Pixels:			1280 x 752 (actual best) 1280 x 769 (recommended) 712 x 430 (minimum) 4000 x 2416 (maximum)
+DPI:			72
+Margin:			50px top and bottom, 150px right and left (full resolution: 1280 x 752)
+https://shihabiiuc.com/fiverr-gig-image-size/

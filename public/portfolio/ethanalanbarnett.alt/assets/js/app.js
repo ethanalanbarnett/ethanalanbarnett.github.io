@@ -199,6 +199,33 @@ class ArchivePage extends Page {
   element;
   content = `
     <h1 class="main__title centered">Archive</h1>
+    <section class="project">
+      <div class="project__itm">
+        <h2 class="project__h2">Example Entry 1</h2>
+        <img class="project__img" src="assets/img/folder-icon.svg" alt="Folder Icon">
+      </div>
+      <div class="project__itm">
+        <p class="project__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus facilisis mauris, ut auctor urna molestie pharetra. Nam a ullamcorper justo. In sed urna lacus. Praesent tempor congue metus, semper blandit justo eleifend ut. Mauris lacinia enim quis mauris eleifend aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sodales, quam ut interdum finibus, enim quam ultrices metus, id blandit lacus quam non urna. Integer dapibus ut ex ut semper. Praesent luctus risus eget suscipit vestibulum. Ut non quam condimentum, consectetur tellus id, pulvinar lorem. Aenean et gravida libero. Vivamus fringilla tellus enim, maximus vulputate ex vulputate fringilla. Vestibulum egestas, arcu at tempus accumsan, mauris enim accumsan erat, et sollicitudin odio urna sit amet turpis. Proin non tellus non augue maximus tincidunt eget eget augue. Phasellus orci libero, porta non mattis non, bibendum auctor ipsum.</p>
+      </div>
+    </section>
+    <section class="project">
+      <div class="project__itm">
+        <h2 class="project__h2">Example Entry 2</h2>
+        <img class="project__img" src="assets/img/folder-icon.svg" alt="Folder Icon">
+      </div>
+      <div class="project__itm">
+        <p class="project__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus facilisis mauris, ut auctor urna molestie pharetra. Nam a ullamcorper justo. In sed urna lacus. Praesent tempor congue metus, semper blandit justo eleifend ut. Mauris lacinia enim quis mauris eleifend aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sodales, quam ut interdum finibus, enim quam ultrices metus, id blandit lacus quam non urna. Integer dapibus ut ex ut semper. Praesent luctus risus eget suscipit vestibulum. Ut non quam condimentum, consectetur tellus id, pulvinar lorem. Aenean et gravida libero. Vivamus fringilla tellus enim, maximus vulputate ex vulputate fringilla. Vestibulum egestas, arcu at tempus accumsan, mauris enim accumsan erat, et sollicitudin odio urna sit amet turpis. Proin non tellus non augue maximus tincidunt eget eget augue. Phasellus orci libero, porta non mattis non, bibendum auctor ipsum.</p>
+      </div>
+    </section>
+    <section class="project">
+      <div class="project__itm">
+        <h2 class="project__h2">Example Entry 3</h2>
+        <img class="project__img" src="assets/img/folder-icon.svg" alt="Folder Icon">
+      </div>
+      <div class="project__itm">
+        <p class="project__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus facilisis mauris, ut auctor urna molestie pharetra. Nam a ullamcorper justo. In sed urna lacus. Praesent tempor congue metus, semper blandit justo eleifend ut. Mauris lacinia enim quis mauris eleifend aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sodales, quam ut interdum finibus, enim quam ultrices metus, id blandit lacus quam non urna. Integer dapibus ut ex ut semper. Praesent luctus risus eget suscipit vestibulum. Ut non quam condimentum, consectetur tellus id, pulvinar lorem. Aenean et gravida libero. Vivamus fringilla tellus enim, maximus vulputate ex vulputate fringilla. Vestibulum egestas, arcu at tempus accumsan, mauris enim accumsan erat, et sollicitudin odio urna sit amet turpis. Proin non tellus non augue maximus tincidunt eget eget augue. Phasellus orci libero, porta non mattis non, bibendum auctor ipsum.</p>
+      </div>
+    </section>
   `;
 }
 

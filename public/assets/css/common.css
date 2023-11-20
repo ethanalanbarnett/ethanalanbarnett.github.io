@@ -168,6 +168,12 @@ menu, ul {
 
 .project__title {
   line-height: 1;
+  text-align: center;
+}
+
+.project__title-tag {
+  color: var(--theme-teal-logo);
+  font-size: small;
 }
 
 .project__image {

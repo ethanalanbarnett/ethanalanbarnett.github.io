@@ -33,6 +33,11 @@ header {
   z-index: 3;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 main {
   background-color: #ffffff;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
@@ -51,7 +56,7 @@ main {
 }
 
 .bgd-desktop {
-  background-image: url(/portfolio/ethanalanbarnett.alt/assets/img/background/pattern_background.png);
+  background-image: url(../img/background/pattern_background.png);
   display: grid;
   grid-template: 
     'ethan' auto
@@ -226,7 +231,7 @@ main {
 
 .project__img {
   display: block;
-  width: 100%;
+  width: min(100%, 50rem);
 }
 
 .project__itm {
@@ -318,13 +323,13 @@ main {
 @font-face {
   font-display: swap;
   font-family: custom-hebrew;
-  src: local("Ezra SIL"), local("Ezra SIL SR"), url(/portfolio/ethanalanbarnett.alt/assets/font/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
+  src: local("Ezra SIL"), local("Ezra SIL SR"), url(../font/ezrasilsr.ttf); /* https://opensiddur.org/wp-content/uploads/fonts/display-font-charmap.php?fnt=EzraSIL-SR */
 }
 
 @font-face {
   font-display: swap;
   font-family: symbola;
-  src: local("Symbola"), url(/portfolio/ethanalanbarnett.alt/assets/font/symbola.ttf); /* https://www.fontspace.com/symbola-font-f22021 */
+  src: local("Symbola"), url(../font/symbola.ttf); /* https://www.fontspace.com/symbola-font-f22021 */
 }
 
 @media screen and (max-width: 1042px) {

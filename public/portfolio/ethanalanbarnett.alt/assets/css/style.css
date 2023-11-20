@@ -279,6 +279,10 @@ main {
   justify-items: end;
 }
 
+.project__img--small {
+  width: min(50%, 25rem);
+}
+
 .résumé-modal__btn--x {
   text-align: right;
   width: 100%;

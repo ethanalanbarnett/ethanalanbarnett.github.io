@@ -58,9 +58,8 @@ class Tools {
 
 class User {
   static existingUsers = [
-    {username: 'Ethan', password: 'Ethan123!'},
-    {username: 'Andrea', password: 'Andrea123!'},
-    {username: 'Caiaphas', password: 'Caiaphas123!'}
+    {username: 'UserOfWebz', password: 'admin1'},
+    {username: 'Ethan', password: 'ethan1'}
   ];
   static signInUser(usrnm, pswrd) {
     const navMenuUl = App.navBanner.children[0].children[0];
@@ -68,7 +67,7 @@ class User {
     App.user = user;
     App.user.username = usrnm;
     App.user.password = pswrd;
-    navMenuUl.menuButtons[2] = ['Sign out', 'javascript:User.signOutHandler()'];
+    navMenuUl.menuButtons[3] = ['Sign out', 'javascript:User.signOutHandler()'];
     navMenuUl.nextTask();
     App.screenDimmer.toggle();
   }
@@ -82,7 +81,7 @@ class User {
     if (App.user) {
       App.user = false;
       const navMenuUl = App.navBanner.children[0].children[0];
-      navMenuUl.menuButtons[2] = ['Sign in', 'javascript:User.signInHandler()'];
+      navMenuUl.menuButtons[3] = ['Sign in', 'javascript:User.signInHandler()'];
       navMenuUl.nextTask();
     }
   }
@@ -132,7 +131,7 @@ class Element {
 class NavBanner extends Element {
   elementRecipe = {
     tag: 'header',
-    className: 'header-main card card--bubble',
+    className: 'header-main card card--bubble card--dark',
     id: 'Header_Main',
     innerHTML: false,
     nextTask: true,
@@ -170,9 +169,8 @@ class NavMenuUl extends Element {
   menuButtons = [
     ['Home', `javascript:App.navigate('Home')`],
     ['About', `javascript:App.navigate('About')`],
-    ['Sign in', 'javascript:User.signInHandler()'],
     ['Settings', `javascript:App.navigate('Settings')`],
-    ['Main Site', '/']
+    ['Sign in', 'javascript:User.signInHandler()']
   ];
   nextTask() {
     if (this.children[0]) {
@@ -297,11 +295,11 @@ class NewPostBtn extends Element {
     this.element.addEventListener('click', this.clicked.bind(this));
   }
   clicked() {
-    if (!App.user) {
+    if (App.user) {
       const newPostModal = new NewPostModal();
       newPostModal.render(App.element, true);
     } else {
-      const noticeModal = new NoticeModal('Notice', 'You must sign in before you can post.', 'OK');
+      const noticeModal = new NoticeModal('Notice', "You must sign in before you can post.<br /><br />*psst!*<br /><br />Username: UserOfWebz<br />Password: admin1<br /><br />(This baby's secure as Fort Knox)", 'OK');
       noticeModal.render(App.element, true);
     }
   }
@@ -336,17 +334,12 @@ class FeedPost extends Element {
   constructor(title, text) {
     super();
     this.elementRecipe.innerHTML = `
-      <table>
-        <tr><td class="feed-post-user-td"></td></tr>
-      </table>
-      <div class="">
-        <h2 class="feed-post-user">${App.user.username}</h2>
-        <p class="feed-post-date">${Tools.getCurrentDate()}</p>
+      <div class="feed__user-date flex">
+        <h2 class="feed__user">${App.user.username}</h2>
+        <p class="feed__date">${Tools.getCurrentDate()}</p>
       </div>
-      <h3 class="feed-post-title">${title}</h3>
-      <div class="feed-post-text">
-        <p>${text}</p>
-      </div>
+      <h3 class="feed__title">${title}</h3>
+      <p class="feed__text">${text}</p>
     `
   }
 }
@@ -437,14 +430,14 @@ class Modal extends Element {
   }
   addButtonListeners() {
     const inputs = this.element.querySelectorAll('input');
-    const xBtn = this.element.querySelector('.modal-x-button');
+    const xBtn = this.element.querySelector('.modal__button-x');
     xBtn.addEventListener('click', App.screenDimmer.toggle.bind(App.screenDimmer));
     if (this.modalButtons >= 1) {
-      const cancelBtn = this.element.querySelector('#modal-cancel-button');
+      const cancelBtn = this.element.querySelector('#Modal_Cancel_Button');
       cancelBtn.addEventListener('click', App.screenDimmer.toggle.bind(App.screenDimmer));
     }
     if (this.modalButtons > 1) {
-      const submitBtn = this.element.querySelector('#modal-submit-button');
+      const submitBtn = this.element.querySelector('#Modal_Submit_Button');
       submitBtn.addEventListener('click', this.submitForm.bind(this));
     }
     if (inputs.length > 0) {
@@ -484,12 +477,12 @@ class NoticeModal extends Modal {
   constructor(h2, p, button) {
     super();
     this.elementRecipe.innerHTML = `
-      <h2 class="modal-title">${h2}</h2>
+      <h2 class="modal__title">${h2}</h2>
       <p>${p}</p>
-      <div class="modal-button-wrapper">
-        <input class="modal-button" type="button" value="${button}" id="modal-cancel-button">
+      <div class="modal__button-wrapper">
+        <input class="modal__button" type="button" value="${button}" id="Modal_Cancel_Button">
       </div>
-      <button class="modal-x-button">🗙</button>
+      <button class="modal__button-x">🗙</button>
     `;
   }
 }
@@ -500,31 +493,31 @@ class SignInModal extends Modal {
     className: 'modal card',
     id: false,
     innerHTML: `
-      <h2 class="modal-title">Sign in</h2>
-      <form action="" id="sign-in-form">
+      <h2 class="modal__title">Sign in</h2>
+      <form action="" id="Sign_In_Form">
         <table>
           <tr>
-            <td><label for="modal-form-username" class="form-label">Username</label></td>
-            <td><input type="text" id="modal-form-username" name="modal-form-username" autofocus></td>
+            <td><label for="Modal_Form_Username" class="form__label">Username</label></td>
+            <td><input type="text" id="Modal_Form_Username" name="Modal_Form_Username" autofocus></td>
           </tr>
           <tr>
-            <td><label for="modal-form-password" class="form-label">Password</label></td>
-            <td><input type="password" id="modal-form-password" name="modal-form-password"></td>
+            <td><label for="Modal_Form_Password" class="form__label">Password</label></td>
+            <td><input type="password" id="Modal_Form_Password" name="Modal_Form_Password"></td>
           </tr>
         </table>
-        <div class="modal-button-wrapper">
-          <input class="modal-button" type="button" value="Cancel" id="modal-cancel-button">
-          <input class="modal-button" type="button" value="Sign in" id="modal-submit-button">
+        <div class="modal__button-wrapper">
+          <input class="modal__button" type="button" value="Cancel" id="Modal_Cancel_Button">
+          <input class="modal__button" type="button" value="Sign in" id="Modal_Submit_Button">
         </div>
       </form>
-      <button class="modal-x-button">🗙</button>
+      <button class="modal__button-x">🗙</button>
     `,
     nextTask: true,
   };
   modalButtons = 2;
   submitForm() {
-    const username = this.element.querySelector('#modal-form-username').value;
-    const password = this.element.querySelector('#modal-form-password').value;
+    const username = this.element.querySelector('#Modal_Form_Username').value;
+    const password = this.element.querySelector('#Modal_Form_Password').value;
     if (!username.trim() && !password) {
       const noticeModal = new NoticeModal('Notice', 'The username and password are blank; they need to be filled.', 'OK');
       noticeModal.render(App.element);
@@ -546,27 +539,25 @@ class NewPostModal extends Modal {
     className: 'modal card',
     id: false,
     innerHTML: `
-      <h2 class="modal-title">Add a post to the network</h2>
-      <form action="" id="new-post-form">
-        <label for="modal-form-title" class="form-label">Title</label>
-        <input type="text" id="modal-form-title" name="modal-form-title"><br />
-        <label for="modal-form-text" class="form-label" style="display: none">Text</label>
-        <textarea name="modal-form-text" id="modal-form-text" form="new-post-form"></textarea><br />
-        <label for="modal-form-file" class="form-label">File</label>
-        <input type="file" value="Attach File..." id="modal-form-file" name="modal-form-file">
-        <div class="modal-button-wrapper">
-          <input class="modal-button" type="button" value="Cancel" id="modal-cancel-button">
-          <input class="modal-button" type="button" value="Submit" id="modal-submit-button">
+      <h2 class="modal__title">Add a post to the network</h2>
+      <form action="" id="New_Post_Form">
+        <label for="Modal_Form_Title" class="form__label">Title</label>
+        <input type="text" id="Modal_Form_Title" name="Modal_Form_Title" class="modal__form-title"><br />
+        <label for="Modal_Form_Text" class="form__label" style="display: none">Text</label>
+        <textarea name="Modal_Form_Text" id="Modal_Form_Text" class="modal__form-text" form="New_Post_Form"></textarea><br />
+        <div class="modal__button-wrapper">
+          <input class="modal__button" type="button" value="Cancel" id="Modal_Cancel_Button">
+          <input class="modal__button" type="button" value="Submit" id="Modal_Submit_Button">
         </div>
       </form>
-      <button class="modal-x-button">🗙</button>
+      <button class="modal__button-x">🗙</button>
     `,
     nextTask: true,
   };
   modalButtons = 2;
   submitForm() {
-    const title = this.element.querySelector('#modal-form-title').value;
-    const text = this.element.querySelector('#modal-form-text').value;
+    const title = this.element.querySelector('#Modal_Form_Title').value;
+    const text = this.element.querySelector('#Modal_Form_Text').value;
     if (!title.trim() && !text.trim()) {
       const noticeModal = new NoticeModal('Notice', 'The title and body are blank; they need to be filled.', 'OK');
       noticeModal.render(App.element);

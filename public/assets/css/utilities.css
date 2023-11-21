@@ -11,6 +11,16 @@
   box-sizing: border-box;
 }
 
+.flex {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* MODIFIERS ________________________________________________________________________________________ */
+
 .card--dark {
   background-color: var(--theme-grey-dark);
   box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.1);
@@ -20,15 +30,12 @@
   background-color: #fff;
 }
 
-.flex {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-}
-
 .flex--column {
   flex-flow: column nowrap;
+}
+
+.flex--left-justified {
+  align-items: start;
 }
 
 .flex--standard-gap {

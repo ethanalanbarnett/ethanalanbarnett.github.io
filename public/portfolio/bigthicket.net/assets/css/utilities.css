@@ -1,4 +1,5 @@
 .card {
+  background-color: var(--theme-green-lighter);
   border: 3px solid var(--theme-green-hunter);
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
@@ -23,6 +24,10 @@
 .card--bubble {
   border-radius: 100vw;
   padding: 0.5rem 3.5rem;
+}
+
+.card--dark {
+  background-color: var(--theme-green-hunter);
 }
 
 .flex--column {

@@ -4,7 +4,7 @@ class App {
   static navBanner;
   static page;
   static screenDimmer;
-  static location = 'home';
+  static location = 'Home';
   static activeModal = false;
   static inactiveModals = [];
   static init() {
@@ -131,9 +131,9 @@ class Element {
 
 class NavBanner extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: false,
-    id: 'nav-banner',
+    tag: 'header',
+    className: 'header-main card card--bubble',
+    id: 'Header_Main',
     innerHTML: false,
     nextTask: true,
   };
@@ -147,8 +147,8 @@ class NavBanner extends Element {
 class NavMenu extends Element {
   elementRecipe = {
     tag: 'nav',
-    className: 'nav-menu',
-    id: 'nav-menu-main',
+    className: 'nav-main',
+    id: 'Nav_Main',
     innerHTML: false,
     nextTask: true,
   };
@@ -161,17 +161,17 @@ class NavMenu extends Element {
 
 class NavMenuUl extends Element {
   elementRecipe = {
-    tag: 'ul',
-    className: 'nav-menu-ul',
+    tag: 'menu',
+    className: 'nav-main__menu flex flex--double-gap',
     id: false,
     innerHTML: false,
     nextTask: true,
   };
   menuButtons = [
-    ['Home', `javascript:App.navigate('home')`],
-    ['About', `javascript:App.navigate('about')`],
+    ['Home', `javascript:App.navigate('Home')`],
+    ['About', `javascript:App.navigate('About')`],
     ['Sign in', 'javascript:User.signInHandler()'],
-    ['Settings', `javascript:App.navigate('settings')`],
+    ['Settings', `javascript:App.navigate('Settings')`],
     ['Main Site', '/']
   ];
   nextTask() {
@@ -191,22 +191,22 @@ class NavMenuUl extends Element {
 class NavMenuButton extends Element {
   elementRecipe = {
     tag: 'li',
-    className: 'nav-menu-li',
+    className: 'nav-main__li',
     id: false,
     innerHTML: '',
     nextTask: false,
   };
   constructor(content, href) {
     super();
-    this.elementRecipe.innerHTML = `<a class="nav-menu-a" href="${href}">${content}</a>`;
+    this.elementRecipe.innerHTML = `<a class="nav-main__a" href="${href}">${content}</a>`;
   }
 }
 
 class Page extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: false,
-    id: 'main-page',
+    tag: 'main',
+    className: 'page-main',
+    id: 'Page_Main',
     innerHTML: false,
     nextTask: true,
   };
@@ -216,13 +216,13 @@ class Page extends Element {
     if (!switchBack) {
       let pageContent;
       switch (App.location) {
-        case 'home':
-          pageContent = new Feed();
+        case 'Home':
+          pageContent = new Home();
           break;
-        case 'about':
+        case 'About':
           pageContent = new About();
           break;
-        case 'settings':
+        case 'Settings':
           pageContent = new Settings();
       }
       this.children.push(pageContent);
@@ -253,11 +253,11 @@ class Page extends Element {
   }
 }
 
-class Feed extends Element {
+class Home extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: false,
-    id: 'home',
+    tag: 'section',
+    className: 'feed flex flex--column',
+    id: 'Home',
     innerHTML: false,
     nextTask: true,
   };
@@ -273,8 +273,8 @@ class Feed extends Element {
 class FeedControls extends Element {
   elementRecipe = {
     tag: 'div',
-    className: false,
-    id: 'feed-controls',
+    className: 'feed__controls card card--bubble',
+    id: 'Feed_Controls',
     innerHTML: false,
     nextTask: true,
   };
@@ -288,7 +288,7 @@ class FeedControls extends Element {
 class NewPostBtn extends Element {
   elementRecipe = {
     tag: 'button',
-    className: 'feed-button',
+    className: 'feed__button',
     id: false,
     innerHTML: 'New post',
     nextTask: true,
@@ -297,7 +297,7 @@ class NewPostBtn extends Element {
     this.element.addEventListener('click', this.clicked.bind(this));
   }
   clicked() {
-    if (App.user) {
+    if (!App.user) {
       const newPostModal = new NewPostModal();
       newPostModal.render(App.element, true);
     } else {
@@ -310,8 +310,8 @@ class NewPostBtn extends Element {
 class FeedList extends Element {
   elementRecipe = {
     tag: 'div',
-    className: false,
-    id: 'feed-list',
+    className: 'feed__list flex flex--column',
+    id: 'Feed_List',
     innerHTML: false,
     nextTask: true,
   };
@@ -327,8 +327,8 @@ class FeedList extends Element {
 
 class FeedPost extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: 'feed-post',
+    tag: 'article',
+    className: 'feed__post card card--bubble',
     id: Date.now(),
     innerHTML: '',
     nextTask: false,
@@ -337,8 +337,12 @@ class FeedPost extends Element {
     super();
     this.elementRecipe.innerHTML = `
       <table>
-        <tr><td class="feed-post-user-td"><h2 class="feed-post-user">${App.user.username}</h2></td><td class="feed-post-date-td"><p class="feed-post-date">${Tools.getCurrentDate()}</p></td></tr>
+        <tr><td class="feed-post-user-td"></td></tr>
       </table>
+      <div class="">
+        <h2 class="feed-post-user">${App.user.username}</h2>
+        <p class="feed-post-date">${Tools.getCurrentDate()}</p>
+      </div>
       <h3 class="feed-post-title">${title}</h3>
       <div class="feed-post-text">
         <p>${text}</p>
@@ -349,9 +353,9 @@ class FeedPost extends Element {
 
 class About extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: false,
-    id: 'about',
+    tag: 'section',
+    className: 'about flex flex--column',
+    id: 'About',
     innerHTML: false,
     nextTask: true,
   };
@@ -366,9 +370,9 @@ class About extends Element {
 
 class Settings extends Element {
   elementRecipe = {
-    tag: 'div',
-    className: false,
-    id: 'settings',
+    tag: 'section',
+    className: 'settings flex flex--column',
+    id: 'Settings',
     innerHTML: false,
     nextTask: true,
   };
@@ -384,8 +388,8 @@ class Settings extends Element {
 class ScreenDimmer extends Element {
   elementRecipe = {
     tag: 'div',
-    className: 'hidden',
-    id: 'screen-dimmer',
+    className: 'screen-dimmer hidden',
+    id: 'Screen_Dimmer',
     innerHTML: false,
     nextTask: true,
   };
@@ -471,7 +475,7 @@ class Modal extends Element {
 class NoticeModal extends Modal {
   elementRecipe = {
     tag: 'div',
-    className: 'modal',
+    className: 'modal card',
     id: false,
     innerHTML: '',
     nextTask: true
@@ -493,7 +497,7 @@ class NoticeModal extends Modal {
 class SignInModal extends Modal {
   elementRecipe = {
     tag: 'div',
-    className: 'modal',
+    className: 'modal card',
     id: false,
     innerHTML: `
       <h2 class="modal-title">Sign in</h2>
@@ -539,7 +543,7 @@ class SignInModal extends Modal {
 class NewPostModal extends Modal {
   elementRecipe = {
     tag: 'div',
-    className: 'modal',
+    className: 'modal card',
     id: false,
     innerHTML: `
       <h2 class="modal-title">Add a post to the network</h2>

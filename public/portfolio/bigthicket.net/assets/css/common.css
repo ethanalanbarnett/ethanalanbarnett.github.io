@@ -1,0 +1,206 @@
+/* VARIABLES ________________________________________________________________________________________ */
+
+:root {
+  --gap-double: calc(var(--gap-standard) * 2);
+  --gap-half: calc(var(--gap-standard) / 2);
+  --gap-quarter: calc(var(--gap-standard) / 4);
+  --gap-standard: 1.3rem;
+  --theme-grey-dark: #242525;
+  --theme-grey-light: #363838;
+  --theme-grey-medium: #2d2e2e;
+  --theme-green-hunter: #0a5500;
+  --theme-green-light: #d5ffcf;
+  --theme-orange-logo: #ff5100;
+  --theme-teal-logo: #0177a2;
+}
+
+/* PSUEDO ELEMENTS __________________________________________________________________________________ */
+
+::-webkit-scrollbar {
+  height: var(--gap-standard);
+  width: var(--gap-standard);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-grey-dark);
+  border: var(--gap-quarter) solid var(--theme-grey-light);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-orange-logo);
+}
+
+::-webkit-scrollbar-thumb:active { /* This is not in alphabetical order because it hase to appear below hover, or else only the hover effect will dispaly. */
+  background-color: var(--theme-teal-logo);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--theme-grey-light);
+  margin: calc(var(--gap-half) - var(--gap-quarter));
+}
+
+
+/* TAGS _____________________________________________________________________________________________ */
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--theme-green-light);
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100svh;
+  overflow-x: hidden;
+  padding: var(--gap-standard);
+  width: 100vw;
+  width: 100svw;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--gap-standard);
+}
+
+
+/* BLOCKS ___________________________________________________________________________________________ */
+
+.feed {
+  width: 100%;
+}
+
+.feed-post-date {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.feed-post-date-td {
+  vertical-align: top;
+}
+
+.feed-post-title {
+  margin: 0 0 5px 0;
+}
+
+/* .feed-post-user {} */
+
+.feed-post-user-td {
+  width: 100%;
+}
+
+.header-main {
+  background-color: var(--theme-green-hunter);
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  overflow: auto;
+  margin-top: 40px;
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffffff;
+  white-space: nowrap;
+}
+
+.modal-button-wrapper {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.modal-x-button {
+  position: absolute;
+  left: calc(100% - 20px);
+  top: 3px;
+  padding: 0 1.844px;
+  border: none;
+  background-color: rgb(0,0,0,0);
+}
+.modal-x-button:hover {
+  color: red;
+}
+
+.nav-main {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.page-main {
+  width: min(100%, 60rem);
+}
+
+.screen-dimmer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+/* ELEMENTS _________________________________________________________________________________________ */
+
+.feed__button {
+  display: block;
+}
+
+.feed__controls {
+  display: inline-block;
+  width: max-content;
+  background-color: #ffffff;
+}
+
+.feed__list {
+  width: 100%;
+}
+
+.feed__post {
+  background-color: #ffffff;
+  height: fit-content;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+.nav-main__a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.nav-main__li {
+  list-style-type: none;
+}
+
+.nav-main__menu {
+  padding-inline-start: 0;
+}
+
+
+
+
+
+
+#modal-form-title {
+  width: 400px;
+  margin-bottom: 5px;
+}
+
+#modal-form-text {
+  width: calc(100% - 6px);
+  height: 400px;
+  resize: none;
+}

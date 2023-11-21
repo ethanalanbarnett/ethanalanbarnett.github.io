@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Big Thicket Network</title>
-    <link rel="stylesheet" href="styles/app.css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <script type="text/javascript" src="scripts/app.js" defer></script>
+    <link rel="stylesheet" href="assets/css/common.css" media="all" />
+    <link rel="stylesheet" href="assets/css/landscape.css" media="all and (orientation: landscape)" />
+    <link rel="stylesheet" href="assets/css/portrait.css" media="all and (orientation: portrait)" />
+    <link rel="stylesheet" href="assets/css/utilities.css" media="all" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" />
+    <style>
+      @font-face {
+        font-display: fallback;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+      * {
+        font-family: 'Roboto', Helvetica, Arial, sans-serif;
+      }
+    </style>
+    <script type="text/javascript" src="assets/js/app.js" defer></script>
   </head>
-  <body>
+  <body class="flex flex--column">
   </body>
 </html>
